@@ -220,7 +220,7 @@
                             <span>FRUIT FRESH</span>
                             <h2>Vegetable <br />100% Organic</h2>
                             <p>Free Pickup and Delivery Available</p>
-                            <a href="#" class="primary-btn">SHOP NOW</a>
+                            <a href="#" class="primary-btn">MUA NGAY</a>
                         </div>
                     </div>
                 </div>

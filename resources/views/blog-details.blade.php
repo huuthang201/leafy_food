@@ -136,7 +136,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./">Home</a></li>
+                            <li><a href="./">Trang chủ</a></li>
                             <li><a href="./shop-grid">Cửa hàng</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">

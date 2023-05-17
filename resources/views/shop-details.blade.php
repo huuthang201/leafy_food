@@ -136,7 +136,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./">Home</a></li>
+                            <li><a href="./">Trang chủ</a></li>
                             <li class="active"><a href="./shop-grid">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -229,7 +229,7 @@
                     <div class="breadcrumb__text">
                         <h2>Vegetable’s Package</h2>
                         <div class="breadcrumb__option">
-                            <a href="./">Home</a>
+                            <a href="./">Trang chủ</a>
                             <a href="./">Vegetables</a>
                             <span>Vegetable’s Package</span>
                         </div>
@@ -386,13 +386,13 @@
     </section>
     <!-- Product Details Section End -->
 
-    <!-- Related Product Section Begin -->
+    <!-- Có thể bạn thích Section Begin -->
     <section class="related-product">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title related__product__title">
-                        <h2>Related Product</h2>
+                        <h2>Có thể bạn thích</h2>
                     </div>
                 </div>
             </div>
@@ -460,7 +460,7 @@
             </div>
         </div>
     </section>
-    <!-- Related Product Section End -->
+    <!-- Có thể bạn thích Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">

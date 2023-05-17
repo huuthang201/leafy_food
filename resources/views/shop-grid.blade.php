@@ -136,7 +136,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./">Home</a></li>
+                            <li><a href="./">Trang chủ</a></li>
                             <li class="active"><a href="./shop-grid">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -227,9 +227,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Organi Shop</h2>
+                        <h2>Leafy Food</h2>
                         <div class="breadcrumb__option">
-                            <a href="./">Home</a>
+                            <a href="./">Trang chủ</a>
                             <span>Shop</span>
                         </div>
                     </div>
@@ -246,7 +246,7 @@
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
-                            <h4>Department</h4>
+                            <h4>Danh mục</h4>
                             <ul>
                                 <li><a href="#">Fresh Meat</a></li>
                                 <li><a href="#">Vegetables</a></li>
@@ -532,7 +532,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
-                                    <span>Sort By</span>
+                                    <span>Sắp xếp theo</span>
                                     <select>
                                         <option value="0">Default</option>
                                         <option value="0">Default</option>
@@ -541,7 +541,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>16</span> Products found</h6>
+                                    <h6><span>16</span> Sản phẩm được tìm thấy</h6>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
