@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
+                <a href="#"><i class="fa fa-user"></i> {{ $id ? $name : 'Login' }}</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -81,7 +81,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
                 <li>Free Shipping for all Order of $99</li>
             </ul>
         </div>
@@ -96,7 +96,7 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
                                 <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
@@ -119,7 +119,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="#"><i class="fa fa-user"></i> {{ $id ? $name : 'Login' }}</a>
                             </div>
                         </div>
                     </div>
@@ -268,7 +268,7 @@
                     <div class="contact__widget">
                         <span class="icon_mail_alt"></span>
                         <h4>Email</h4>
-                        <p>hello@colorlib.com</p>
+                        <p>email_của_nhóm@gm.cc</p>
                     </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
                             <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
+                            <li>Email: email_của_nhóm@gm.cc</li>
                         </ul>
                     </div>
                 </div>

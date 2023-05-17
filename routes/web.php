@@ -14,32 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/blog-details', function () {
-    return view('blog-details');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/shop-details', function () {
-    return view('shop-details');
-});
-Route::get('/shop-grid', function () {
-    return view('shop-grid');
-});
-Route::get('/shoping-cart', function () {
-    return view('shoping-cart');
-});
-
-
 Auth::routes();
 
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('landing');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/blog-details', [App\Http\Controllers\BlogController::class, 'blog_details'])->name('blog-details');
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+Route::get('/shop-details', [App\Http\Controllers\ShopGridController::class, 'shop_details'])->name('shop-details');
+Route::get('/shop-grid', [App\Http\Controllers\ShopGridController::class, 'index'])->name('shop-grid');
+Route::get('/shoping-cart', [App\Http\Controllers\ShopingCartController::class, 'index'])->name('shoping-cart');
+
+
