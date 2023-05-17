@@ -278,7 +278,7 @@
                             </div>
                         </div>
                         <div class="sidebar__item sidebar__item__color--option">
-                            <h4>Colors</h4>
+                            <h4>Màu sắc</h4>
                             <div class="sidebar__item__color sidebar__item__color--white">
                                 <label for="white">
                                     White
@@ -317,7 +317,7 @@
                             </div>
                         </div>
                         <div class="sidebar__item">
-                            <h4>Popular Size</h4>
+                            <h4>Size phổ biến</h4>
                             <div class="sidebar__item__size">
                                 <label for="large">
                                     Large
@@ -345,7 +345,7 @@
                         </div>
                         <div class="sidebar__item">
                             <div class="latest-product__text">
-                                <h4>Sản phẩm mới nhất</h4>
+                                <h4>Mới nhất</h4>
                                 <div class="latest-product__slider owl-carousel">
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
