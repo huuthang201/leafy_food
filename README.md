@@ -25,6 +25,8 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+## Chạy câu này để tạo database
+Nhớ bật Xampp lên rồi chạy câu này
 ```
 php artisan migrate
 ```
