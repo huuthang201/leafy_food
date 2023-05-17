@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>Leafy Food</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -58,8 +58,8 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./">Home</a></li>
-                <li><a href="./shop-grid">Shop</a></li>
+                <li class="active"><a href="./">Trang chủ</a></li>
+                <li><a href="./shop-grid">Cửa hàng</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         <li><a href="./shop-details">Shop Details</a></li>
@@ -69,7 +69,7 @@
                     </ul>
                 </li>
                 <li><a href="./blog">Blog</a></li>
-                <li><a href="./contact">Contact</a></li>
+                <li><a href="./contact">Liên hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -82,7 +82,7 @@
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
-                <li>Free Shipping for all Order of $99</li>
+                <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
             </ul>
         </div>
     </div>
@@ -97,7 +97,7 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
-                                <li>Free Shipping for all Order of $99</li>
+                                <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
                             </ul>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./">Home</a></li>
-                            <li><a href="./shop-grid">Shop</a></li>
+                            <li><a href="./shop-grid">Cửa hàng</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details">Shop Details</a></li>
@@ -176,7 +176,7 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>All departments</span>
+                            <span>Danh mục</span>
                         </div>
                         <ul>
                             <li><a href="#">Fresh Meat</a></li>
@@ -198,11 +198,11 @@
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
-                                    All Categories
+                                    Tất cả danh mục
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
+                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
                         <div class="hero__search__phone">
@@ -211,7 +211,7 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <h5>+65 11.188.888</h5>
-                                <span>support 24/7 time</span>
+                                <span>Hỗ trợ 24/7</span>
                             </div>
                         </div>
                     </div>
@@ -332,7 +332,7 @@
                             <a href="./"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
                             <li>Phone: +65 11.188.888</li>
                             <li>Email: email_của_nhóm@gm.cc</li>
                         </ul>
@@ -361,11 +361,11 @@
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <h6>Đăng kí nhận thông tin</h6>
+                        <p>Nhận thông tin về cửa hàng và các ưu đãi đặc biệt.</p>
                         <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
+                            <input type="text" placeholder="Nhập email của bạn">
+                            <button type="submit" class="site-btn">Đăng kí ngay!</button>
                         </form>
                         <div class="footer__widget__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
