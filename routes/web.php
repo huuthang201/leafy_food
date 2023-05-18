@@ -22,7 +22,7 @@ Route::get('/blog-details', [App\Http\Controllers\BlogController::class, 'blog_d
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
-Route::get('/shop-details', [App\Http\Controllers\ShopGridController::class, 'shop_details'])->name('shop-details');
+Route::get('/shop-details/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_details'])->name('shop-details');
 Route::get('/shop-grid', [App\Http\Controllers\ShopGridController::class, 'index'])->name('shop-grid');
 Route::get('/shoping-cart', [App\Http\Controllers\ShopingCartController::class, 'index'])->name('shoping-cart');
 
