@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            CategorySeeder::class,
-            // ProductSeeder::class,
-            // UserSeeder::class,
-        ]);
+        $cate = Category::where('id', '!=', '')->first();
+        $product = Product::where('id', '!=', '')->first();
+        if (!$cate)
+        {
+            $this->call([
+                CategorySeeder::class,
+            ]);
+        }
+        if (!$product)
+        {
+            $this->call([
+                ProductSeeder::class,
+            ]);
+        }
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
