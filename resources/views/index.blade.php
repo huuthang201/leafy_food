@@ -337,7 +337,7 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="/shop-details" class="latest-product__item">
+                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
@@ -351,7 +351,7 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="/shop-details" class="latest-product__item">
+                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
@@ -372,7 +372,7 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="/shop-details" class="latest-product__item">
+                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
@@ -386,7 +386,7 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="/shop-details" class="latest-product__item">
+                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
@@ -407,7 +407,7 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="/shop-details" class="latest-product__item">
+                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
@@ -421,7 +421,7 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="/shop-details" class="latest-product__item">
+                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>

@@ -333,7 +333,7 @@
                                 <h4>Your Order</h4>
                                 <div class="checkout__order__products">Products <span>Total</span></div>
                                 <ul>
-                                    <li>Vegetable’s Package <span>$75.99</span></li>
+                                    <li>{{ $dataProduct->product_name }} <span>$75.99</span></li>
                                     <li>Fresh Vegetable <span>$151.99</span></li>
                                     <li>Organic Bananas <span>$53.99</span></li>
                                 </ul>
