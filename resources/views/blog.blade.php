@@ -38,7 +38,7 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
@@ -155,7 +155,7 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -318,7 +318,7 @@
                                         <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
+                                    <h5><a href="/blog-details">6 ways to prepare breakfast for 30</a></h5>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                         quaerat </p>
                                     <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
@@ -335,7 +335,7 @@
                                         <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">Visit the clean farm in the US</a></h5>
+                                    <h5><a href="/blog-details">Visit the clean farm in the US</a></h5>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                         quaerat </p>
                                     <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
@@ -352,7 +352,7 @@
                                         <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">Cooking tips make cooking simple</a></h5>
+                                    <h5><a href="/blog-details">Cooking tips make cooking simple</a></h5>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                         quaerat </p>
                                     <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
@@ -369,7 +369,7 @@
                                         <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">Cooking tips make cooking simple</a></h5>
+                                    <h5><a href="/blog-details">Cooking tips make cooking simple</a></h5>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                         quaerat </p>
                                     <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
@@ -386,7 +386,7 @@
                                         <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">The Moment You Need To Remove Garlic From The Menu</a></h5>
+                                    <h5><a href="/blog-details">The Moment You Need To Remove Garlic From The Menu</a></h5>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                         quaerat </p>
                                     <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
@@ -403,7 +403,7 @@
                                         <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">Cooking tips make cooking simple</a></h5>
+                                    <h5><a href="/blog-details">Cooking tips make cooking simple</a></h5>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
                                         quaerat </p>
                                     <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>

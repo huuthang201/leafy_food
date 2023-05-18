@@ -38,7 +38,7 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
@@ -155,7 +155,7 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -348,7 +348,7 @@
                                 <h4>Mới nhất</h4>
                                 <div class="latest-product__slider owl-carousel">
                                     <div class="latest-prdouct__slider__item">
-                                        <a href="#" class="latest-product__item">
+                                        <a href="/shop-details" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="img/latest-product/lp-1.jpg" alt="">
                                             </div>
@@ -357,7 +357,7 @@
                                                 <span>$30.00</span>
                                             </div>
                                         </a>
-                                        <a href="#" class="latest-product__item">
+                                        <a href="/shop-details" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="img/latest-product/lp-2.jpg" alt="">
                                             </div>
@@ -366,7 +366,7 @@
                                                 <span>$30.00</span>
                                             </div>
                                         </a>
-                                        <a href="#" class="latest-product__item">
+                                        <a href="/shop-details" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="img/latest-product/lp-3.jpg" alt="">
                                             </div>
@@ -377,7 +377,7 @@
                                         </a>
                                     </div>
                                     <div class="latest-prdouct__slider__item">
-                                        <a href="#" class="latest-product__item">
+                                        <a href="/shop-details" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="img/latest-product/lp-1.jpg" alt="">
                                             </div>
@@ -386,7 +386,7 @@
                                                 <span>$30.00</span>
                                             </div>
                                         </a>
-                                        <a href="#" class="latest-product__item">
+                                        <a href="/shop-details" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="img/latest-product/lp-2.jpg" alt="">
                                             </div>
@@ -395,7 +395,7 @@
                                                 <span>$30.00</span>
                                             </div>
                                         </a>
-                                        <a href="#" class="latest-product__item">
+                                        <a href="/shop-details" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="img/latest-product/lp-3.jpg" alt="">
                                             </div>
@@ -430,7 +430,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <h5><a href="/blog-details">Raisin’n’nuts</a></h5>
                                             <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                         </div>
                                     </div>
@@ -448,7 +448,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Vegetables</span>
-                                            <h5><a href="#">Vegetables’package</a></h5>
+                                            <h5><a href="/blog-details">Vegetables’package</a></h5>
                                             <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                         </div>
                                     </div>
@@ -466,7 +466,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Dried Fruit</span>
-                                            <h5><a href="#">Mixed Fruitss</a></h5>
+                                            <h5><a href="/blog-details">Mixed Fruitss</a></h5>
                                             <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                         </div>
                                     </div>
@@ -484,7 +484,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <h5><a href="/blog-details">Raisin’n’nuts</a></h5>
                                             <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                         </div>
                                     </div>
@@ -502,7 +502,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <h5><a href="/blog-details">Raisin’n’nuts</a></h5>
                                             <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                         </div>
                                     </div>
@@ -520,7 +520,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>Dried Fruit</span>
-                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <h5><a href="/blog-details">Raisin’n’nuts</a></h5>
                                             <div class="product__item__price">$30.00 <span>$36.00</span></div>
                                         </div>
                                     </div>
@@ -563,7 +563,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -578,7 +578,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -593,7 +593,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -608,7 +608,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -623,7 +623,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -638,7 +638,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -653,7 +653,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -668,7 +668,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -683,7 +683,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -698,7 +698,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -713,7 +713,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>
@@ -728,7 +728,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h6><a href="/shop-details">Crab Pool Security</a></h6>
                                     <h5>$30.00</h5>
                                 </div>
                             </div>

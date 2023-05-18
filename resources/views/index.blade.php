@@ -38,7 +38,7 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
@@ -155,7 +155,7 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -236,27 +236,27 @@
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
+                            <h5><a href="/blog-details">Fresh Fruit</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
+                            <h5><a href="/blog-details">Dried Fruit</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
+                            <h5><a href="/blog-details">Vegetables</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                            <h5><a href="/blog-details">drink fruits</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                            <h5><a href="/blog-details">drink fruits</a></h5>
                         </div>
                     </div>
                 </div>
@@ -296,8 +296,8 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">{{ $product->product_name }}</a></h6>
-                            <h5>{{ $product->price }} VNĐ</h5>
+                            <h6><a href="/shop-details">{{ $product->product_name }}</a></h6>
+                            <h5>{{ number_format($product->price, 0, '', ',') }} VNĐ</h5>
                         </div>
                     </div>
                 </div>
@@ -337,13 +337,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="#" class="latest-product__item">
+                                <a href="/shop-details" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ $latestProducts[$i]->price }} VNĐ</span>
+                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -351,13 +351,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="#" class="latest-product__item">
+                                <a href="/shop-details" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ $latestProducts[$i]->price }} VNĐ</span>
+                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -372,13 +372,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="#" class="latest-product__item">
+                                <a href="/shop-details" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ $latestProducts[$i]->price }} VNĐ</span>
+                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -386,13 +386,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="#" class="latest-product__item">
+                                <a href="/shop-details" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ $latestProducts[$i]->price }} VNĐ</span>
+                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -407,13 +407,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="#" class="latest-product__item">
+                                <a href="/shop-details" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ $latestProducts[$i]->price }} VNĐ</span>
+                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -421,13 +421,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="#" class="latest-product__item">
+                                <a href="/shop-details" class="latest-product__item">
                                     <div class="latest-product__item__pic">
                                         <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
                                         <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ $latestProducts[$i]->price }} VNĐ</span>
+                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -461,7 +461,7 @@
                                 <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
-                            <h5><a href="#">Cooking tips make cooking simple</a></h5>
+                            <h5><a href="/blog-details">Cooking tips make cooking simple</a></h5>
                             <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
                     </div>
@@ -476,7 +476,7 @@
                                 <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
-                            <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
+                            <h5><a href="/blog-details">6 ways to prepare breakfast for 30</a></h5>
                             <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
                     </div>
@@ -491,7 +491,7 @@
                                 <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
-                            <h5><a href="#">Visit the clean farm in the US</a></h5>
+                            <h5><a href="/blog-details">Visit the clean farm in the US</a></h5>
                             <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
                         </div>
                     </div>
