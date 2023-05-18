@@ -58,7 +58,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./">Trang chủ</a></li>
+                <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -130,13 +130,13 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./"><img src="/img/logo.png" alt=""></a>
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./">Trang chủ</a></li>
+                            <li><a href="/">Trang chủ</a></li>
                             <li class="active"><a href="./shop-grid">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -229,7 +229,7 @@
                     <div class="breadcrumb__text">
                         <h2>Shopping Cart</h2>
                         <div class="breadcrumb__option">
-                            <a href="./">Trang chủ</a>
+                            <a href="/">Trang chủ</a>
                             <span>Shopping Cart</span>
                         </div>
                     </div>
@@ -245,6 +245,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="shoping__cart__table">
+                        @if (count($dataCart) > 0)
                         <table>
                             <thead>
                                 <tr>
@@ -256,83 +257,66 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($dataCart as $item)
                                 <tr>
                                     <td class="shoping__cart__item">
-                                        <img src="/img/cart/cart-1.jpg" alt="">
-                                        <h5>Vegetable</h5>
+                                        <img src="{{ $item->product_image }}" alt="{{ $item->product_name }}" width="100px" height="100px">
+                                        <h5>{{ $item->product_name }}</h5>
                                     </td>
                                     <td class="shoping__cart__price">
-                                        $55.00
+                                        {{ number_format($item->product_price) }} VNĐ
                                     </td>
                                     <td class="shoping__cart__quantity">
                                         <div class="quantity">
                                             <div class="pro-qty">
-                                                <input type="text" value="1">
+                                                <input type="text" value="{{ $item->quantity }}">
                                             </div>
                                         </div>
                                     </td>
                                     <td class="shoping__cart__total">
-                                        $110.00
+                                        {{ number_format($item->product_price * $item->quantity) }} VNĐ
                                     </td>
                                     <td class="shoping__cart__item__close">
-                                        <span class="icon_close"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="/img/cart/cart-2.jpg" alt="">
-                                        <h5>Fresh Garden Vegetable</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $39.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
+                                        <span class="icon_close" data-toggle="modal" data-target="#exampleModal"></span>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Xóa sản phẩm đã chọn</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Bạn muốn xóa sản phẩm này khỏi giỏ hàng?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                                        <button type="button" class="btn btn-danger" onclick="deleteCart({{ $item->id }}, {{ $item->product_id }})">Xóa</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="shoping__cart__total">
-                                        $39.99
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span class="icon_close"></span>
-                                    </td>
                                 </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="/img/cart/cart-3.jpg" alt="">
-                                        <h5>Organic Bananas</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $69.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $69.99
-                                    </td>
-                                    <td class="shoping__cart__item__close">
-                                        <span class="icon_close"></span>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        @else
+                        <div class="alert alert-danger" role="alert">
+                            Giỏ hàng của bạn đang trống!
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="shoping__cart__btns">
-                        <a href="#" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+                        <a href="/shop-grid" class="primary-btn cart-btn">MUA HÀNG TIẾP</a>
                         <a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
-                            Upadate Cart</a>
+                            CẬP NHẬT GIỎ</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -350,8 +334,8 @@
                     <div class="shoping__checkout">
                         <h5>Cart Total</h5>
                         <ul>
-                            <li>Subtotal <span>$454.98</span></li>
-                            <li>Total <span>$454.98</span></li>
+                            <li>Tổng tiền sản phẩm <span>{{ number_format($totalPrice) }} VNĐ</span></li>
+                            <li>Thanh toán <span>{{ number_format($totalPrice) }} VNĐ</span></li>
                         </ul>
                         <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a>
                     </div>
@@ -368,7 +352,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./"><img src="/img/logo.png" alt=""></a>
+                            <a href="/"><img src="/img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
@@ -442,4 +426,20 @@
 
 </body>
 
+<script>
+    function deleteCart(id, product_id) {
+        $.ajax({
+            url: '/cart/delete',
+            type: 'GET',
+            data: {
+                id: id,
+                product_id: product_id,
+                _token: '{{ csrf_token() }}'
+            },
+            success: function(data) {
+                location.reload();
+            }
+        });
+    }
+</script>
 </html>

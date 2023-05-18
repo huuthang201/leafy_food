@@ -7,6 +7,8 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- csrf token --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Leafy Food</title>
 
     <!-- Google Font -->
@@ -58,7 +60,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./">Trang chủ</a></li>
+                <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -130,13 +132,13 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./"><img src="/img/logo.png" alt=""></a>
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./">Trang chủ</a></li>
+                            <li><a href="/">Trang chủ</a></li>
                             <li class="active"><a href="./shop-grid">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -229,8 +231,8 @@
                     <div class="breadcrumb__text">
                         <h2>{{ $dataProduct->product_name }}</h2>
                         <div class="breadcrumb__option">
-                            <a href="./">Trang chủ</a>
-                            <a href="./">Vegetables</a>
+                            <a href="/">Trang chủ</a>
+                            <a href="/">Vegetables</a>
                             <span>{{ $dataProduct->product_name }}</span>
                         </div>
                     </div>
@@ -248,7 +250,7 @@
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
                             <img class="product__details__pic__item--large"
-                                src="/img/product/details/product-details-1.jpg" alt="">
+                                src="{{ $dataProduct->image }}" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
                             <img data-imgbigurl="img/product/details/product-details-2.jpg"
@@ -262,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
                     <div class="product__details__text">
                         <h3>{{ $dataProduct->product_name }}</h3>
                         <div class="product__details__rating">
@@ -278,17 +280,18 @@
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
-                                    <input type="text" value="1">
+                                    <input type="text" value="1" name="quantity">
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">ADD TO CARD</a>
+                        <input type="hidden" name="product_id" value="{{ $dataProduct->id }}">
+                        <input type="submit" class="primary-btn" value="Thêm vào giỏ hàng">
                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                         <ul>
-                            <li><b>Availability</b> <span>{{ $dataProduct->quantity }}</span></li>
-                            <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                            <li><b>Weight</b> <span>0.5 kg</span></li>
-                            <li><b>Share on</b>
+                            <li><b>Còn</b> <span>{{ $dataProduct->quantity }}</span></li>
+                            <li><b>Giao hàng</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
+                            <li><b>Trọng lượng</b> <span>0.5 kg</span></li>
+                            <li><b>Chia sẻ</b>
                                 <div class="share">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -298,7 +301,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </form>
                 <div class="col-lg-12">
                     <div class="product__details__tab">
                         <ul class="nav nav-tabs" role="tablist">
@@ -425,7 +428,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./"><img src="/img/logo.png" alt=""></a>
+                            <a href="/"><img src="/img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>

@@ -58,7 +58,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./">Trang chủ</a></li>
+                <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -130,13 +130,13 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./"><img src="/img/logo.png" alt=""></a>
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./">Trang chủ</a></li>
+                            <li class="active"><a href="/">Trang chủ</a></li>
                             <li><a href="./shop-grid">Cửa hàng</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -508,7 +508,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./"><img src="/img/logo.png" alt=""></a>
+                            <a href="/"><img src="/img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>

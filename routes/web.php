@@ -26,4 +26,5 @@ Route::get('/shop-details/{id}', [App\Http\Controllers\ShopGridController::class
 Route::get('/shop-grid', [App\Http\Controllers\ShopGridController::class, 'index'])->name('shop-grid');
 Route::get('/shoping-cart', [App\Http\Controllers\ShopingCartController::class, 'index'])->name('shoping-cart');
 
-
+Route::get('/add-cart', [App\Http\Controllers\ShopingCartController::class, 'add_cart'])->name('add-cart');
+Route::get('/cart/delete', [App\Http\Controllers\ShopingCartController::class, 'delete_cart'])->name('delete-cart');
