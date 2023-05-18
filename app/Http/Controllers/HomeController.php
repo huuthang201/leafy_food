@@ -31,7 +31,11 @@ class HomeController extends Controller
         $param['email'] = $user->email;
 
         // Fake data products
-        // Product::factory()->count(50)->create();
+        // check product is not empty
+        $firstProduct = Product::where('id', '!=', '')->first();
+        if (empty($firstProduct)) {
+            Product::factory()->count(50)->create();
+        }
 
         // Featured products
         $featuredProducts = Product::where('status', 1)->orderBy('quantity', 'desc')->take(8)->get();
