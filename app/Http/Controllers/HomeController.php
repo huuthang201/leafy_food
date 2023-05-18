@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +44,8 @@ class HomeController extends Controller
         // Latest products
         $latestProducts = Product::where('status', 1)->orderBy('created_at', 'desc')->take(6)->get();
         $param['latestProducts'] = $latestProducts;
-
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
         return view('index', $param);
     }
 }

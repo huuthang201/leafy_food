@@ -25,6 +25,7 @@ Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])
 Route::get('/shop-details/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_details'])->name('shop-details');
 Route::get('/shop-grid', [App\Http\Controllers\ShopGridController::class, 'index'])->name('shop-grid');
 Route::get('/shoping-cart', [App\Http\Controllers\ShopingCartController::class, 'index'])->name('shoping-cart');
+Route::get('/shop-grid/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_grid'])->name('shop-grid');
 
 Route::get('/add-cart', [App\Http\Controllers\ShopingCartController::class, 'add_cart'])->name('add-cart');
 Route::get('/cart/delete', [App\Http\Controllers\ShopingCartController::class, 'delete_cart'])->name('delete-cart');
