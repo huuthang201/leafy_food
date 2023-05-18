@@ -48,8 +48,8 @@ class ShopGridController extends Controller
         $param['name'] = $user->name;
         $param['email'] = $user->email;
         $idCategory = $request->id;
-        $dataProduct = Product::where('category_id', $idCategory)->get();
-        $param['dataProduct'] = $dataProduct;
+        $products = Product::where('category_id', $idCategory)->get();
+        $param['products'] = $products;
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         return view('shop-grid-category', $param);

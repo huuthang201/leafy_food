@@ -268,7 +268,7 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">{{ number_format($dataProduct->price, 0, '', ',') }} VNĐ</div>
-                        <p>{{ $dataProduct->description }}</p>
+                        <p>{{ strip_tags($dataProduct->description) }}</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -314,19 +314,19 @@
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Products Infomation</h6>
-                                    <p>{{ $dataProduct->description }}</p>
+                                    <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Products Infomation</h6>
-                                    <p>{{ $dataProduct->description }}</p>
+                                    <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-3" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Products Infomation</h6>
-                                    <p>{{ $dataProduct->description }}</p>
+                                    <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
                         </div>

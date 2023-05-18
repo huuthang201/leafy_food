@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,6 +30,8 @@ class ShopingCartController extends Controller
         }
         $param['dataCart'] = $dataCart;
         $param['totalPrice'] = $totalPrice;
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
         return view('shoping-cart', $param);
     }
 

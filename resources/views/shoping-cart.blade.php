@@ -329,7 +329,7 @@
                             <li>Tổng tiền sản phẩm <span>{{ number_format($totalPrice) }} VNĐ</span></li>
                             <li>Thanh toán <span>{{ number_format($totalPrice) }} VNĐ</span></li>
                         </ul>
-                        <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        <a href="/checkout" class="primary-btn">Thanh toán</a>
                     </div>
                 </div>
             </div>
