@@ -33,7 +33,7 @@ php artisan migrate
 
 ## Không chạy câu này nếu không muốn tạo dữ liệu mẫu
 ```
-php artisan db:seed
+php artisan db:seed --class=DatabaseSeeder
 ```
 
 ## Chạy web
