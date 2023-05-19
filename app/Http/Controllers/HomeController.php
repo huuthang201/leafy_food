@@ -55,8 +55,10 @@ class HomeController extends Controller
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         // Count total products in cart
-        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
-        $param['totalProductsInCart'] = $totalProductsInCart;
+        if(isset(Auth::user()->id)){
+            $totalProductsInCart = Cart::where('user_id', Auth::user()->id)->count();
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
         return view('index', $param);
     }
 
