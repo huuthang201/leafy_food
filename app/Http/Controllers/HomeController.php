@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -44,8 +45,39 @@ class HomeController extends Controller
         // Latest products
         $latestProducts = Product::where('status', 1)->orderBy('created_at', 'desc')->take(6)->get();
         $param['latestProducts'] = $latestProducts;
+        // Categories
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
+        // Count total products in cart
+        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        $param['totalProductsInCart'] = $totalProductsInCart;
         return view('index', $param);
+    }
+
+    /**
+     * Search products
+     *
+     */
+    public function search(Request $request)
+    {
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        $param['id'] = $user->id;
+        $param['name'] = $user->name;
+        $param['email'] = $user->email;
+
+        $keyword = $request->keyword;
+        $products = Product::where('product_name', 'like', '%' . $keyword . '%')->paginate(12);
+        $param['products'] = $products;
+        // Total products found
+        $allProducts = Product::where('product_name', 'like', '%' . $keyword . '%')->get();
+        $totalProducts = count($allProducts);
+        $param['totalProducts'] = $totalProducts;
+        // Categories
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
+        // Count total products in cart
+        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        $param['totalProductsInCart'] = $totalProductsInCart;
+        return view('search', $param);
     }
 }

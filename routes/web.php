@@ -29,3 +29,4 @@ Route::get('/shop-grid/{id}', [App\Http\Controllers\ShopGridController::class, '
 
 Route::get('/add-cart', [App\Http\Controllers\ShopingCartController::class, 'add_cart'])->name('add-cart');
 Route::get('/cart/delete', [App\Http\Controllers\ShopingCartController::class, 'delete_cart'])->name('delete-cart');
+Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');

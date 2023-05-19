@@ -32,6 +32,9 @@ class ShopingCartController extends Controller
         $param['totalPrice'] = $totalPrice;
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
+        // Count total products in cart
+        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        $param['totalProductsInCart'] = $totalProductsInCart;
         return view('shoping-cart', $param);
     }
 

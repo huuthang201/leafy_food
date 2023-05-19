@@ -188,12 +188,12 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="/search" method="GET">
                                 <div class="hero__search__categories">
                                     Tất cả danh mục
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
                                 <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
@@ -326,39 +326,6 @@
                                     Tiny
                                     <input type="radio" id="tiny">
                                 </label>
-                            </div>
-                        </div>
-                        <div class="sidebar__item">
-                            <div class="latest-product__text">
-                                <h4>Mới nhất</h4>
-                                <div class="latest-product__slider owl-carousel">
-                                    <div class="latest-prdouct__slider__item">
-                                        @for ($i = 0; $i < 3; $i++)
-                                            <a href="/shop-details" class="latest-product__item">
-                                                <div class="latest-product__item__pic">
-                                                    <img src="{{ @$products[$i]->image }}" alt="{{ @$products[$i]->product_name }}">
-                                                </div>
-                                                <div class="latest-product__item__text">
-                                                    <h6>{{ @$products[$i]->product_name }}</h6>
-                                                    <span>{{ number_format(@$products[$i]->price) }} VNĐ</span>
-                                                </div>
-                                            </a>
-                                        @endfor
-                                    </div>
-                                    <div class="latest-prdouct__slider__item">
-                                        @for ($i = 3; $i < 6; $i++)
-                                            <a href="/shop-details" class="latest-product__item">
-                                                <div class="latest-product__item__pic">
-                                                    <img src="{{ @$products[$i]->image }}" alt="{{ @$products[$i]->product_name }}">
-                                                </div>
-                                                <div class="latest-product__item__text">
-                                                    <h6>{{ @$products[$i]->product_name }}</h6>
-                                                    <span>{{ number_format(@$products[$i]->price) }} VNĐ</span>
-                                                </div>
-                                            </a>
-                                        @endfor
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -494,7 +461,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>{{ $totalProducts }}</span> Sản phẩm hiện có</h6>
+                                    <h6><span>{{ $totalProducts }}</span> Sản phẩm được tìm thấy</h6>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
