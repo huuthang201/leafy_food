@@ -293,33 +293,33 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">Description</a>
+                                    aria-selected="true">{{ $dataProduct->product_name }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
-                                    aria-selected="false">Information</a>
+                                    aria-selected="false">{{ $categoryName->category_name }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">Reviews <span>(1)</span></a>
+                                    aria-selected="false">Đánh giá <span>(1)</span></a>
                             </li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
+                                    <h6>Về {{ $dataProduct->product_name }}</h6>
                                     <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
-                                    <p>{{ strip_tags($dataProduct->description) }}</p>
+                                    <h6>Về {{ $categoryName->category_name }}</h6>
+                                    <p>{{ strip_tags($categoryName->description) }}</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-3" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
+                                    <h6>Đánh giá nổi bật</h6>
                                     <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>

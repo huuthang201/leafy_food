@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         $cate = Category::where('id', '!=', '')->first();
         $product = Product::where('id', '!=', '')->first();
+        $user = User::where('id', '!=', '')->first();
         if (!$cate)
         {
             $this->call([
@@ -30,9 +32,11 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        if (!$user)
+        {
+            $this->call([
+                UserSeeder::class,
+            ]);
+        }
     }
 }

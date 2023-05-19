@@ -353,11 +353,11 @@
                                         @for ($i = 0; $i < 3; $i++)
                                             <a href="/shop-details" class="latest-product__item">
                                                 <div class="latest-product__item__pic">
-                                                    <img src="{{ @$products[$i]->image }}" alt="{{ @$products[$i]->product_name }}">
+                                                    <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name }}">
                                                 </div>
                                                 <div class="latest-product__item__text">
-                                                    <h6>{{ @$products[$i]->product_name }}</h6>
-                                                    <span>{{ number_format(@$products[$i]->price) }} VNĐ</span>
+                                                    <h6>{{ @$lastestProducts[$i]->product_name }}</h6>
+                                                    <span>{{ number_format(@$lastestProducts[$i]->price) }} VNĐ</span>
                                                 </div>
                                             </a>
                                         @endfor
@@ -366,11 +366,11 @@
                                         @for ($i = 3; $i < 6; $i++)
                                             <a href="/shop-details" class="latest-product__item">
                                                 <div class="latest-product__item__pic">
-                                                    <img src="{{ @$products[$i]->image }}" alt="{{ @$products[$i]->product_name }}">
+                                                    <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name }}">
                                                 </div>
                                                 <div class="latest-product__item__text">
-                                                    <h6>{{ @$products[$i]->product_name }}</h6>
-                                                    <span>{{ number_format(@$products[$i]->price) }} VNĐ</span>
+                                                    <h6>{{ @$lastestProducts[$i]->product_name }}</h6>
+                                                    <span>{{ number_format(@$lastestProducts[$i]->price) }} VNĐ</span>
                                                 </div>
                                             </a>
                                         @endfor
