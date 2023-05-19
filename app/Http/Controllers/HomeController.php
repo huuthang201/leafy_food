@@ -45,6 +45,12 @@ class HomeController extends Controller
         // Latest products
         $latestProducts = Product::where('status', 1)->orderBy('created_at', 'desc')->take(6)->get();
         $param['latestProducts'] = $latestProducts;
+        // Order by price asc
+        $orderByPriceAsc = Product::where('status', 1)->orderBy('price', 'asc')->take(6)->get();
+        $param['orderByPrice'] = $orderByPriceAsc;
+        // Order by price desc
+        $orderByPriceDesc = Product::where('status', 1)->orderBy('price', 'desc')->take(6)->get();
+        $param['orderByPriceDesc'] = $orderByPriceDesc;
         // Categories
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;

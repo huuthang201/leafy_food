@@ -69,6 +69,9 @@ class ShopGridController extends Controller
         $param['name'] = $user->name;
         $param['email'] = $user->email;
         $idCategory = $request->id;
+        // Categories info
+        $categoryInfo = Category::where('id', $idCategory)->first();
+        $param['categoryInfo'] = $categoryInfo;
         $products = Product::where('category_id', $idCategory)->orderBy('created_at', 'desc')->paginate(12);
         $param['products'] = $products;
         // Total products found

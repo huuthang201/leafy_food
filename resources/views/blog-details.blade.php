@@ -60,14 +60,7 @@
             <ul>
                 <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="./shop-grid">Cửa hàng</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details">Shop Details</a></li>
-                        <li><a href="./shoping-cart">Shoping Cart</a></li>
-                        <li><a href="./checkout">Check Out</a></li>
-                        <li><a href="./blog-details">Blog Details</a></li>
-                    </ul>
-                </li>
+                
                 <li><a href="./blog">Blog</a></li>
                 <li><a href="./contact">Liên hệ</a></li>
             </ul>
@@ -138,14 +131,7 @@
                         <ul>
                             <li><a href="/">Trang chủ</a></li>
                             <li><a href="./shop-grid">Cửa hàng</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details">Shop Details</a></li>
-                                    <li><a href="./shoping-cart">Shoping Cart</a></li>
-                                    <li><a href="./checkout">Check Out</a></li>
-                                    <li><a href="./blog-details">Blog Details</a></li>
-                                </ul>
-                            </li>
+                            
                             <li class="active"><a href="./blog">Blog</a></li>
                             <li><a href="./contact">Liên hệ</a></li>
                         </ul>

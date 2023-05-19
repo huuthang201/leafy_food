@@ -60,14 +60,7 @@
             <ul>
                 <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="./shop-grid">Cửa hàng</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details">Shop Details</a></li>
-                        <li><a href="./shoping-cart">Shoping Cart</a></li>
-                        <li><a href="./checkout">Check Out</a></li>
-                        <li><a href="./blog-details">Blog Details</a></li>
-                    </ul>
-                </li>
+                
                 <li><a href="./blog">Blog</a></li>
                 <li><a href="./contact">Liên hệ</a></li>
             </ul>
@@ -138,14 +131,7 @@
                         <ul>
                             <li class="active"><a href="/">Trang chủ</a></li>
                             <li><a href="./shop-grid">Cửa hàng</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details">Shop Details</a></li>
-                                    <li><a href="./shoping-cart">Shoping Cart</a></li>
-                                    <li><a href="./checkout">Check Out</a></li>
-                                    <li><a href="./blog-details">Blog Details</a></li>
-                                </ul>
-                            </li>
+                            
                             <li><a href="./blog">Blog</a></li>
                             <li><a href="./contact">Liên hệ</a></li>
                         </ul>
@@ -209,10 +195,10 @@
                     </div>
                     <div class="hero__item set-bg" data-setbg="/img/hero/banner.jpg">
                         <div class="hero__text">
-                            <span>FRUIT FRESH</span>
-                            <h2>Vegetable <br />100% Organic</h2>
-                            <p>Free Pickup and Delivery Available</p>
-                            <a href="#" class="primary-btn">MUA NGAY</a>
+                            <span>Thực phẩm từ thiên nhiên</span>
+                            <h2>Leafy Food <br /></h2>
+                            <p>Ăn sạch - Sống khỏe</p>
+                            <a href="/shop-grid" class="primary-btn">MUA NGAY</a>
                         </div>
                     </div>
                 </div>
@@ -359,18 +345,18 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest-product__text">
-                        <h4>Xếp hạng cao</h4>
+                        <h4>Bình dân</h4>
                         <div class="latest-product__slider owl-carousel">
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
+                                <a href="/shop-details/{{ $orderByPrice[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
+                                        <img src="{{ $orderByPrice[$i]->image }}" alt="{{ $orderByPrice[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
+                                        <h6>{{ $orderByPrice[$i]->product_name }}</h6>
+                                        <span>{{ number_format($orderByPrice[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -378,13 +364,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
+                                <a href="/shop-details/{{ $orderByPrice[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
+                                        <img src="{{ $orderByPrice[$i]->image }}" alt="{{ $orderByPrice[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
+                                        <h6>{{ $orderByPrice[$i]->product_name }}</h6>
+                                        <span>{{ number_format($orderByPrice[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -394,18 +380,18 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest-product__text">
-                        <h4>Đánh giá cao</h4>
+                        <h4>Cao cấp</h4>
                         <div class="latest-product__slider owl-carousel">
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from top to middle --}}
                                 @for ($i = 0; $i < 3; $i++)
-                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
+                                <a href="/shop-details/{{ $orderByPriceDesc[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
+                                        <img src="{{ $orderByPriceDesc[$i]->image }}" alt="{{ $orderByPriceDesc[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
+                                        <h6>{{ $orderByPriceDesc[$i]->product_name }}</h6>
+                                        <span>{{ number_format($orderByPriceDesc[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
@@ -413,13 +399,13 @@
                             <div class="latest-prdouct__slider__item">
                                 {{-- for run from middle to bottom --}}
                                 @for ($i = 3; $i < 6; $i++)
-                                <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
+                                <a href="/shop-details/{{ $orderByPriceDesc[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
+                                        <img src="{{ $orderByPriceDesc[$i]->image }}" alt="{{ $orderByPriceDesc[$i]->product_name }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $latestProducts[$i]->product_name }}</h6>
-                                        <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
+                                        <h6>{{ $orderByPriceDesc[$i]->product_name }}</h6>
+                                        <span>{{ number_format($orderByPriceDesc[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
                                 @endfor
