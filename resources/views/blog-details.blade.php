@@ -56,6 +56,17 @@
                 @if ($id)
                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
                     <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                    <div>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
                 @else
                     <a href="/login"><i class="fa fa-user"></i> Login</a>
                 @endif
@@ -117,8 +128,20 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                @if ($id)                                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
-                                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                                @if ($id)                                    
+                                {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
+                                <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                                <div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
                                 @else
                                     <a href="/login"><i class="fa fa-user"></i> Login</a>
                                 @endif
