@@ -78,7 +78,7 @@
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 
                 <li><a href="./blog">Blog</a></li>
-                <li><a href="./contact">Liên hệ</a></li>
+                <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -165,7 +165,7 @@
                             <li class="active"><a href="/shop-grid">Cửa hàng</a></li>
                             
                             <li><a href="./blog">Blog</a></li>
-                            <li><a href="./contact">Liên hệ</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
                 </div>
