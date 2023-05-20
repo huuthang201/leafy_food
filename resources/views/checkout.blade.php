@@ -90,7 +90,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
             </ul>
         </div>
@@ -105,7 +105,7 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
                             </ul>
                         </div>
@@ -406,7 +406,7 @@
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
                             <li>Phone: +65 11.188.888</li>
-                            <li>Email: email_của_nhóm@gm.cc</li>
+                            <li>Email: leafyfood@gmail.com</li>
                         </ul>
                     </div>
                 </div>
