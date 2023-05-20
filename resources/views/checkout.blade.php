@@ -261,6 +261,14 @@
             <div class="checkout__form">
                 <h4>Billing Details</h4>
                 <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
+                    <select name="" id="province" style="display: block !importain">
+                    </select>
+                    <select name="" id="district" style="display: block !importain">
+                        <option  value="">chọn quận</option>
+                    </select>
+                    <select name="" id="ward" style="display: block !importain">
+                        <option   value="">chọn phường</option>
+                    </select>
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">

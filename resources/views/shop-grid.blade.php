@@ -205,12 +205,12 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="/search" method="GET">
                                 <div class="hero__search__categories">
                                     Tất cả danh mục
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
                                 <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
