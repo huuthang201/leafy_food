@@ -75,9 +75,11 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
-        $param['id'] = $user->id;
-        $param['name'] = $user->name;
-        $param['email'] = $user->email;
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
 
         $keyword = $request->keyword;
         $products = Product::where('product_name', 'like', '%' . $keyword . '%')->paginate(12);
