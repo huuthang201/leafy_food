@@ -55,11 +55,12 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                @if ($id)                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
-                                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
-                                @else
-                                    <a href="/login"><i class="fa fa-user"></i> Login</a>
-                                @endif
+                @if (isset($id))                    
+                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
+                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                @else
+                    <a href="/login"><i class="fa fa-user"></i> Login</a>
+                @endif
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -118,7 +119,8 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                @if ($id)                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
+                                @if (isset($id))                    
+                                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
                                     <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
                                 @else
                                     <a href="/login"><i class="fa fa-user"></i> Login</a>

@@ -14,9 +14,12 @@ class ShopGridController extends Controller
     public function index()
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
-        $param['id'] = $user->id;
-        $param['name'] = $user->name;
-        $param['email'] = $user->email;
+        if ($user)
+        {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
         // Fetch all products
         $products = Product::orderBy('created_at', 'desc')->paginate(12);
         $param['products'] = $products;
@@ -31,24 +34,42 @@ class ShopGridController extends Controller
         $lastestProducts = Product::orderBy('created_at', 'desc')->take(6)->get();
         $param['lastestProducts'] = $lastestProducts;
         // Count total products in cart
-        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
-        $param['totalProductsInCart'] = $totalProductsInCart;
+        if ($user)
+        {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart))
+        {
+            $param['totalProductsInCart'] = 0;
+        }
+        else
+        {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
 
         return view('shop-grid', $param);
     }
     public function shop_details(Request $request)
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
-        $param['id'] = $user->id;
-        $param['name'] = $user->name;
-        $param['email'] = $user->email;
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
         $idProduct = $request->id;
         // Categories
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         // Count total products in cart
-        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
-        $param['totalProductsInCart'] = $totalProductsInCart;
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
         // Get product details
         $dataProduct = Product::where('id', $idProduct)->first();
         $param['dataProduct'] = $dataProduct;
@@ -65,9 +86,11 @@ class ShopGridController extends Controller
     public function shop_grid(Request $request)
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
-        $param['id'] = $user->id;
-        $param['name'] = $user->name;
-        $param['email'] = $user->email;
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
         $idCategory = $request->id;
         // Categories info
         $categoryInfo = Category::where('id', $idCategory)->first();
@@ -82,8 +105,14 @@ class ShopGridController extends Controller
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         // Count total products in cart
-        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
-        $param['totalProductsInCart'] = $totalProductsInCart;
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
         // Lastest products
         $lastestProducts = Product::orderBy('created_at', 'desc')->where('category_id', $idCategory)->take(6)->get();
         $param['lastestProducts'] = $lastestProducts;

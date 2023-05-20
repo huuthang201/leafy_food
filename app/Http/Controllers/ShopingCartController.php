@@ -14,11 +14,18 @@ class ShopingCartController extends Controller
     public function index()
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
-        $param['id'] = $user->id;
-        $param['name'] = $user->name;
-        $param['email'] = $user->email;
-
-        $dataCart = Cart::where('user_id', $param['id'])->get();
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
+        if ($user) {
+            $dataCart = Cart::where('user_id', $param['id'])->get();
+        }
+        else
+        {
+            $dataCart = [];
+        }
         // get data product && calculate total price
         $totalPrice = 0;
         foreach ($dataCart as $key => $value) {
@@ -33,13 +40,23 @@ class ShopingCartController extends Controller
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         // Count total products in cart
-        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
-        $param['totalProductsInCart'] = $totalProductsInCart;
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
         return view('shoping-cart', $param);
     }
 
     public function add_cart(Request $request)
     {
+        // check if user is logged in
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }
         $user = Auth::user(); // alternative way to get the currently authenticated user
         $param['user_id'] = $user->id;
         $param['product_id'] = $request->product_id;

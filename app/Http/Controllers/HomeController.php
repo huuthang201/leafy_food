@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -28,9 +28,11 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
-        $param['id'] = $user->id;
-        $param['name'] = $user->name;
-        $param['email'] = $user->email;
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
 
         // Fake data products
         // check product is not empty
@@ -55,8 +57,12 @@ class HomeController extends Controller
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         // Count total products in cart
-        if(isset(Auth::user()->id)){
-            $totalProductsInCart = Cart::where('user_id', Auth::user()->id)->count();
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
             $param['totalProductsInCart'] = $totalProductsInCart;
         }
         return view('index', $param);
@@ -84,8 +90,14 @@ class HomeController extends Controller
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
         // Count total products in cart
-        $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
-        $param['totalProductsInCart'] = $totalProductsInCart;
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
         return view('search', $param);
     }
 }

@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                @if ($id)
+                @if (isset($id))
                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
                     <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
                     <div>
@@ -128,7 +128,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                @if ($id)                                    
+                                @if (isset($id))                                    
                                 {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
                                 <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
                                 <div>

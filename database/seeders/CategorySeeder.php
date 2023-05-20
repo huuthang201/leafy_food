@@ -51,7 +51,7 @@ class CategorySeeder extends Seeder
             ],
             [
                 'category_name' => 'Gia vị',
-                'image' => 'https://www.cet.edu.vn/wp-content/uploads/2022/01/cach-lam-banh-ran-doremon-1.jpg',
+                'image' => 'https://garis.vn/wp-content/uploads/2020/11/gia-vi-.jpg',
                 'description' => 'Gia vị là một loại gia vị truyền thống của người Việt Nam, được làm từ bột gạo, có dạng sợi dài, màu trắng, dùng để chế biến các món ăn như gia vị bò, gia vị riêu, gia vị chả, gia vị thịt nướng, gia vị mọc, gia vị đậu mắm tôm, gia vị cá, gia vị ốc, gia vị chả cá, gia vị chả cá thì là, gia vị chả cá lóc, gia vị chả cá nướng, gia vị chả cá chép, gia vị chả cá lăng, gia vị chả cá nai, gia vị chả cá trê'
             ],
         ];
