@@ -260,11 +260,12 @@
             </div>
             <div class="checkout__form">
                 <h4>Billing Details</h4>
-                <form action="#">
+                <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
                                 <div class="col-lg-6">
+                                    
                                     <div class="checkout__input">
                                         <p>Fist Name<span>*</span></p>
                                         <input type="text">
@@ -340,39 +341,42 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">
-                                <h4>Your Order</h4>
-                                <div class="checkout__order__products">Products <span>Total</span></div>
+                                <h4>Đơn hàng</h4>
+                                <div class="checkout__order__products">Sản phẩm <span>Tổng</span></div>
                                 <ul>
-                                    <li>Vegetable <span>$75.99</span></li>
-                                    <li>Fresh Vegetable <span>$151.99</span></li>
-                                    <li>Organic Bananas <span>$53.99</span></li>
+                                    @foreach ($dataCart as $item)
+                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
+                                    @endforeach
                                 </ul>
-                                <div class="checkout__order__subtotal">Subtotal <span>$750.99</span></div>
-                                <div class="checkout__order__total">Total <span>$750.99</span></div>
+                                <div class="checkout__order__subtotal">Tổng tiền <span>{{ number_format($totalPrice) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Thanh toán <span>{{ number_format($totalPrice) }} VNĐ</span></div>
+                                <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
                                 <div class="checkout__input__checkbox">
                                     <label for="acc-or">
-                                        Create an account?
+                                        In hóa đơn
                                         <input type="checkbox" id="acc-or">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.</p>
-                                <div class="checkout__input__checkbox">
-                                    <label for="payment">
-                                        Check Payment
-                                        <input type="checkbox" id="payment">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="checkout__input__checkbox">
-                                    <label for="paypal">
-                                        Paypal
-                                        <input type="checkbox" id="paypal">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <button type="submit" class="site-btn">PLACE ORDER</button>
+                                @if ($totalPrice > 0)
+                                    <p>Vui lòng chọn các phương thức thanh toán ở dưới.</p>
+                                    <div class="checkout__input__checkbox">
+                                        <label for="momo">
+                                            Momo
+                                            <input type="checkbox" id="momo" name='momo'>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    {{-- <div class="checkout__input__checkbox">
+                                        <label for="paypal">
+                                            Paypal
+                                            <input type="checkbox" id="paypal">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div> --}}
+                                    @csrf
+                                    <button type="submit" class="site-btn">Đặt hàng</button>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -451,6 +455,7 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.nice-select.min.js"></script>
@@ -459,9 +464,7 @@
     <script src="/js/mixitup.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/main.js"></script>
-
- 
-
+    <script src="/js/province.js"></script>
 </body>
 
 </html>

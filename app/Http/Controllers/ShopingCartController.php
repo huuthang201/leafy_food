@@ -19,6 +19,7 @@ class ShopingCartController extends Controller
             $param['name'] = $user->name;
             $param['email'] = $user->email;
         }
+        // Get data cart
         if ($user) {
             $dataCart = Cart::where('user_id', $param['id'])->get();
         }
