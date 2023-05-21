@@ -43,15 +43,7 @@
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
         <div class="humberger__menu__widget">
-            <div class="header__top__right__language">
-                <img src="/img/language.png" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
+
             <div class="header__top__right__auth">
                 @if (isset($id))                    
                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
@@ -118,15 +110,7 @@
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
-                            <div class="header__top__right__language">
-                                <img src="/img/language.png" alt="">
-                                <div>English</div>
-                                <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
-                            </div>
+
                             <div class="header__top__right__auth">
                                 @if (isset($id))                    
                                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
@@ -220,7 +204,7 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
+                                <h5>1900 6868</h5>
                                 <span>Hỗ trợ 24/7</span>
                             </div>
                         </div>
@@ -257,7 +241,7 @@
                     <div class="contact__widget">
                         <span class="icon_phone"></span>
                         <h4>Phone</h4>
-                        <p>+01-3-8888-6868</p>
+                        <p>1900 6868 (miễn phí)</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -288,16 +272,14 @@
 
     <!-- Map Begin -->
     <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
-            height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tab="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.5834650620966!2d106.80255325834823!3d10.870245412974466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2sUniversity%20of%20Information%20Technology%20-%20VNUHCM!5e0!3m2!1sen!2s!4v1684667043920!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="map-inside">
             <i class="icon_pin"></i>
             <div class="inside-widget">
-                <h4>New York</h4>
+                <h4>LeafyFood</h4>
                 <ul>
-                    <li>Phone: +12-345-6789</li>
-                    <li>Add: 16 Creek Ave. Farmingdale, NY</li>
+                    <li>Phone: 1900 6868 (miễn phí)</li>
+                    <li>Add: UIT, Khu phố a, Thủ Đức</li>
                 </ul>
             </div>
         </div>
@@ -310,21 +292,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact__form__title">
-                        <h2>Leave Message</h2>
+                        <h2>Liên hệ với chúng tôi</h2>
                     </div>
                 </div>
             </div>
             <form action="#">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your name">
+                        <input type="text" placeholder="Họ tên">
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Email">
+                        <input type="text" placeholder="Email">
                     </div>
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="Your message"></textarea>
-                        <button type="submit" class="site-btn">SEND MESSAGE</button>
+                        <textarea placeholder="Bạn muốn nhắn gửi gì?"></textarea>
+                        <button type="submit" class="site-btn">Gửi ngay</button>
                     </div>
                 </div>
             </form>
@@ -343,7 +325,7 @@
                         </div>
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
-                            <li>Phone: +65 11.188.888</li>
+                            <li>Phone: 1900 6868</li>
                             <li>Email: leafyfood@gmail.com</li>
                         </ul>
                     </div>

@@ -45,15 +45,7 @@
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
         <div class="humberger__menu__widget">
-            <div class="header__top__right__language">
-                <img src="/img/language.png" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
+
             <div class="header__top__right__auth">
                 @if (isset($id))                    
                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
@@ -109,15 +101,7 @@
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
-                            <div class="header__top__right__language">
-                                <img src="/img/language.png" alt="">
-                                <div>English</div>
-                                <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
-                            </div>
+
                             <div class="header__top__right__auth">
                                 @if (isset($id))                    
                                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
@@ -200,7 +184,7 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
+                                <h5>1900 6868</h5>
                                 <span>Hỗ trợ 24/7</span>
                             </div>
                         </div>
@@ -377,7 +361,7 @@
                         </div>
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
-                            <li>Phone: +65 11.188.888</li>
+                            <li>Phone: 1900 6868</li>
                             <li>Email: leafyfood@gmail.com</li>
                         </ul>
                     </div>
