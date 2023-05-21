@@ -69,7 +69,7 @@
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 
                 <li><a href="./blog">Blog</a></li>
-                <li><a href="./contact">Liên hệ</a></li>
+                <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -81,7 +81,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
             </ul>
         </div>
@@ -96,7 +96,7 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
                             </ul>
                         </div>
@@ -145,7 +145,7 @@
                             <li class="active"><a href="/shop-grid">Cửa hàng</a></li>
                             
                             <li><a href="./blog">Blog</a></li>
-                            <li><a href="./contact">Liên hệ</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -186,12 +186,12 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="/search" method="GET">
                                 <div class="hero__search__categories">
                                     Tất cả danh mục
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
                                 <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
@@ -295,11 +295,11 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">{{ $dataProduct->product_name }}</a>
+                                    aria-selected="true">{{ substr($dataProduct->product_name, 0, 20) . '...' }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
-                                    aria-selected="false">{{ $categoryName->category_name }}</a>
+                                    aria-selected="false">{{ substr($categoryName->category_name, 0, 20) . '...' }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
@@ -309,13 +309,13 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Về {{ $dataProduct->product_name }}</h6>
+                                    <h6>Về {{ substr($dataProduct->product_name, 0, 20) . '...' }}</h6>
                                     <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Về {{ $categoryName->category_name }}</h6>
+                                    <h6>Về {{ substr($categoryName->category_name, 0, 20) . '...' }}</h6>
                                     <p>{{ strip_tags($categoryName->description) }}</p>
                                 </div>
                             </div>
@@ -378,7 +378,7 @@
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
                             <li>Phone: +65 11.188.888</li>
-                            <li>Email: email_của_nhóm@gm.cc</li>
+                            <li>Email: leafyfood@gmail.com</li>
                         </ul>
                     </div>
                 </div>

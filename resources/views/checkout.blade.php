@@ -78,7 +78,7 @@
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 
                 <li><a href="./blog">Blog</a></li>
-                <li><a href="./contact">Liên hệ</a></li>
+                <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -90,7 +90,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
             </ul>
         </div>
@@ -105,7 +105,7 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
                             </ul>
                         </div>
@@ -165,7 +165,7 @@
                             <li class="active"><a href="/shop-grid">Cửa hàng</a></li>
                             
                             <li><a href="./blog">Blog</a></li>
-                            <li><a href="./contact">Liên hệ</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -261,6 +261,14 @@
             <div class="checkout__form">
                 <h4>Billing Details</h4>
                 <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
+                    <select name="" id="province" style="display: block !importain">
+                    </select>
+                    <select name="" id="district" style="display: block !importain">
+                        <option  value="">chọn quận</option>
+                    </select>
+                    <select name="" id="ward" style="display: block !importain">
+                        <option   value="">chọn phường</option>
+                    </select>
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
@@ -398,7 +406,7 @@
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
                             <li>Phone: +65 11.188.888</li>
-                            <li>Email: email_của_nhóm@gm.cc</li>
+                            <li>Email: leafyfood@gmail.com</li>
                         </ul>
                     </div>
                 </div>

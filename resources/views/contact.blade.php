@@ -78,7 +78,7 @@
                 <li><a href="./shop-grid">Cửa hàng</a></li>
                 
                 <li><a href="./blog">Blog</a></li>
-                <li><a href="./contact">Liên hệ</a></li>
+                <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -90,7 +90,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
             </ul>
         </div>
@@ -105,7 +105,7 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> email_của_nhóm@gm.cc</li>
+                                <li><i class="fa fa-envelope"></i> leafyfood@gmail.com</li>
                                 <li>Giao hàng miễn phí cho tất cả đơn hàng 300.000 đ</li>
                             </ul>
                         </div>
@@ -165,7 +165,7 @@
                             <li><a href="./shop-grid">Cửa hàng</a></li>
                             
                             <li><a href="./blog">Blog</a></li>
-                            <li class="active"><a href="./contact">Contact</a></li>
+                            <li class="active"><a href="/contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -206,12 +206,12 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="/search" method="GET">
                                 <div class="hero__search__categories">
                                     Tất cả danh mục
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
                                 <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
@@ -264,7 +264,7 @@
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
                         <h4>Address</h4>
-                        <p>60-49 Road 11378 New York</p>
+                        <p>UIT, Khu phố a, Thủ Đức</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -278,7 +278,7 @@
                     <div class="contact__widget">
                         <span class="icon_mail_alt"></span>
                         <h4>Email</h4>
-                        <p>email_của_nhóm@gm.cc</p>
+                        <p>leafyfood@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -344,7 +344,7 @@
                         <ul>
                             <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
                             <li>Phone: +65 11.188.888</li>
-                            <li>Email: email_của_nhóm@gm.cc</li>
+                            <li>Email: leafyfood@gmail.com</li>
                         </ul>
                     </div>
                 </div>
