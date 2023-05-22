@@ -74,7 +74,7 @@ class ShopGridController extends Controller
         $dataProduct = Product::where('id', $idProduct)->first();
         $param['dataProduct'] = $dataProduct;
         // nl2br() function inserts HTML line breaks (<br> or <br />) in front of each newline in a string.
-        $param['dataProduct']->description = nl2br($param['dataProduct']->description);
+        $param['dataProduct']->description = nl2br($param['dataProduct']->description, true);
         // Category name of product
         $categoryName = Category::where('id', $dataProduct->category_id)->first();
         $param['categoryName'] = $categoryName;
