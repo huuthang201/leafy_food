@@ -368,7 +368,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
                     <div class="footer__widget">
-                        <h6>Useful Links</h6>
+                        <h6>Truy cập nhanh</h6>
                         <ul>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">About Our Shop</a></li>
