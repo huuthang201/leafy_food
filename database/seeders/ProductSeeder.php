@@ -15,268 +15,1814 @@ class ProductSeeder extends Seeder
     {
         $data = [
             [
-            'product_name' => 'Bún ngô eat clean, bún khô gia truyền',
+            'product_name' => 'Trà giải độc thận (Mùi tây khô)',
             'category_id' => 1,
-            'price' => 43000,
-            'description' => 'Bún ngô eat clean, bún khô gia truyền',
+            'price' => 25000,
+            'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
+            'description' => '<p>
+                            <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 6 tháng. Bảo quản nơi&nbsp;</span>
+                            <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Dùng hàng ngày như trà thảo dược</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Cho 2 g (khoảng 1 muỗng canh) mùi tây vào 100ml nước sôi; để ngấm trong 10 phút, lọc lấy nước uống</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">• Mỗi ngày uống 2 lần, sau 2 tuần nên nghỉ 1 tuần</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">• Trường hợp cần thải độc thận tích cực hơn, có thể uống tối đa 4 lần/ngày trong 2 tuần; sau đó nghỉ 1 tuần rồi trở lại uống 2 lần/ngày.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Cảnh báo: Phụ nữ có thai, cho con bú, trẻ nhỏ và người mẫn cảm với các thành phần của sản phẩm cân nhắc trước khi sử dụng.</span>
+                            </p>',
             'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/large/100/458/914/products/bun-ngo-2-1671982030102.jpg?v=1671982090000',
             'status' => 1,
+            'number' => 0,
+            'unit' => 'g'
             ],
             [
-            'product_name' => 'Bún gạo ngũ sắc eat clean, healthy 1kg',
+            'product_name' => 'Trà giải độc thận (Mùi tây khô)',
             'category_id' => 1,
-            'price' => 78000,
-            'description' => 'Ngoài những danh lam thắng cảnh đắm say lòng người, Cao Bằng còn nổi tiếng trứ danh với Bún khô Ngũ sắc
-            Mỗi loại bún khô được chế biến từ một nguyên liệu có màu đặc trưng, ví dụ bún ngô làm nguyên liệu ngô tẻ có màu vàng. Ngoài ra còn có bún làm từ gạo lứt đỏ, lá chùm ngây màu xanh lá, hoa đậu biếc màu xanh trời, lá cẩm màu tím, khoai lang tím, hay quả gấc hoặc bún trộn từ các màu trên.
-            Với nguyên liệu 100% từ tự nhiên, không phẩm màu hay chất bảo quản, Bún ngũ sắc Cao Bằng được phân phối bởi Tây Nguyên Food - Việt Nam tự tin mang đến cho bạn trải nghiệm tốt nhất.
-            Vì sản xuất theo phương pháp thủ công và rau củ tự nhiên nên Bún ngũ sắc Cao Bằng rất rốt cho sức khoẻ và cơ thể.
-            Tây Nguyên Food - Việt Nam',
-            'quantity' => 110,
-            'image' => 'https://bizweb.dktcdn.net/thumb/large/100/458/914/products/bun-ngu-sac-3-1671980512410.jpg?v=1671980546000',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Bún gạo lứt đỏ',
-            'category_id' => 1,
-            'price' => 77000,
-            'description' => '<p><br>
-                1: Kiểm soát tốt cân nặng, tránh béo phì5 CÔNG DỤNG TUYỆT VỜI NHẤT CỦA BÚN GẠO LỨT ĐỎ&nbsp;<br>
-                2: Cực tốt cho người bị tiểu đường<br>
-                3: Ngăn ngừa các bệnh về tim mạch<br>
-                4: Hỗ trợ tiêu hóa tốt, ổn định đường ruột<br>
-                5: Bổ sung chất cho cho xương<br>
-                Vậy, bạn đã thử qua Bún gạo lứt đỏ nguyên chất 100% nhà Tây Nguyên Food chưa?&nbsp;<br>
-                Cam kết 100% nguyên chất, không chất bảo quản</p>',
-            'quantity' => 90,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/bun-gao-lut-do-2-1671980785810.jpg?v=1671980792297',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Mỳ chũ gạo lứt eat clean Tây Nguyên Food',
-            'category_id' => 2,
             'price' => 99000,
-            'description' => '<p>Nói đến mỳ chũ, chắc chắn nhiều người sẽ không còn xa lạ. Vì nó góp một phần vào bữa ăn của mỗi gia đình Việt. Trong đó, loại mỳ được đánh giá chất lượng ngon, có độ dai và được nhiều người thích nhất là mỳ chũ Lục Ngạn. Đây là loại mỳ nổi tiếng, chính hiệu được người Bắc Giang tự tay sản xuất ra. Để tạo ra những sợi mỳ vừa dai,vừa ngọt bùi, người làng nghề phải tiến hành rất nhiều công đoạn rất công phu. Sợi mỳ dai ngon và ngọt bùi có thể dùng làm phở, hủ tiếu, phở xào hoặc nhúng để ăn lẩu… sợi mì không bị nát! Mỳ chũ nhà làm trực tiếp nên mọi người yên tâm về chất lượng nhé. Sợi mì trắng đục chứ không trắng trong như hàng ngoài chợ bán!<br>
-                Mỳ dành cho người ăn kiêng, giảm béo, ăn theo chế độ healthy ko tinh bột xấu</p>
-            <p>Mỳ chũ có thể kết hợp với nhiều nguyên liệu như xào thịt bò, xào cần tây, xào măng tây, &nbsp;nấu gà, để có được những món ăn hấp dẫn. Thưởng thức món ăn dân giã này bạn sẽ thấy khác hẳn với vị bún, phở được làm theo cách công nghiệp. Sợi mỳ dai, không tạo cảm giác khó chịu đối với người bị dạy dày. Đặc biệt lựa chọn mỳ chũ cho trẻ nhỏ rất an toàn.&nbsp;</p>',
-            'quantity' => 99,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/my-chu-lut-5-1671983815684.jpg?v=1671983822930',
+            'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
+            'description' => '<p>
+                            <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 6 tháng. Bảo quản nơi&nbsp;</span>
+                            <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Dùng hàng ngày như trà thảo dược</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Cho 2 g (khoảng 1 muỗng canh) mùi tây vào 100ml nước sôi; để ngấm trong 10 phút, lọc lấy nước uống</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">• Mỗi ngày uống 2 lần, sau 2 tuần nên nghỉ 1 tuần</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">• Trường hợp cần thải độc thận tích cực hơn, có thể uống tối đa 4 lần/ngày trong 2 tuần; sau đó nghỉ 1 tuần rồi trở lại uống 2 lần/ngày.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Cảnh báo: Phụ nữ có thai, cho con bú, trẻ nhỏ và người mẫn cảm với các thành phần của sản phẩm cân nhắc trước khi sử dụng.</span>
+                            </p>',
+            'quantity' => 24,
             'status' => 1,
+            'number' => 50,
+            'unit' => 'g'
             ],
             [
-            'product_name' => 'Mỳ chũ rau củ eat clean 1kg',
-            'category_id' => 2,
-            'price' => 106000,
-            'description' => '<p>Nói đến mỳ chũ, chắc chắn nhiều người sẽ không còn xa lạ. Vì nó góp một phần vào bữa ăn của mỗi gia đình Việt. Trong đó, loại mỳ được đánh giá chất lượng ngon, có độ dai và được nhiều người thích nhất là mỳ chũ Lục Ngạn. Đây là loại mỳ nổi tiếng, chính hiệu được người Bắc Giang tự tay sản xuất ra. Để tạo ra những sợi mỳ vừa dai,vừa ngọt bùi, người làng nghề phải tiến hành rất nhiều công đoạn rất công phu. Sợi mỳ dai ngon và ngọt bùi có thể dùng làm phở, hủ tiếu, phở xào hoặc nhúng để ăn lẩu… sợi mì không bị nát! Mỳ chũ nhà làm trực tiếp nên mọi người yên tâm về chất lượng nhé. Sợi mì trắng đục chứ không trắng trong như hàng ngoài chợ bán!<br>
-                Mỳ dành cho người ăn eat clean, ăn theo chế độ healthy ko tinh bột xấu</p>
-            <p>Mỳ chũ có thể kết hợp với nhiều nguyên liệu như xào thịt bò, xào cần tây, xào măng tây, &nbsp;nấu gà, để có được những món ăn hấp dẫn. Thưởng thức món ăn dân giã này bạn sẽ thấy khác hẳn với vị bún, phở được làm theo cách công nghiệp. Sợi mỳ dai, không tạo cảm giác khó chịu đối với người bị dạy dày. Đặc biệt lựa chọn mỳ chũ cho trẻ nhỏ rất an toàn.&nbsp;</p>',
-            'quantity' => 99,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/my-chu-rau-cu-3-1671983370506.jpg?v=1671983778900',
+            'product_name' => 'Trà giải độc thận (Mùi tây khô)',
+            'category_id' => 1,
+            'price' => 179000,
+            'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
+            'description' => '<p>
+                            <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 6 tháng. Bảo quản nơi&nbsp;</span>
+                            <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Dùng hàng ngày như trà thảo dược</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Cho 2 g (khoảng 1 muỗng canh) mùi tây vào 100ml nước sôi; để ngấm trong 10 phút, lọc lấy nước uống</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">• Mỗi ngày uống 2 lần, sau 2 tuần nên nghỉ 1 tuần</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">• Trường hợp cần thải độc thận tích cực hơn, có thể uống tối đa 4 lần/ngày trong 2 tuần; sau đó nghỉ 1 tuần rồi trở lại uống 2 lần/ngày.</span>
+                            </p>
+                            <p>
+                            <span style="background-color:transparent;color:#000000;">Cảnh báo: Phụ nữ có thai, cho con bú, trẻ nhỏ và người mẫn cảm với các thành phần của sản phẩm cân nhắc trước khi sử dụng.</span>
+                            </p>',
+            'quantity' => 15,
             'status' => 1,
-            ],
-
-            [
-            'product_name' => 'Gạo lứt tím than',
-            'category_id' => 3,
-            'price' => 59900,
-            'description' => '<p>“Ăn gạo lứt khô và ngán, không ngọt vị như cơm thường làm dễ nản”<br>
-                Đây có phải thường là lý do chính cản trở mọi người trong việc duy trì lối ăn uống lành mạnh giúp trẻ da, đẹp dáng, tăng sức đề kháng cho cơ thể?<br>
-                Vậy mời bạn thử qua Gạo lứt tím than Sóc Trăng nhà Tây Nguyên Food - Việt Nam.<br>
-                Với đặc tính hạt gạo dài - dẻo - thơm ngon tuyệt đối.&nbsp;<br>
-                🍃 Bạn có thể nấu ngay mà không cần ngâm ạ!<br>
-                Tỉ lệ nước gấp 1.5 lần gạo<br>
-                Lưu ý: khi bạn vo gạo mà thấy sắc tố tím ra nước thì đừng lo, đấy là sắc tố tự nhiên của gạo ạ 🌱&nbsp;<br>
-                Các bạn để ý những loại thực phẩm mà có màu sắc đặc biệt luôn mang lại nhiều dinh dưỡng hơn so với thông thường ấy ạ ^^&nbsp;<br>
-                Gạo lứt tím than Sóc Trăng:&nbsp;<br>
-                Made in Việt Nam<br>
-                Thông tin dinh dưỡng/100Gr<br>
-                + Calories: 125<br>
-                + Fat: 1<br>
-                + Carbs: 26<br>
-                + Protein: 2.9<br>
-                - Tác dụng: tốt cho người tiểu đường, thừa cân, tạo cảm giác no lâu hơn, hỗ trợ cho việc kiểm soát cholesterol<br>
-                * Lưu Ý: Nên sử dụng sản phẩm trong 2 tháng để sản phẩm được tốt nhất</p>',
-            'quantity' => 99,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/gao-tim-than-soc-trang-4-1671976273287.jpg?v=1671976852143',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Gạo lứt dẻo Điện Biên healthy',
-            'category_id' => 3,
-            'price' => 59900,
-            'description' => '<p>Gạo lứt là một trong những loại ngũ cốc lành mạnh và đem lại nhiều lợi ích cho sức khỏe. Bổ sung gạo lứt thường xuyên giúp cải thiện sức khỏe tim mạch, kiểm soát cân nặng, nuôi dưỡng làn da từ sâu bên trong. Hiện nay, gạo lứt thường được thêm vào khẩu phần ăn vì nó giàu chất dinh dưỡng nhưng lại cung cấp ít năng lượng. So với gạo trắng và lúa mì, gạo lứt cung cấp ít calo hơn nhưng nhiều chất xơ, vitamin và khoáng chất hơn. Những thành phần này sẽ giúp bạn no lâu hơn và giảm lượng thức ăn nạp vào cơ thể mỗi ngày.</p>
-            <p>Ngoài ra, gạo lứt chứa hàm lượng đường, chất béo và tinh bột thấp nên có thể làm giảm sự tích tụ của các mô mỡ ở vùng bụng và hỗ trợ quá trình giảm cân đáng kể. Ngoài ra, gạo lứt không chứa gluten - một loại protein được tìm thấy trong nhiều loại ngũ cốc khác như lúa mì và lúa mạch.</p>
-            <p>Ăn gạo lứt khô và ngán, không ngọt vị như cơm thường làm dễ nản”<br>
-                Đây có phải thường là lý do chính cản trở mọi người trong việc duy trì lối ăn uống lành mạnh giúp trẻ da, đẹp dáng, tăng sức đề kháng cho cơ thể?<br>
-                Vậy mời bạn thử qua Gạo lứt dẻo Điện Biên nhà Tây Nguyên Food - Việt Nam.<br>
-                Với đặc tính hạt gạo dài - dẻo - thơm ngon tuyệt đối.&nbsp;<br>
-                Bạn có thể nấu ngay mà không cần ngâm ạ!</p>
-            <p>Tỉ lệ nước gấp 1.5 lần gạo<br>Lưu ý: khi bạn vo gạo mà thấy ra màu nước thì đừng lo, đấy là sắc tố tự nhiên của gạo ạ&nbsp;<br>Các bạn để ý những loại thực phẩm mà có màu sắc đặc biệt luôn mang lại nhiều dinh dưỡng hơn so với thông thường ấy ạ ^^&nbsp;</p>',
-            'quantity' => 120,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/gao-lut-deo-dien-bien-1-1671976795254.jpg?v=1671977601847',
-            'status' => 1,
+            'number' => 100,
+            'unit' => 'g'   
             ],
             [
-            'product_name' => 'Bánh canh ngũ sắc, thực phẩm eat clean, bún khô healthy',
-            'category_id' => 4,
-            'price' => 112000,
-            'description' => '<p>Eat clean là cách tiếp cận ăn uống tập trung vào thực phẩm tươi sạch, càng tinh khiết càng tốt. Khi ăn sạch, bạn ăn trái cây, rau xanh, thực phẩm giàu protein với chất béo tốt và ngũ cốc nguyên hạt như gạo lứt, yến mạch… và hạn chế đồ chiên rán, chế biến sẵn, nhiều gia vị và nhiều dầu mỡ.</p>
-            <p>Bánh canh là tinh hoa của ẩm thực Việt nhưng lại chứa lượng mỡ trong nước dùng khá nhiều. Vậy thì làm sao để ta có thể vừa eat clean vừa có thể thưởng thức được tinh hoa của dân tộc bây giờ?&nbsp;</p>
-            <p>Nghe có vẻ là một câu hỏi khó, tuy nhiên khi bạn đến với Tây Nguyên Food, các bạn không cần phải lo lắng làm sao để vừa ăn có thể ăn ngon vừa có thể eat clean, Tây Nguyên Food có thể đảm bảo với các bạn rằng, bánh canh ngũ sắc&nbsp;ở đây vẫn giữ được tinh túy của món bánh canh truyền thống, đồng thời lượng calo lại không cao tí nào, vô cùng phù hợp với dân eat clean hay các bạn đang giảm cân nha.</p>
-            <p>5 CÔNG DỤNG TUYỆT VỜI NHẤT CỦA BÁNH CANH<br> 1: Kiểm soát tốt cân nặng, tránh béo phì<br> 2: Cực tốt cho người bị tiểu đường<br> 3: Ngăn ngừa các bệnh về tim mạch<br> 4: Hỗ trợ tiêu hóa tốt, ổn định đường ruột<br> 5: Bổ sung chất cho cho xương<br> Cam kết 100% nguyên chất, không chất bảo quản&nbsp;</p>',
-            'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/banh-canh-ngu-sac-3-1671989026574.jpg?v=1671989110820',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Bánh canh gạo lứt, thực phẩm eat clean, bánh canh healthy',
-            'category_id' => 4,
-            'price' => 112000,
-            'description' => '<p>Eat clean là cách tiếp cận ăn uống tập trung vào thực phẩm tươi sạch, càng tinh khiết càng tốt. Khi ăn sạch, bạn ăn trái cây, rau xanh, thực phẩm giàu protein với chất béo tốt và ngũ cốc nguyên hạt như gạo lứt, yến mạch… và hạn chế đồ chiên rán, chế biến sẵn, nhiều gia vị và nhiều dầu mỡ.</p>
-            <p>Bánh canh là tinh hoa của ẩm thực Việt nhưng lại chứa lượng mỡ trong nước dùng khá nhiều. Vậy thì làm sao để ta có thể vừa eat clean vừa có thể thưởng thức được tinh hoa của dân tộc bây giờ?&nbsp;</p>
-            <p>Nghe có vẻ là một câu hỏi khó, tuy nhiên khi bạn đến với Tây Nguyên Food, các bạn không cần phải lo lắng làm sao để vừa ăn có thể ăn ngon vừa có thể eat clean, Tây Nguyên Food có thể đảm bảo với các bạn rằng, bánh canh ngũ sắc&nbsp;ở đây vẫn giữ được tinh túy của món bánh canh truyền thống, đồng thời lượng calo lại không cao tí nào, vô cùng phù hợp với dân eat clean hay các bạn đang giảm cân nha.</p>
-            <p>5 CÔNG DỤNG TUYỆT VỜI NHẤT CỦA BÁNH CANH<br> 1: Kiểm soát tốt cân nặng, tránh béo phì<br> 2: Cực tốt cho người bị tiểu đường<br> 3: Ngăn ngừa các bệnh về tim mạch<br> 4: Hỗ trợ tiêu hóa tốt, ổn định đường ruột<br> 5: Bổ sung chất cho cho xương<br> Cam kết 100% nguyên chất, không chất bảo quản&nbsp;</p>',
-            'quantity' => 110,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/banh-canh-gao-lut-1-1671984421710.jpg?v=1671984550897',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Nui ống ngũ sắc, đồ ăn eat clean cho cuộc sống healthy',
-            'category_id' => 5,
-            'price' => 105000,
-            'description' => '<p>Nui được làm chủ yếu từ: bột mì, bột gạo, trứng, nước và một số rau củ tạo màu như: chùm ngây, đậu biếc, gấc, ngô, cẩm. Sau khi trộn bột với trứng và nước xong, người ta sẽ cho thêm phụ gia vào để tạo thành khối bột đồng nhất. Cuối cùng đem đi ép khuôn và sấy khô để tạo thành nui.</p>
-            <p>Khác với những sợi mì dài quen thuộc của Việt Nam, mì có nhiều hình dạng phong phú và độc đáo như hình tròn, xoắn, ống tròn, ống lớn, hình ngôi sao, con bướm, ... với nhiều màu sắc lộng lẫy. Trong loại nui ống ngũ sắc này có chứa một lượng lớn tinh bột, protein, canxi, sắt, chất xơ,…cùng một số vitamin có trong gạo tạo nên hàm lượng chất dinh dưỡng của nó sẽ cao hơn so với các loại nui thông thường khác.</p>
-            <p>Ngoài ra, người ta còn sản xuất ra món mì xào đậm đà, hương vị độc đáo. Món ăn vặt này được trẻ em cũng như người lớn yêu thích.</p>
-            <p>Tuy nui ống ngon là vậy, nhưng nếu không biết chế biến đúng cách với nguồn nguyễn liệu phù hợp, chúng ta dễ dàng kiểm soát được cân nặng của mình. Nhưng các bạn đừng lo lắng, chuyện gì khó đã có Tây Nguyễn Food lo, đến với Tây Nguyên Food, các bạn sẽ có nui ống đặc biệt được làm từ 100% tự nhiên, vừa ngon miệng lại vừa eat clean đúng không nào.</p>
-            <p>Một vài lưu ý khi lựa chọn mua nui gạo dinh dưỡng<br>Sản phẩm này chỉ thực sự tốt khi bạn mua đúng loại nui gạo rau củ chính hãng, vì trên thị trường hiên nay có rất nhiều &nbsp;đơn vị sử dụng màu hóa chất để tạo màu cho sản phẩm và gắn mác sản phẩm tự nhiên. Và đương nhiên giá thành sẽ rẻ hơn rất nhiều so với sản phẩm chính hãng, chính vì thế bạn phải thật tinh ý và lựa chọn điểm cung cấp uy tín để gửi gắm niềm tin.</p>',
-            'quantity' => 200,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/nui-ong-ngu-sac-1-1671985503404.jpg?v=1671985509867',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Nui ống gạo lứt, nui hữu cơ eat clean',
-            'category_id' => 5,
-            'price' => 105000,
-            'description' => '<p>Nui được làm chủ yếu từ: bột mì, bột gạo, trứng, nước và một số rau củ tạo màu như: chùm ngây, đậu biếc, gấc, ngô, cẩm. Sau khi trộn bột với trứng và nước xong, người ta sẽ cho thêm phụ gia vào để tạo thành khối bột đồng nhất. Cuối cùng đem đi ép khuôn và sấy khô để tạo thành nui.</p>
-            <p>Khác với những sợi mì dài quen thuộc của Việt Nam, mì có nhiều hình dạng phong phú và độc đáo như hình tròn, xoắn, ống tròn, ống lớn, hình ngôi sao, con bướm, ... với nhiều màu sắc lộng lẫy. Trong loại nui ống ngũ sắc này có chứa một lượng lớn tinh bột, protein, canxi, sắt, chất xơ,…cùng một số vitamin có trong gạo tạo nên hàm lượng chất dinh dưỡng của nó sẽ cao hơn so với các loại nui thông thường khác.</p>
-            <p>Ngoài ra, người ta còn sản xuất ra món mì xào đậm đà, hương vị độc đáo. Món ăn vặt này được trẻ em cũng như người lớn yêu thích.</p>
-            <p>Tuy nui ống ngon là vậy, nhưng nếu không biết chế biến đúng cách với nguồn nguyễn liệu phù hợp, chúng ta dễ dàng kiểm soát được cân nặng của mình. Nhưng các bạn đừng lo lắng, chuyện gì khó đã có Tây Nguyễn Food lo, đến với Tây Nguyên Food, các bạn sẽ có nui ống đặc biệt được làm từ 100% tự nhiên, vừa ngon miệng lại vừa eat clean đúng không nào.</p>
-            <p>Một vài lưu ý khi lựa chọn mua nui gạo dinh dưỡng<br>Sản phẩm này chỉ thực sự tốt khi bạn mua đúng loại nui gạo rau củ chính hãng, vì trên thị trường hiên nay có rất nhiều &nbsp;đơn vị sử dụng màu hóa chất để tạo màu cho sản phẩm và gắn mác sản phẩm tự nhiên. Và đương nhiên giá thành sẽ rẻ hơn rất nhiều so với sản phẩm chính hãng, chính vì thế bạn phải thật tinh ý và lựa chọn điểm cung cấp uy tín để gửi gắm niềm tin.</p>',
-            'quantity' => 120,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/nui-ong-gao-lut-2-1671984941563.jpg?v=1671984948467',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Ngũ cốc Granola siêu hạt, mật ong nguyên chất 100%',
-            'category_id' => 6,
-            'price' => 118000,
-            'description' => '<p><strong>GRANOLA</strong> - trên thị trường rất nhiều granola giá rẽ - Tại sao tây nguyên food không chạy theo xu hướng giá rẽ mà vẫn theo châm ngôn “Ăn sạch – sống khoẻ”?</p>
-            <p><strong>Granola</strong> ngũ cốc siêu hạt dinh dưỡng vị ngọt tự nhiên từ mật ong chỉ 10% yến mạch.</p>
-            <p>Với châm ngôn “Ăn sạch – sống khoẻ”, giúp người tiêu dùng có những bữa ăn lành mạnh, khoa học và đầy đủ dưỡng chất, tây nguyên food luôn nỗ lực, mang những dòng sản phẩm ưu việt và hữu ích nhất đến với khách hàng. Các sản phẩm tại tây nguyên food đều được kiểm định chất lượng, chứng minh nguồn gốc xuất xứ rõ ràng, giúp khách hàng an tâm khi sử dụng.</p>
-            <p><strong>Thông tin sản phẩm:</strong></p>
-            <p>- Thương hiệu: Tây Nguyên Food</p>
-            <p>- Xuất xứ: Việt Nam</p>
-            <p>- Đạt tiêu chuẩn vệ sinh ATTP Số: 63/2022/NNPTNT-DL</p>
-            <p>- Quy cách đóng gói: hộp 500Gr</p>
-            <p>- Ngày sản xuất: in trên bao bì</p>
-            <p>- Hạn sử dụng: 6 tháng kể từ ngày sản xuất</p>
-            <p>- Vị truyền thống sấy mật ong nguyên chất.</p>
-            <p><strong>Thành phần:</strong> Hạnh nhân, óc chó vàng, óc chó đỏ, macca, hạt điều, bí xanh, yến mạch, nho khô, mật ong rừng, hoa quả khô theo mùa (nam việt quất, dừa sấy khô nguyên vị, chanh dây sấy dẻo, hồng táo giòn, dâu tây…)</p>',
-            'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/granola-3-1671987006548.jpg?v=1681179931617',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Yến mạch Úc tươi siêu ngon eatclean & healthy',
-            'category_id' => 6,
-            'price' => 42000,
-            'description' => '<p>Ngũ cốc Yến Mạch được dùng rộng rãi ở Châu Âu, vì rất ngon và bổ dưỡng khi quấy với bột, với sữa, trứng, nước xương hoặc thịt (tôm, lươn, …) bằm cho trẻ em từ 5 tháng tuổi trở lên, người ốm, người cao tuổi; bởi vậy Yến Mạch được sử dụng thường xuyên trong các bữa ăn của nhà trẻ, trường học, bệnh viện hay ở các gia đình có em bé, người già.</p>
-            <p>Thực phẩm ăn kiêng:<br>
-                Ngũ cốcc yến mạch có thể chế biến rất nhiều món ăn ăn kiêng ngon miệng như bánh nướng, bánh kếp, bánh mỳ nướng,… Bạn sẽ hấp thụ được lượng chất xơ gấp đôi so với hàm lượng mà các chất bột khác mang lại, nhưng lại chứa rất ít calo.<br>
-                – Tăng khả năng vận động của cơ bắp<br>
-                – Chống ung thư</p>
-            <p>Ăn sáng với ngũ cốc yến mạch mỗi ngày sẽ giúp phòng ngừa nguy cơ ung thư vú. Đặc biệt đối với phụ nữ ở thời kỳ tiền mãn kinh, có hiện tượng thừa chất xơ từ các loại ngũ cốc, thì yến mạch sẽ giúp giảm nguy cơ tăng lượng chất xơ trong cơ thể, điều hòa nội tiết.</p>
-            <p>Chăm sóc sắc đẹp:<br>
-                Theo bác sĩ chuyên khoa da liễu Amy Wechsler đến từ New York, làm mặt nạ đắp mặt hoặc rửa mặt hàng ngày bằng bột yến mạch có công dụng tẩy các chất bẩn nơi lỗ chân lông trên mặt, nhờ có dưỡng chất saponin chống lão hóa hiệu quả và làm mịn da.<br>
-                Pha 1/2 cốc nhỏ yến mạch với 1/2 chén nước nóng, 1/4 chén mật ong, quấy đều, để nguội và thoa đắp một lớp mỏng, đều lên mặt. Để mặt nạ 10 phút rồi rửa sạch bằng nước mát.</p>
-            ',
-            'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/yen-mach-1-1671988415306.jpg?v=1671988427003',
-            'status' => 1,
-            ],
-            [
-            'product_name' => 'Thanh gạo lứt siêu hạt',
-            'category_id' => 7,
-            'price' => 89000,
-            'description' => '<p>Việt Nam cũng có món bánh ăn kiêng, ăn vặt healthy siêu ngon là thanh gạo lứt chứ đâu phải chỉ nước ngoài...<br>
-                Gạo lứt của nước mình tốt thì khỏi bàn rồi, bao nhiêu công năng, cho bao nhiêu đối tượng chắc mọi người cũng biết, đặc biệt cho người tiểu đường, người ăn kiêng.<br>
-                Nay Tây Nguyên Food làm một phiên bản mới hơn, tiện lợi hơn, ngon hơn mà vẫn đảm bảo Healthy, nhiều dinh dưỡng là Thanh Gạo lứt chà bông và thanh gạo lứt mix siêu hạt rong biển<br>
-                Thanh Gạo lứt chà bông ăn kiêng của Tây Nguyên Food không dừng lại ở việc dùng những nguyên liệu tốt, healthy cho sức khoẻ, mà kết hợp nhiều giá trị dinh dưỡng thiết yếu khác và tạo cảm giác ngon miệng.<br>
-                Thành phần:<br>
-                - Gạo lứt<br>
-                - Hạt: hạt hạnh nhân, hạt macca, hạt điều, hạt bí xanh, hạt chia, hạt hướng dương và nho khô<br>
-                - Mạch nha<br>
-                - Chà bông hoặc rong biển<br>
-                - KHÔNG ĐƯỜNG<br>
-            <p>',
-                'quantity' => 100,
-                'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/thanh-lut-cha-bong-1-1671987620968.jpg?v=1671987643813',
+                'product_name' => 'Mật ong lên men phục hồi',
+                'category_id' => 2,
+                'price' => 49000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 23,
                 'status' => 1,
-                ],
-                [
-                'product_name' => 'Đường Ăn Kiêng Mivolis 1200V Xuất Xứ Đức',
-                'category_id' => 8,
-                'price' => 96000,
-                'description' => '
-            <p>ĐƯỜNG ĂN KIÊNG MIVOLIS 1200 viên</p>
-            <p>Xuất xứ: Đức</p>
-            <p>Hạn dùng: 2 năm từ ngày sản xuất</p>
-            <p>Viên đường ăn kiêng Mivolis Substoff có vị ngọt đậm đà như hương vị tự nhiên, đảm bảo được khẩu vị và cảm quan của người sử dụng. Hơn thế, nó chỉ chứa một lượng calo rất thấp. Vì vậy, bạn không cần quá lo lắng về vấn đề tích tụ mỡ thừa cũng như tăng đường huyết sau khi sử dụng.</p>
-            <p>Mivolis Substoff rất nịnh đồ uống, đặc biệt là cafe và cacao. Sản phẩm có thể được sử dụng để làm ngọt đồ uống nóng và lạnh.</p>
-            <p>1 viên đường ăn kiêng = 1 thìa cà phê đường (khoảng 4,4 g)</p>
-            <p>1200 viên = khoảng 5,28 kg đường</p>',
-            'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/duong-mivolis-1-1671990381462.jpg?v=1671990386537',
-            'status' => 1,
+                'number' => 50,
+                'unit' => 'ml'   
             ],
             [
-            'product_name' => 'Đường ăn kiêng Splenda cho người bệnh tiểu đường, ăn kiêng, eat clean',
-            'category_id' => 8,
-            'price' => 59000,
-            'description' => '<p>ĐƯỜNG SPLENDA Xuất xứ mỹ</p>
-            <p>50 gói tách lẻ từ hộp 1.200 gói nên mua lẻ sẽ ko có hộp nhé chỉ đóng túi zip như hình</p>
-            <p>Thành phần: 100% đường splenda</p>
-            <p>Xuất xứ: Mỹ</p>
-            <p>Hạn dùng: 2 năm từ ngày sản xuất&nbsp;trên bao bì</p>
-            <p>Đường ăn kiêng Splenda dành cho người tiểu đường, ăn kiêng, Ăn Eat Clean, béo phì và chị em ăn theo chế độ Das, low carb, Keto....Chị em mang thai muốn kiêng do tiểu đường thai kỳ cũng nên tham khảo nhé ạ.</p>
-            <p>Xuất xứ: Mỹ (USA)</p>
-            <p>Ai đang muốn giảm cân hay mắc bệnh tiểu đường thì đường ăn kiêng là 1 trong những thứ ko thể thiếu trong tủ đồ gia vị của mình ạ.</p>
-            <p>Với hàm lượng dinh dưỡng và đường là 0% thì chúng ta thoải mái ăn mà ko sợ bị nhiễm đường vào cơ thể. Đường ăn kiêng ko chứa năng lượng và giảm tới 90% calor khi sử dụng.</p>
-            <p>Đường ăn kiêng có thể dùng để nấu các món ăn thay đường kính hoặc mì chính, làm các món bánh yêu thích, hay các loại đồ uống.</p>
-            <p>Nó ngọt giống như đường kính, chỉ cần 1 lượng nhỏ đã thay đổi hoàn toàn vị giác của mình</p>
-            <p>Gói nhỏ tiện dụng 1g/ gói.</p>',
-            'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/duong-splenda-1-1671990209477.jpg?v=1671990252810',
-            'status' => 1,
+                'product_name' => 'Mật ong lên men phục hồi',
+                'category_id' => 2,
+                'price' => 219000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 14,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'ml'   
             ],
-
-
             [
-            'product_name' => 'Dầu xịt ăn kiêng Olive Oil Member\'s Mark - Net WT 7 OZ (198g)',
-            'category_id' => 8,
-            'price' => 196000,
-            'description' => '<p>Dầu xịt ăn kiêng Olive Oil Member\'s Mark - Net WT 7 OZ (198g) (khoảng 700 lần xịt)</p>
-                        <p>SẢN PHẨM ĐẠT ĐỦ TIÊU CHUẨN FDI TRONG NUTRIFACT ALL 0<br>
-                            Thành phần :<br>
-                            0 kcal<br>
-                            0 cholesterol<br>
-                            0 fats<br>
-                            0 sodium</p>
-                        <p>☘ Xuất sứ : Mỹ</p>',
-            'quantity' => 100,
-            'image' => 'https://bizweb.dktcdn.net/thumb/medium/100/458/914/products/dau-olive-1-1671989974879.jpg?v=1671989982353',
-            'status' => 1,
-            ]
+                'product_name' => 'Mật ong lên men phục hồi',
+                'category_id' => 2,
+                'price' => 409000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men phục hồi',
+                'category_id' => 2,
+                'price' => 789000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 5,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tươi',
+                'category_id' => 2,
+                'price' => 29000,
+                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 50,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tươi',
+                'category_id' => 2,
+                'price' => 159000,
+                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 14,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tươi',
+                'category_id' => 2,
+                'price' => 289000,
+                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tươi',
+                'category_id' => 2,
+                'price' => 609000,
+                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 5,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men nghệ',
+                'category_id' => 2,
+                'price' => 49000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 50,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men nghệ',
+                'category_id' => 2,
+                'price' => 219000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 14,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men nghệ',
+                'category_id' => 2,
+                'price' => 409000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men nghệ',
+                'category_id' => 2,
+                'price' => 789000,
+                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 5,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men gừng',
+                'category_id' => 2,
+                'price' => 49000,
+                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 50,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men gừng',
+                'category_id' => 2,
+                'price' => 219000,
+                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 14,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men gừng',
+                'category_id' => 2,
+                'price' => 409000,
+                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men gừng',
+                'category_id' => 2,
+                'price' => 789000,
+                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 5,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tỏi',
+                'category_id' => 2,
+                'price' => 49000,
+                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 50,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tỏi',
+                'category_id' => 2,
+                'price' => 219000,
+                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 14,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tỏi',
+                'category_id' => 2,
+                'price' => 409000,
+                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Mật ong lên men tỏi',
+                'category_id' => 2,
+                'price' => 789000,
+                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'description' => '<p>
+                                    <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                    </p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Mật ong lên men theo công thức Oxymel của Hy Lạp cổ đại</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Muối biển tự nhiên</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng, chanh, tỏi, me rừng (amla), chùm ngây, chuối : Tất cả đều được sấy lạnh</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lợi khuẩn đa chủng dạng bào tử: Lactobacillus acidophius; Bifidobacterium lactis; Bacillus Subtilis; Bacillus Clausii; Bacillus Coagulans, Immunepath-IP</span>
+                                    </li>
+                                    </ul>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 12 tháng kể từ ngày sản xuất. Nên dùng hết trong vòng 30 ngày từ khi mở nắp. Bảo quản nơi&nbsp;</span>
+                                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Pha với nước ấm: Dùng 5ml MOLM MOLA, pha cùng 150-200ml nước ấm, uống ngày 3 lần vào các thời điểm: vừa ngủ dậy, trước ăn trưa và ăn tối 30 phút. Cần chú ý không nên pha với nước quá nóng vì có thể làm chết bào tử lợi khuẩn.</span>
+                                    </p>
+                                    <p>
+                                    <span style="background-color:transparent;color:#000000;">Lưu ý</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <ul>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Gừng có tính ấm, nếu cơ thể nóng, dùng lượng nhỏ rồi tăng dần</span>
+                                    </li>
+                                    <li>
+                                    <span style="background-color:transparent;color:#000000;">Lắc thật đều trước khi sử dụng</span>
+                                    </li>
+                                    </ul>',
+                'quantity' => 5,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'ml'   
+            ],
+            [
+                'product_name' => 'Trà Yerba Mates Loose Tea - dành cho gymer ',
+                'category_id' => 1,
+                'price' => 247000,
+                'image' => 'https://drive.google.com/file/d/1SXr3FUBmx_yios8sPYLky2TQ0oUuIQz5/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần: 100% từ búp và lá cây Ilex Paraguariensis sấy khô</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Tăng cường tỉnh táo rất tốt, gia tăng hiệu quả tập trung làm việc. Sự tỉnh táo của trà yerba mate êm ái và cân bằng không bị bồn chồn, khó chịu, đau dạ dày hay tim đập nhanh.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Thư giãn tinh thần, trà yerba mate mặc dù giúp tỉnh táo nhưng không làm căng thẳng lên não bộ, trong ngày bạn vẫn có sự tập trung cao độ nhưng tối vẫn ngủ ngon, không ảnh hưởng giấc ngủ</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Giúp khoẻ hơn và tăng sức bền rất nhiều khi tập thể thao</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Detox thanh lọc, thanh nhiệt cơ thể, làm đẹp da</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Cung cấp đa dạng lợi chất vitamin, khoáng chất, chất chống oxy hoá cho cơ thể</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 2 năm kể từ ngày sản xuất. Bảo quản nơi&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Đổ trà vào cốc. Nếu bạn mới uống sử dụng 10 gram / một ngày (2 thìa cơm to)</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Thêm một chút nước nguội vào cốc khoảng 30gram/30ml để lá trà được nở ra cho thơm hơn trong vòng 30 giây ( Không nên bỏ qua bước này )</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Cắm ống hút có đầu lọc trà bombilla vào trong cốc</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Chuẩn bị nước 60-65 độ bằng cách cho tỉ lệ 2 nước nóng : 1 nước nguội ( Không sử dụng nước 100 độ để uống trà sẽ làm cháy trà ! )</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Khi uống trà thì cho nước 60-65 độ vào trong và ủ trong vòng 15-30 giây, cho nước bao nhiêu thì uống hết ngay sau đó, không để trà ngâm với nước quá lâu sẽ bị đắng. Rót nước lần nào thì uống hết lần đó, cứ như vậy có thể đổ thêm từ 10 đến 15 lần nước, sử dụng trong suốt cả ngày.</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">*Trà Yerba Mate có chứa 196 vitamin / khoáng chất / chất chống oxy hoá, Caffein và hai hợp chất thư giãn tinh thần là Theobromine ( tìm thấy trong sô cô la ) và Theophylline ( tìm thấy trong trà xanh )</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hương vị: Trà Yerba Maté Taragui Loose Leaf có hương vị truyền thống, đây cũng là vị trà Yerba Maté nguyên bản nhất. Không giống như dòng trà 500g, dòng trà 180g được tạo nên từ 100% búp và lá cây Ilex Paraguariensis, do đó không có bột trà nên nước trà pha ra có màu vàng tươi đặc trưng. Khi uống vào trà có hương thơm của cỏ khô và cam thảo lan tỏa nhẹ nhàng. Vị trà thanh nhẹ không chát, qua tới cổ họng là hậu vị ngọt thanh dễ chịu, lưu lại đầy tinh tế. Trà Yerba Maté vị truyền thống rất dễ uống và dễ thưởng thức cả kể đối với người chưa từng uống trà . Là hương vị đầu tiên bạn cần phải thử khi bắt đầu uống trà Yerba Maté. Đây cũng là hương vị trà được ưa chuộng nhất trên toàn thế giới, được sử dụng bởi 80% dân số Nam Mỹ trong đó có Lionel Messi đang sử dụng hãng Taragui.</span>
+                                </p>',
+                'quantity' => 8,
+                'status' => 1,
+                'number' => 180,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Trà Yerba Mates Loose Tea - dành cho gymer ',
+                'category_id' => 1,
+                'price' => 539000,
+                'image' => 'https://drive.google.com/file/d/1SXr3FUBmx_yios8sPYLky2TQ0oUuIQz5/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần: 100% từ búp và lá cây Ilex Paraguariensis sấy khô</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Tăng cường tỉnh táo rất tốt, gia tăng hiệu quả tập trung làm việc. Sự tỉnh táo của trà yerba mate êm ái và cân bằng không bị bồn chồn, khó chịu, đau dạ dày hay tim đập nhanh.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Thư giãn tinh thần, trà yerba mate mặc dù giúp tỉnh táo nhưng không làm căng thẳng lên não bộ, trong ngày bạn vẫn có sự tập trung cao độ nhưng tối vẫn ngủ ngon, không ảnh hưởng giấc ngủ</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Giúp khoẻ hơn và tăng sức bền rất nhiều khi tập thể thao</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Detox thanh lọc, thanh nhiệt cơ thể, làm đẹp da</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Cung cấp đa dạng lợi chất vitamin, khoáng chất, chất chống oxy hoá cho cơ thể</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 2 năm kể từ ngày sản xuất. Bảo quản nơi&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh sáng trực tiếp.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Đổ trà vào cốc. Nếu bạn mới uống sử dụng 10 gram / một ngày (2 thìa cơm to)</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Thêm một chút nước nguội vào cốc khoảng 30gram/30ml để lá trà được nở ra cho thơm hơn trong vòng 30 giây ( Không nên bỏ qua bước này )</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Cắm ống hút có đầu lọc trà bombilla vào trong cốc</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Chuẩn bị nước 60-65 độ bằng cách cho tỉ lệ 2 nước nóng : 1 nước nguội ( Không sử dụng nước 100 độ để uống trà sẽ làm cháy trà ! )</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Khi uống trà thì cho nước 60-65 độ vào trong và ủ trong vòng 15-30 giây, cho nước bao nhiêu thì uống hết ngay sau đó, không để trà ngâm với nước quá lâu sẽ bị đắng. Rót nước lần nào thì uống hết lần đó, cứ như vậy có thể đổ thêm từ 10 đến 15 lần nước, sử dụng trong suốt cả ngày.</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">*Trà Yerba Mate có chứa 196 vitamin / khoáng chất / chất chống oxy hoá, Caffein và hai hợp chất thư giãn tinh thần là Theobromine ( tìm thấy trong sô cô la ) và Theophylline ( tìm thấy trong trà xanh )</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hương vị: Trà Yerba Maté Taragui Loose Leaf có hương vị truyền thống, đây cũng là vị trà Yerba Maté nguyên bản nhất. Không giống như dòng trà 500g, dòng trà 180g được tạo nên từ 100% búp và lá cây Ilex Paraguariensis, do đó không có bột trà nên nước trà pha ra có màu vàng tươi đặc trưng. Khi uống vào trà có hương thơm của cỏ khô và cam thảo lan tỏa nhẹ nhàng. Vị trà thanh nhẹ không chát, qua tới cổ họng là hậu vị ngọt thanh dễ chịu, lưu lại đầy tinh tế. Trà Yerba Maté vị truyền thống rất dễ uống và dễ thưởng thức cả kể đối với người chưa từng uống trà . Là hương vị đầu tiên bạn cần phải thử khi bắt đầu uống trà Yerba Maté. Đây cũng là hương vị trà được ưa chuộng nhất trên toàn thế giới, được sử dụng bởi 80% dân số Nam Mỹ trong đó có Lionel Messi đang sử dụng hãng Taragui.</span>
+                                </p>',
+                'quantity' => 2,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Cà phê eatclean Tropicana Slim',
+                'category_id' => 1,
+                'price' => 69000,
+                'image' => 'https://drive.google.com/file/d/1aT5LkVd7-4-BXuriQh8i-WnwRdAzzjbA/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Kem béo thực vật (45,11%), chất tạo ngọt:Sorbitol (5,5g/gói), bột cà phê (11,6%), bột cacao (2,86%), muối, chất ổn định:Carboxymethyl Cellulose, chất tạo ngọt (Sucralose; Acesulfam K, Steviolglycosides (0,07%).</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng: Sản phẩm có tác dụng tinh thần tỉnh táo, trí óc cải thiện.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 24 tháng. Bảo quản nơi&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Hòa tan 1 gói sản phẩm vào ly với 150 ml nước nóng, khuấyđều và thưởng thức.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Không cần thêm đường.&nbsp;</span>
+                                </li>
+                                </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 100,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Gạo lứt',
+                'category_id' => 3,
+                'price' => 39000,
+                'image' => 'https://drive.google.com/file/d/15lpju1HM4nAfHxBOz2DH7Rhln_b7c_4g/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Gạo lức huyết rồng được xay sơ qua, và vẫn giữ được lớp cám dày bên ngoài nên lớp vỏ màu nâu đặc biệt, nó là một giống lúa được trồng ở vùng nước ngập sâu có nguồn gốc từ vùng Đồng Tháp Mười và Tứ Giác Long Xuyên được trồng trên vùng đất ngập sâu 1 - 2m. Nó có sức sống khá mạnh mẽ và có thể thích nghi với mọi điều kiện để sinh trưởng và phát triển mạnh. Gạo lức huyết rồng có chứa rất nhiều các chất dinh dưỡng tốt cho cơ thể.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Gạo lứt.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#252a2b;">là nguồn bổ sung vitamin B1, gluxit, lipit cần thiết cho những người có nhu cầu dinh dưỡng cao như người ăn chay, người già yếu, trẻ em, người bị tiểu đường, ung thư… Hàm lượng omega cao trong gạo giúp phòng chống ung thư, phục hồi chức năng hệ miễn dịch.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày đóng gói</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Vo rửa gạo từ 2-3 lần, cho gạo vào nồi&nbsp; , cho nước vào với tỷ lệ&nbsp; 1 gạo : 1,5 nước, lượng nước cho vào có thể thay đổi tùy theo khẩu vị của người dùng. Bật lửa nấu cho đến khi nước sôi đều, tắt lửa để khoảng 15 phút , sau đó bật lửa nấu lại cho đến khi chín là được.&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Không sử dụng nếu mẫn cảm hoặc dị ứng với sản phẩm</span>
+                                </p>',
+                'quantity' => 15,
+                'status' => 1,
+                'number' => 1,
+                'unit' => 'kg'   
+            ],
+            [
+                'product_name' => 'Gạo lứt',
+                'category_id' => 3,
+                'price' => 69000,
+                'image' => 'https://drive.google.com/file/d/15lpju1HM4nAfHxBOz2DH7Rhln_b7c_4g/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Gạo lức huyết rồng được xay sơ qua, và vẫn giữ được lớp cám dày bên ngoài nên lớp vỏ màu nâu đặc biệt, nó là một giống lúa được trồng ở vùng nước ngập sâu có nguồn gốc từ vùng Đồng Tháp Mười và Tứ Giác Long Xuyên được trồng trên vùng đất ngập sâu 1 - 2m. Nó có sức sống khá mạnh mẽ và có thể thích nghi với mọi điều kiện để sinh trưởng và phát triển mạnh. Gạo lức huyết rồng có chứa rất nhiều các chất dinh dưỡng tốt cho cơ thể.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Gạo lứt.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#252a2b;">là nguồn bổ sung vitamin B1, gluxit, lipit cần thiết cho những người có nhu cầu dinh dưỡng cao như người ăn chay, người già yếu, trẻ em, người bị tiểu đường, ung thư… Hàm lượng omega cao trong gạo giúp phòng chống ung thư, phục hồi chức năng hệ miễn dịch.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày đóng gói</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Vo rửa gạo từ 2-3 lần, cho gạo vào nồi&nbsp; , cho nước vào với tỷ lệ&nbsp; 1 gạo : 1,5 nước, lượng nước cho vào có thể thay đổi tùy theo khẩu vị của người dùng. Bật lửa nấu cho đến khi nước sôi đều, tắt lửa để khoảng 15 phút , sau đó bật lửa nấu lại cho đến khi chín là được.&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Không sử dụng nếu mẫn cảm hoặc dị ứng với sản phẩm</span>
+                                </p>',
+                'quantity' => 8,
+                'status' => 1,
+                'number' => 2,
+                'unit' => 'kg'   
+            ],
+            [
+                'product_name' => 'Gạo lứt',
+                'category_id' => 3,
+                'price' => 119000,
+                'image' => 'https://drive.google.com/file/d/15lpju1HM4nAfHxBOz2DH7Rhln_b7c_4g/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Gạo lức huyết rồng được xay sơ qua, và vẫn giữ được lớp cám dày bên ngoài nên lớp vỏ màu nâu đặc biệt, nó là một giống lúa được trồng ở vùng nước ngập sâu có nguồn gốc từ vùng Đồng Tháp Mười và Tứ Giác Long Xuyên được trồng trên vùng đất ngập sâu 1 - 2m. Nó có sức sống khá mạnh mẽ và có thể thích nghi với mọi điều kiện để sinh trưởng và phát triển mạnh. Gạo lức huyết rồng có chứa rất nhiều các chất dinh dưỡng tốt cho cơ thể.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Gạo lứt.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#252a2b;">là nguồn bổ sung vitamin B1, gluxit, lipit cần thiết cho những người có nhu cầu dinh dưỡng cao như người ăn chay, người già yếu, trẻ em, người bị tiểu đường, ung thư… Hàm lượng omega cao trong gạo giúp phòng chống ung thư, phục hồi chức năng hệ miễn dịch.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày đóng gói</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Vo rửa gạo từ 2-3 lần, cho gạo vào nồi&nbsp; , cho nước vào với tỷ lệ&nbsp; 1 gạo : 1,5 nước, lượng nước cho vào có thể thay đổi tùy theo khẩu vị của người dùng. Bật lửa nấu cho đến khi nước sôi đều, tắt lửa để khoảng 15 phút , sau đó bật lửa nấu lại cho đến khi chín là được.&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Không sử dụng nếu mẫn cảm hoặc dị ứng với sản phẩm</span>
+                                </p>',
+                'quantity' => 3,
+                'status' => 1,
+                'number' => 5,
+                'unit' => 'kg'   
+            ],
+            [
+                'product_name' => 'Thanh gạo lứt phô mai',
+                'category_id' => 3,
+                'price' => 89000,
+                'image' => 'https://drive.google.com/file/d/1Wf5XAtrxKoqsJlhdBARFX-H26Z-UwCeZ/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Gạo lứt, Hạt điều, Hạnh nhân, Chà bông, Phô mai, Hạt bí, Gelatin.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Thanh hạt dinh dưỡng gạo lứt cung cấp nhiều khoáng chất và vitamin cho khẩu phần ăn. Giúp cân đối dinh dưỡng, tốt cho sức khỏe. Sản phẩm bổ sung chất đạm và chất xơ, đủ chất cho người đang ăn kiêng, giảm cân. Tốt cho tim mạch, người mắc bệnh huyết áp.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày sản xuất</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát tránh nguồn nhiệt cao và nơi ẩm ướt.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Dùng ngay khi mở bao bì, ăn trực tiếp.</span>
+                                </p>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Thanh gạo lứt phô mai',
+                'category_id' => 3,
+                'price' => 169000,
+                'image' => 'https://drive.google.com/file/d/1Wf5XAtrxKoqsJlhdBARFX-H26Z-UwCeZ/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Gạo lứt, Hạt điều, Hạnh nhân, Chà bông, Phô mai, Hạt bí, Gelatin.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Thanh hạt dinh dưỡng gạo lứt cung cấp nhiều khoáng chất và vitamin cho khẩu phần ăn. Giúp cân đối dinh dưỡng, tốt cho sức khỏe. Sản phẩm bổ sung chất đạm và chất xơ, đủ chất cho người đang ăn kiêng, giảm cân. Tốt cho tim mạch, người mắc bệnh huyết áp.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày sản xuất</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát tránh nguồn nhiệt cao và nơi ẩm ướt.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Dùng ngay khi mở bao bì, ăn trực tiếp.</span>
+                                </p>',
+                'quantity' => 15,
+                'status' => 1,
+                'number' => 5000,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Thanh gạo lứt phô mai',
+                'category_id' => 3,
+                'price' => 329000,
+                'image' => 'https://drive.google.com/file/d/1Wf5XAtrxKoqsJlhdBARFX-H26Z-UwCeZ/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Gạo lứt, Hạt điều, Hạnh nhân, Chà bông, Phô mai, Hạt bí, Gelatin.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">Thanh hạt dinh dưỡng gạo lứt cung cấp nhiều khoáng chất và vitamin cho khẩu phần ăn. Giúp cân đối dinh dưỡng, tốt cho sức khỏe. Sản phẩm bổ sung chất đạm và chất xơ, đủ chất cho người đang ăn kiêng, giảm cân. Tốt cho tim mạch, người mắc bệnh huyết áp.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày sản xuất</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát tránh nguồn nhiệt cao và nơi ẩm ướt.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Dùng ngay khi mở bao bì, ăn trực tiếp.</span>
+                                </p>',
+                'quantity' => 14,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Granola',
+                'category_id' => 4,
+                'price' => 99000,
+                'image' => 'https://drive.google.com/file/d/1f2Fuv3_9ttktMdpbT1tTOwsZ5oe51RSe/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> 100% hạt dinh dưỡng gồm Hạt Macca, Óc chó đỏ, Óc chó vàng, Hạnh nhân, Hạt điều, Hạt bí xanh, Nho khô 3 màu, Nam việt quất.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Cải thiện tiêu hóa</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp giảm cân</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm Cholesterol có hại</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp làm đẹp da hơn</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Cung cấp năng lượng</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Hỗ trợ chống ung thư</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Phòng chống thiếu máu</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Não hoạt động tốt hơn</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">3 tháng kể từ ngày sản xuất. Nên ăn hết trong vòng 1 tháng kể từ ngày mở nắp hộp</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, Tốt nhất là bảo quản trong ngăn mát tủ lạnh để ăn được lâu, không bị lên dầu.&nbsp;</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Bạn có thể ăn granola siêu hạt trực tiếp hoặc có thể ăn chung với sữa chua, trái cây tươi vào mỗi buổi sáng để thay thế bữa sáng thông thường.</span>
+                                </p>',
+                'quantity' => 30,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Granola',
+                'category_id' => 4,
+                'price' => 189000,
+                'image' => 'https://drive.google.com/file/d/1f2Fuv3_9ttktMdpbT1tTOwsZ5oe51RSe/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> 100% hạt dinh dưỡng gồm Hạt Macca, Óc chó đỏ, Óc chó vàng, Hạnh nhân, Hạt điều, Hạt bí xanh, Nho khô 3 màu, Nam việt quất.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Cải thiện tiêu hóa</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp giảm cân</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm Cholesterol có hại</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp làm đẹp da hơn</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Cung cấp năng lượng</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Hỗ trợ chống ung thư</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Phòng chống thiếu máu</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Não hoạt động tốt hơn</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">3 tháng kể từ ngày sản xuất. Nên ăn hết trong vòng 1 tháng kể từ ngày mở nắp hộp</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, Tốt nhất là bảo quản trong ngăn mát tủ lạnh để ăn được lâu, không bị lên dầu.&nbsp;</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: Bạn có thể ăn granola siêu hạt trực tiếp hoặc có thể ăn chung với sữa chua, trái cây tươi vào mỗi buổi sáng để thay thế bữa sáng thông thường.</span>
+                                </p>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Yến mạch',
+                'category_id' => 4,
+                'price' => 20000,
+                'image' => 'https://drive.google.com/file/d/1Zsq499xGHTK5H0rXgYO392GDICRUWNCa/view',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> 100% yến mạch hữu cơ cán mỏng đã sấy chín sơ.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp bảo vệ tim, phòng chống ung thư: Yến mạch là loại thực phẩm duy nhất có chứa avenanthramide là chất có khả năng ức chế và phá vỡ các gốc tự do, ngăn chặn và phòng ngừa các bệnh ung thư.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Tránh suy nhược cơ thể: Sử dụng yến mạch cán mỏng hữu cơ giúp có thể tránh suy nhược, và củng cố hệ miễn dịch, điều hòa cơ thể, xua tan những cơn khó chịu, nóng bức bên trong</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm nguy cơ mắc bệnh suyễn ở trẻ em: Yến mạch có chứa nhiều khoáng chất, chất xơ, vitamin và protein cùng với chất béo lành mạnh hơn các loại ngũ cốc khác sẽ giúp giảm tỷ lệ mắc bệnh hen suyễn ở trẻ trước 6 tháng tuổi.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm cân hiệu quả: chất xơ và protein có trong yến mạch hỗ trợ người sử dụng có cảm giác no lâu, kiềm chế các cơn thèm ăn của bạn, giúp kích thích cơ thể đốt cháy chất béo dư thừa, thúc đẩy cơ bắp phát triển.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Trị mụn trứng cá: Với những người bị mụn trứng cá nhiều có thể sử dụng yến mạch như một loại mặt nạ dưỡng da, trộn yến mạch cùng với mật ong, đắp lên mặt giúp loại bỏ chất dầu nhờn, kháng khuẩn cho da, giúp làn da sạch, hạn chế sự nảy sinh của mụn.</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày sản xuất</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, đóng kín hộp hoặc túi đựng sau khi sử dụng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Yến mạch cán mỏng hữu cơ Markal có thể được dùng để ăn trực tiếp, trộn với sữa lạnh hoặc nóng cho bữa ăn sáng nhiều dưỡng chất.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Ngoài ra còn có thể dùng để nấu với trứng, rau củ và gia vị, hoặc dùng làm món bánh pancakes bằng chảo không dính, dùng nướng bánh quy,... ưu điểm của yến mạch cán mỏng so với yến mạch nguyên hạt là dễ tiêu hóa và hấp thụ dưỡng chất hơn và rút ngắn thời gian nấu nướng.</span>
+                                </li>
+                                </ul>',
+                'quantity' => 9,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Yến mạch',
+                'category_id' => 4,
+                'price' => 39000,
+                'image' => 'https://drive.google.com/file/d/1Zsq499xGHTK5H0rXgYO392GDICRUWNCa/view',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> 100% yến mạch hữu cơ cán mỏng đã sấy chín sơ.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp bảo vệ tim, phòng chống ung thư: Yến mạch là loại thực phẩm duy nhất có chứa avenanthramide là chất có khả năng ức chế và phá vỡ các gốc tự do, ngăn chặn và phòng ngừa các bệnh ung thư.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Tránh suy nhược cơ thể: Sử dụng yến mạch cán mỏng hữu cơ giúp có thể tránh suy nhược, và củng cố hệ miễn dịch, điều hòa cơ thể, xua tan những cơn khó chịu, nóng bức bên trong</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm nguy cơ mắc bệnh suyễn ở trẻ em: Yến mạch có chứa nhiều khoáng chất, chất xơ, vitamin và protein cùng với chất béo lành mạnh hơn các loại ngũ cốc khác sẽ giúp giảm tỷ lệ mắc bệnh hen suyễn ở trẻ trước 6 tháng tuổi.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm cân hiệu quả: chất xơ và protein có trong yến mạch hỗ trợ người sử dụng có cảm giác no lâu, kiềm chế các cơn thèm ăn của bạn, giúp kích thích cơ thể đốt cháy chất béo dư thừa, thúc đẩy cơ bắp phát triển.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Trị mụn trứng cá: Với những người bị mụn trứng cá nhiều có thể sử dụng yến mạch như một loại mặt nạ dưỡng da, trộn yến mạch cùng với mật ong, đắp lên mặt giúp loại bỏ chất dầu nhờn, kháng khuẩn cho da, giúp làn da sạch, hạn chế sự nảy sinh của mụn.</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày sản xuất</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, đóng kín hộp hoặc túi đựng sau khi sử dụng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Yến mạch cán mỏng hữu cơ Markal có thể được dùng để ăn trực tiếp, trộn với sữa lạnh hoặc nóng cho bữa ăn sáng nhiều dưỡng chất.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Ngoài ra còn có thể dùng để nấu với trứng, rau củ và gia vị, hoặc dùng làm món bánh pancakes bằng chảo không dính, dùng nướng bánh quy,... ưu điểm của yến mạch cán mỏng so với yến mạch nguyên hạt là dễ tiêu hóa và hấp thụ dưỡng chất hơn và rút ngắn thời gian nấu nướng.</span>
+                                </li>
+                                </ul>',
+                'quantity' => 8,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Yến mạch',
+                'category_id' => 4,
+                'price' => 69000,
+                'image' => 'https://drive.google.com/file/d/1Zsq499xGHTK5H0rXgYO392GDICRUWNCa/view',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> 100% yến mạch hữu cơ cán mỏng đã sấy chín sơ.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giúp bảo vệ tim, phòng chống ung thư: Yến mạch là loại thực phẩm duy nhất có chứa avenanthramide là chất có khả năng ức chế và phá vỡ các gốc tự do, ngăn chặn và phòng ngừa các bệnh ung thư.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Tránh suy nhược cơ thể: Sử dụng yến mạch cán mỏng hữu cơ giúp có thể tránh suy nhược, và củng cố hệ miễn dịch, điều hòa cơ thể, xua tan những cơn khó chịu, nóng bức bên trong</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm nguy cơ mắc bệnh suyễn ở trẻ em: Yến mạch có chứa nhiều khoáng chất, chất xơ, vitamin và protein cùng với chất béo lành mạnh hơn các loại ngũ cốc khác sẽ giúp giảm tỷ lệ mắc bệnh hen suyễn ở trẻ trước 6 tháng tuổi.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Giảm cân hiệu quả: chất xơ và protein có trong yến mạch hỗ trợ người sử dụng có cảm giác no lâu, kiềm chế các cơn thèm ăn của bạn, giúp kích thích cơ thể đốt cháy chất béo dư thừa, thúc đẩy cơ bắp phát triển.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Trị mụn trứng cá: Với những người bị mụn trứng cá nhiều có thể sử dụng yến mạch như một loại mặt nạ dưỡng da, trộn yến mạch cùng với mật ong, đắp lên mặt giúp loại bỏ chất dầu nhờn, kháng khuẩn cho da, giúp làn da sạch, hạn chế sự nảy sinh của mụn.</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">6 tháng kể từ ngày sản xuất</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, đóng kín hộp hoặc túi đựng sau khi sử dụng.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Yến mạch cán mỏng hữu cơ Markal có thể được dùng để ăn trực tiếp, trộn với sữa lạnh hoặc nóng cho bữa ăn sáng nhiều dưỡng chất.&nbsp;</span>
+                                </li>
+                                <li>
+                                <span style="background-color:transparent;color:#000000;">Ngoài ra còn có thể dùng để nấu với trứng, rau củ và gia vị, hoặc dùng làm món bánh pancakes bằng chảo không dính, dùng nướng bánh quy,... ưu điểm của yến mạch cán mỏng so với yến mạch nguyên hạt là dễ tiêu hóa và hấp thụ dưỡng chất hơn và rút ngắn thời gian nấu nướng.</span>
+                                </li>
+                                </ul>',
+                'quantity' => 5,
+                'status' => 1,
+                'number' => 1000,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Hạt mix ',
+                'category_id' => 4,
+                'price' => 139000,
+                'image' => 'https://drive.google.com/file/d/1aoETUa_-3WVFw6Whrkuv9R0QWlAWGLtK/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Mix các loại hạt Macca Úc, Óc chó đỏ/Vàng Mỹ, Hạnh nhân Mỹ, Hạt dẻ cười Mỹ, Hạt bí xanh Ấn Độ, Hạt điều Bình Phước.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Với mẹ bầu: giúp bổ sung các dưỡng chất quan trọng: canx1, sắt, Omega3, Folate, vitamin nhóm B. Mẹ khỏe, bé phát triển toàn diện thông minh, ngăn ngừa các dị tật thai nhi.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Với những người già, lớn tuổi: giúp ngăn ngừa các bệnh về suy giảm trí nhớ, các bệnh liên quan đến tim mạch, tiểu đường, huyết áp, mỡ máu, thậm chí ngăn ngừa một số bệnh ung thư thư ung thư đại tràng, hoặc các nguy cơ đột quỵ, tử vong.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Đối với trẻ nhỏ và người trưởng thành: Hạt giúp bạn tăng cường sức đề kháng, não bộ hoạt động linh hoạt, tăng cường thị lực, có 1 sức khỏe dẻo dai.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Chị em phụ nữ ăn hạt: giúp điều hòa nội tiết tốt, chống lão hóa, làm đẹp da và giữ gìn vóc dáng, nhờ dinh dưỡng trong hạt giàu chất béo tốt, đa dạng vitamin và khoáng chất, loại ít calo.</span>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">12 tháng kể từ ngày đóng hộp.&nbsp; Nên ăn hết trong vòng 1 tháng kể từ ngày mở nắp hộp</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, Tốt nhất là bảo quản trong ngăn mát tủ lạnh để ăn được lâu, không bị lên dầu.&nbsp;</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: ăn trực tiếp, để ăn ngon hơn và đỡ bị ngán, có thể sử dụng sản phẩm Mixed Nuts cùng với sữa chua hoặc các món Salad.</span>
+                                </p>',
+                'quantity' => 30,
+                'status' => 1,
+                'number' => 250,
+                'unit' => 'g'   
+            ],
+            [
+                'product_name' => 'Hạt mix ',
+                'category_id' => 4,
+                'price' => 249000,
+                'image' => 'https://drive.google.com/file/d/1aoETUa_-3WVFw6Whrkuv9R0QWlAWGLtK/view?usp=drive_link',
+                'description' => '<p>
+                                <span style="background-color:transparent;color:#000000;">Thành phần:</span>
+                                <span style="background-color:#ffffff;color:#000000;"> Mix các loại hạt Macca Úc, Óc chó đỏ/Vàng Mỹ, Hạnh nhân Mỹ, Hạt dẻ cười Mỹ, Hạt bí xanh Ấn Độ, Hạt điều Bình Phước.</span>
+                                </p>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Công dụng:&nbsp;</span>
+                                </p>
+                                <ul>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Với mẹ bầu: giúp bổ sung các dưỡng chất quan trọng: canx1, sắt, Omega3, Folate, vitamin nhóm B. Mẹ khỏe, bé phát triển toàn diện thông minh, ngăn ngừa các dị tật thai nhi.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Với những người già, lớn tuổi: giúp ngăn ngừa các bệnh về suy giảm trí nhớ, các bệnh liên quan đến tim mạch, tiểu đường, huyết áp, mỡ máu, thậm chí ngăn ngừa một số bệnh ung thư thư ung thư đại tràng, hoặc các nguy cơ đột quỵ, tử vong.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Đối với trẻ nhỏ và người trưởng thành: Hạt giúp bạn tăng cường sức đề kháng, não bộ hoạt động linh hoạt, tăng cường thị lực, có 1 sức khỏe dẻo dai.</span>
+                                </li>
+                                <li>
+                                <span style="background-color:#ffffff;color:#000000;">Chị em phụ nữ ăn hạt: giúp điều hòa nội tiết tốt, chống lão hóa, làm đẹp da và giữ gìn vóc dáng, nhờ dinh dưỡng trong hạt giàu chất béo tốt, đa dạng vitamin và khoáng chất, loại ít calo.</span>
+                                <span style="background-color:transparent;color:#000000;">Hạn sử dụng:&nbsp;</span>
+                                <span style="background-color:#ffffff;color:#000000;">12 tháng kể từ ngày đóng hộp.&nbsp; Nên ăn hết trong vòng 1 tháng kể từ ngày mở nắp hộp</span>
+                                <span style="background-color:transparent;color:#000000;">. Bảo quản nơi khô ráo thoáng mát, Tốt nhất là bảo quản trong ngăn mát tủ lạnh để ăn được lâu, không bị lên dầu.&nbsp;</span>
+                                </li>
+                                </ul>
+                                <p>
+                                <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng: ăn trực tiếp, để ăn ngon hơn và đỡ bị ngán, có thể sử dụng sản phẩm Mixed Nuts cùng với sữa chua hoặc các món Salad.</span>
+                                </p>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => 500,
+                'unit' => 'g'   
+            ],
         ];
 
         foreach ($data as $key => $value) {

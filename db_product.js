@@ -31,7 +31,7 @@ $data = [
                     </p>
                     <p>
                     <span style='background-color:transparent;color:#000000;'>Cảnh báo: Phụ nữ có thai, cho con bú, trẻ nhỏ và người mẫn cảm với các thành phần của sản phẩm cân nhắc trước khi sử dụng.</span>
-                    </p>,
+                    </p>',
     'quantity' => 100,
     'status' => 1,
     'number' => 0,
