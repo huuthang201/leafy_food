@@ -33,3 +33,6 @@
 <br>
 <br>Trà Yerba Mates Loose Tea - dành cho gymer<br>
 ![Trà Yerba Mates Loose Tea - dành cho gymer](https://github.com/huuthang201/leafy_food/assets/64240532/8dced158-dfac-43b9-a53c-c0e1d1f1573e)
+<br>
+<br>Yến mạch<br>
+![Yến mạch](https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679)
