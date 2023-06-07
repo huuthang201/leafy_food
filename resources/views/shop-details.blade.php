@@ -248,7 +248,7 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">{{ number_format($dataProduct->price, 0, '', ',') }} VNĐ</div>
-                        <p>{{ strip_tags($dataProduct->description) }}</p>
+                        <p>{{ $dataProduct->description }}</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -339,7 +339,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="/shop-details/{{ $item->id }}">{{ $item->product_name }}</a></h6>
+                            <h6><a href="/shop-details/{{ $item->id }}">{{ $item->product_name . ' ' . $item->number . $item->unit }}</a></h6>
                             <h5>{{ number_format($item->price, 0, '', ',') }} VNĐ</h5>
                         </div>
                     </div>
