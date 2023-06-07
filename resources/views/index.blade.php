@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Leafy Food</title>
+    <title>LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -212,7 +212,7 @@
                     <div class="hero__item set-bg" data-setbg="/img/hero/banner.jpg">
                         <div class="hero__text">
                             <span>Thực phẩm từ thiên nhiên</span>
-                            <h2>Leafy Food <br /></h2>
+                            <h2>LeafyFood <br /></h2>
                             <p>Ăn sạch - Sống khỏe</p>
                             <a href="/shop-grid" class="primary-btn">MUA NGAY</a>
                         </div>

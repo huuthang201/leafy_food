@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- csrf token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Leafy Food</title>
+    <title>LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -201,11 +201,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>{{ $dataProduct->product_name }}</h2>
+                        <h2>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
                             <a href="/shop-grid/{{ $categoryName->id }}">{{ $categoryName->category_name }}</a>
-                            <span>{{ $dataProduct->product_name }}</span>
+                            <span>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</span>
                         </div>
                     </div>
                 </div>
@@ -238,7 +238,7 @@
                 </div>
                 <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
                     <div class="product__details__text">
-                        <h3>{{ $dataProduct->product_name }}</h3>
+                        <h3>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h3>
                         <div class="product__details__rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -279,7 +279,7 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">{{ substr($dataProduct->product_name, 0, 20) . '...' }}</a>
+                                    aria-selected="true">{{ substr($dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit, 0, 20) . '...' }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
@@ -293,7 +293,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Về {{ substr($dataProduct->product_name, 0, 20) . '...' }}</h6>
+                                    <h6>Về {{ substr($dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit, 0, 20) . '...' }}</h6>
                                     <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
