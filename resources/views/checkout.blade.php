@@ -265,19 +265,19 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="checkout__input">
-                                        <p>Name<span>*</span></p>
+                                        <p>Họ tên<span>*</span></p>
                                         <input type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input checkout__input-address">
-                                <p>Address<span>*</span></p>
+                                <p>Địa chỉ<span>*</span></p>
                                 <select name="" id="province"></select>
                                 <select name="" id="district">
-                                    <option  value="">chọn quận</option>
+                                    <option  value="">Chọn quận</option>
                                 </select>
                                 <select name="" id="ward">
-                                    <option   value="">chọn phường</option>
+                                    <option   value="">Chọn phường</option>
                                 </select>
                             </div>
                             <div class="row">
