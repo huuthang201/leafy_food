@@ -21,6 +21,21 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <style>
+        #province, #district, #ward {
+            display: block !important;
+        }
+        .nice-select {
+            display: none !important;
+        }
+        .checkout__input-address{
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout__input-address select{
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -245,51 +260,25 @@
             <div class="checkout__form">
                 <h4>Billing Details</h4>
                 <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
-                    <select name="" id="province" style="display: block !importain">
-                    </select>
-                    <select name="" id="district" style="display: block !importain">
-                        <option  value="">chọn quận</option>
-                    </select>
-                    <select name="" id="ward" style="display: block !importain">
-                        <option   value="">chọn phường</option>
-                    </select>
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    
+                                <div class="col-lg-12">
                                     <div class="checkout__input">
-                                        <p>Fist Name<span>*</span></p>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Last Name<span>*</span></p>
+                                        <p>Name<span>*</span></p>
                                         <input type="text">
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkout__input">
-                                <p>Country<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input">
+                            <div class="checkout__input checkout__input-address">
                                 <p>Address<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout__input__add">
-                                <input type="text" placeholder="Apartment, suite, unite ect (optinal)">
-                            </div>
-                            <div class="checkout__input">
-                                <p>Town/City<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input">
-                                <p>Country/State<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input">
-                                <p>Postcode / ZIP<span>*</span></p>
-                                <input type="text">
+                                <select name="" id="province"></select>
+                                <select name="" id="district">
+                                    <option  value="">chọn quận</option>
+                                </select>
+                                <select name="" id="ward">
+                                    <option   value="">chọn phường</option>
+                                </select>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -304,26 +293,6 @@
                                         <input type="text">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="checkout__input__checkbox">
-                                <label for="acc">
-                                    Create an account?
-                                    <input type="checkbox" id="acc">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <p>Create an account by entering the information below. If you are a returning customer
-                                please login at the top of the page</p>
-                            <div class="checkout__input">
-                                <p>Account Password<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input__checkbox">
-                                <label for="diff-acc">
-                                    Ship to a different address?
-                                    <input type="checkbox" id="diff-acc">
-                                    <span class="checkmark"></span>
-                                </label>
                             </div>
                             <div class="checkout__input">
                                 <p>Order notes<span>*</span></p>
