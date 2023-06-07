@@ -109,7 +109,7 @@ class CheckoutController extends Controller
             $partnerCode = 'MOMOBKUN20180529';
             $accessKey = 'klm05TvNBzhg7h7j';
             $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
-            $orderInfo = "Thanh toán đơn hàng Leafy Food qua MoMo";
+            $orderInfo = "Thanh toán đơn hàng LeafyFood qua MoMo";
             $amount = $totalPrice;
             $orderId = time() . "";
             $redirectUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";

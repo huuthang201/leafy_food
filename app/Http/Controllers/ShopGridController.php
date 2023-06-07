@@ -22,6 +22,12 @@ class ShopGridController extends Controller
         }
         // Fetch all products
         $products = Product::orderBy('created_at', 'desc')->paginate(12);
+        // get categories name
+        foreach ($products as $product)
+        {
+            $category = Category::where('id', $product->category_id)->first();
+            $product->category_name = $category->category_name;
+        }
         $param['products'] = $products;
         // Total products found
         $allProducts = Product::all();

@@ -346,7 +346,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>{{ $product->category_name }}</span>
-                                            <h5><a href="/blog-details">{{ $product->product_name }}</a></h5>
+                                            <h5><a href="/shop-details/{{ $product->id }}">{{ $product->product_name }}</a></h5>
                                             <div class="product__item__price">{{ number_format($product->price) }} VNĐ<span>{{ number_format($product->price) }} VNĐ</span></div>
                                         </div>
                                     </div>

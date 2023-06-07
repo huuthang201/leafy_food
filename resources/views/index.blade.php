@@ -272,7 +272,7 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name }}</a></h6>
+                            <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name . ' ' . $product->number . $product->unit }}</a></h6> 
                             <h5>{{ number_format($product->price, 0, '', ',') }} VNĐ</h5>
                         </div>
                     </div>
@@ -315,10 +315,10 @@
                                 @for ($i = 0; $i < 3; $i++)
                                 <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
+                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name . ' ' . $latestProducts[$i]->number . $latestProducts[$i]->unit }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $latestProducts[$i]->product_name }}</h6>
+                                        <h6>{{ $latestProducts[$i]->product_name . ' ' . $latestProducts[$i]->number . $latestProducts[$i]->unit }}</h6>
                                         <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
@@ -329,10 +329,10 @@
                                 @for ($i = 3; $i < 6; $i++)
                                 <a href="/shop-details/{{ $latestProducts[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name }}">
+                                        <img src="{{ $latestProducts[$i]->image }}" alt="{{ $latestProducts[$i]->product_name . ' ' . $latestProducts[$i]->number . $latestProducts[$i]->unit }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $latestProducts[$i]->product_name }}</h6>
+                                        <h6>{{ $latestProducts[$i]->product_name . ' ' . $latestProducts[$i]->number . $latestProducts[$i]->unit }}</h6>
                                         <span>{{ number_format($latestProducts[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
@@ -350,10 +350,10 @@
                                 @for ($i = 0; $i < 3; $i++)
                                 <a href="/shop-details/{{ $orderByPrice[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $orderByPrice[$i]->image }}" alt="{{ $orderByPrice[$i]->product_name }}">
+                                        <img src="{{ $orderByPrice[$i]->image }}" alt="{{ $orderByPrice[$i]->product_name . ' ' . $orderByPrice[$i]->number . $orderByPrice[$i]->unit }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $orderByPrice[$i]->product_name }}</h6>
+                                        <h6>{{ $orderByPrice[$i]->product_name . ' ' . $orderByPrice[$i]->number . $orderByPrice[$i]->unit }}</h6>
                                         <span>{{ number_format($orderByPrice[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
@@ -364,10 +364,10 @@
                                 @for ($i = 3; $i < 6; $i++)
                                 <a href="/shop-details/{{ $orderByPrice[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $orderByPrice[$i]->image }}" alt="{{ $orderByPrice[$i]->product_name }}">
+                                        <img src="{{ $orderByPrice[$i]->image }}" alt="{{ $orderByPrice[$i]->product_name . ' ' . $orderByPrice[$i]->number . $orderByPrice[$i]->unit }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $orderByPrice[$i]->product_name }}</h6>
+                                        <h6>{{ $orderByPrice[$i]->product_name . ' ' . $orderByPrice[$i]->number . $orderByPrice[$i]->unit }}</h6>
                                         <span>{{ number_format($orderByPrice[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
@@ -385,10 +385,10 @@
                                 @for ($i = 0; $i < 3; $i++)
                                 <a href="/shop-details/{{ $orderByPriceDesc[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $orderByPriceDesc[$i]->image }}" alt="{{ $orderByPriceDesc[$i]->product_name }}">
+                                        <img src="{{ $orderByPriceDesc[$i]->image }}" alt="{{ $orderByPriceDesc[$i]->product_name . ' ' . $orderByPriceDesc[$i]->number . $orderByPriceDesc[$i]->unit }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $orderByPriceDesc[$i]->product_name }}</h6>
+                                        <h6>{{ $orderByPriceDesc[$i]->product_name . ' ' . $orderByPriceDesc[$i]->number . $orderByPriceDesc[$i]->unit }}</h6>
                                         <span>{{ number_format($orderByPriceDesc[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
@@ -399,10 +399,10 @@
                                 @for ($i = 3; $i < 6; $i++)
                                 <a href="/shop-details/{{ $orderByPriceDesc[$i]->id }}" class="latest-product__item">
                                     <div class="latest-product__item__pic">
-                                        <img src="{{ $orderByPriceDesc[$i]->image }}" alt="{{ $orderByPriceDesc[$i]->product_name }}">
+                                        <img src="{{ $orderByPriceDesc[$i]->image }}" alt="{{ $orderByPriceDesc[$i]->product_name . ' ' . $orderByPriceDesc[$i]->number . $orderByPriceDesc[$i]->unit }}">
                                     </div>
                                     <div class="latest-product__item__text">
-                                        <h6>{{ $orderByPriceDesc[$i]->product_name }}</h6>
+                                        <h6>{{ $orderByPriceDesc[$i]->product_name . ' ' . $orderByPriceDesc[$i]->number . $orderByPriceDesc[$i]->unit }}</h6>
                                         <span>{{ number_format($orderByPriceDesc[$i]->price, 0, '', ',') }} VNĐ</span>
                                     </div>
                                 </a>
