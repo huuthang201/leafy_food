@@ -51,6 +51,8 @@ class CheckoutController extends Controller
         foreach ($dataCart as $key => $value) {
             $dataProduct = Product::find($value->product_id);
             $dataCart[$key]['product_name'] = $dataProduct->product_name;
+            $dataCart[$key]['number'] = $dataProduct->number;
+            $dataCart[$key]['unit'] = $dataProduct->unit;
             $dataCart[$key]['product_price'] = $dataProduct->price;
             $dataCart[$key]['product_image'] = $dataProduct->image;
             $totalPrice += $dataProduct->price * $value->quantity;

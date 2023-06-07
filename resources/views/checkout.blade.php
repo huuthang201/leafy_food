@@ -337,7 +337,7 @@
                                 <div class="checkout__order__products">Sản phẩm <span>Tổng</span></div>
                                 <ul>
                                     @foreach ($dataCart as $item)
-                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
+                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' ' . $item->number . $item->unit . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name . ' ' . $item->number . $item->unit, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
                                     @endforeach
                                 </ul>
                                 <div class="checkout__order__subtotal">Tổng tiền <span>{{ number_format($totalPrice) }} VNĐ</span></div>
@@ -354,9 +354,10 @@
                                     <p>Vui lòng chọn các phương thức thanh toán ở dưới.</p>
                                     <div class="checkout__input__checkbox">
                                         <label for="momo">
-                                            Momo
+                                            {{-- Momo --}}
                                             <input type="checkbox" id="momo" name='momo'>
                                             <span class="checkmark"></span>
+                                            <img src="/img/payment-item.png" alt="" style="width: 40px !important;height: auto !important;">
                                         </label>
                                     </div>
                                     {{-- <div class="checkout__input__checkbox">
