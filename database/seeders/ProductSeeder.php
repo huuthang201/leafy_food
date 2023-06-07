@@ -333,8 +333,8 @@ class ProductSeeder extends Seeder
                                     </ul>',
                 'quantity' => 5,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'ml'   
+                'number' => 1,
+                'unit' => 'l'   
             ],
             [
                 'product_name' => 'Mật ong lên men tươi',
@@ -541,8 +541,8 @@ class ProductSeeder extends Seeder
                                     </ul>',
                 'quantity' => 5,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'ml'   
+                'number' => 1,
+                'unit' => 'l'   
             ],
             [
                 'product_name' => 'Mật ong lên men nghệ',
@@ -749,8 +749,8 @@ class ProductSeeder extends Seeder
                                     </ul>',
                 'quantity' => 5,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'ml'   
+                'number' => 1,
+                'unit' => 'l'   
             ],
             [
                 'product_name' => 'Mật ong lên men gừng',
@@ -957,8 +957,8 @@ class ProductSeeder extends Seeder
                                     </ul>',
                 'quantity' => 5,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'ml'   
+                'number' => 1,
+                'unit' => 'l'   
             ],
             [
                 'product_name' => 'Mật ong lên men tỏi',
@@ -1165,8 +1165,8 @@ class ProductSeeder extends Seeder
                                     </ul>',
                 'quantity' => 5,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'ml'   
+                'number' => 1,
+                'unit' => 'l'   
             ],
             [
                 'product_name' => 'Trà Yerba Mates Loose Tea - dành cho gymer ',
@@ -1494,8 +1494,8 @@ class ProductSeeder extends Seeder
                                 </p>',
                 'quantity' => 14,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'g'   
+                'number' => 1,
+                'unit' => 'kg'   
             ],
             [
                 'product_name' => 'Granola',
@@ -1746,8 +1746,8 @@ class ProductSeeder extends Seeder
                                 </ul>',
                 'quantity' => 5,
                 'status' => 1,
-                'number' => 1000,
-                'unit' => 'g'   
+                'number' => 1,
+                'unit' => 'kg'   
             ],
             [
                 'product_name' => 'Hạt mix ',
