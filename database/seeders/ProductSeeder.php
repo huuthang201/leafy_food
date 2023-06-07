@@ -49,7 +49,7 @@ class ProductSeeder extends Seeder
                             </p>',
             'quantity' => 100,
             'status' => 1,
-            'number' => 0,
+            'number' => 1,
             'unit' => 'g'
             ],
             [
