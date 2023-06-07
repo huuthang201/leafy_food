@@ -5,33 +5,33 @@ $data = [
     'price' => 25000,
     'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
     'description' => '<p>
-                    <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
+                    <span style='background-color:transparent;color:#000000;'>Thành phần: Lá mùi tây sấy khô.</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
+                    <span style='background-color:transparent;color:#000000;'>Công dụng: Thanh lọc, giải nhiệt cơ thể, tốt cho sức khỏe.</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">Hạn sử dụng: 6 tháng. Bảo quản nơi&nbsp;</span>
-                    <span style="background-color:#ffffff;color:#333333;">khô ráo, thoáng mát, tránh ánh nắng.</span>
+                    <span style='background-color:transparent;color:#000000;'>Hạn sử dụng: 6 tháng. Bảo quản nơi&nbsp;</span>
+                    <span style='background-color:#ffffff;color:#333333;'>khô ráo, thoáng mát, tránh ánh nắng.</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">Hướng dẫn sử dụng:&nbsp;</span>
+                    <span style='background-color:transparent;color:#000000;'>Hướng dẫn sử dụng:&nbsp;</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">Dùng hàng ngày như trà thảo dược</span>
+                    <span style='background-color:transparent;color:#000000;'>Dùng hàng ngày như trà thảo dược</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">Cho 2 g (khoảng 1 muỗng canh) mùi tây vào 100ml nước sôi; để ngấm trong 10 phút, lọc lấy nước uống</span>
+                    <span style='background-color:transparent;color:#000000;'>Cho 2 g (khoảng 1 muỗng canh) mùi tây vào 100ml nước sôi; để ngấm trong 10 phút, lọc lấy nước uống</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">• Mỗi ngày uống 2 lần, sau 2 tuần nên nghỉ 1 tuần</span>
+                    <span style='background-color:transparent;color:#000000;'>• Mỗi ngày uống 2 lần, sau 2 tuần nên nghỉ 1 tuần</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">• Trường hợp cần thải độc thận tích cực hơn, có thể uống tối đa 4 lần/ngày trong 2 tuần; sau đó nghỉ 1 tuần rồi trở lại uống 2 lần/ngày.</span>
+                    <span style='background-color:transparent;color:#000000;'>• Trường hợp cần thải độc thận tích cực hơn, có thể uống tối đa 4 lần/ngày trong 2 tuần; sau đó nghỉ 1 tuần rồi trở lại uống 2 lần/ngày.</span>
                     </p>
                     <p>
-                    <span style="background-color:transparent;color:#000000;">Cảnh báo: Phụ nữ có thai, cho con bú, trẻ nhỏ và người mẫn cảm với các thành phần của sản phẩm cân nhắc trước khi sử dụng.</span>
-                    </p>',
+                    <span style='background-color:transparent;color:#000000;'>Cảnh báo: Phụ nữ có thai, cho con bú, trẻ nhỏ và người mẫn cảm với các thành phần của sản phẩm cân nhắc trước khi sử dụng.</span>
+                    </p>,
     'quantity' => 100,
     'status' => 1,
     'number' => 0,
