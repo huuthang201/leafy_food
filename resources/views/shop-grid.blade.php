@@ -335,12 +335,12 @@
                                 <div class="latest-product__slider owl-carousel">
                                     <div class="latest-prdouct__slider__item">
                                         @for ($i = 0; $i < 3; $i++)
-                                            <a href="/shop-details" class="latest-product__item">
+                                            <a href="/shop-details/{{ @$lastestProducts[$i]->id }}" class="latest-product__item">
                                                 <div class="latest-product__item__pic">
-                                                    <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name }}">
+                                                    <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name . " " . @$lastestProducts[$i]->number . @$lastestProducts[$i]->unit }}">
                                                 </div>
                                                 <div class="latest-product__item__text">
-                                                    <h6>{{ @$lastestProducts[$i]->product_name }}</h6>
+                                                    <h6>{{ @$lastestProducts[$i]->product_name . " " . @$lastestProducts[$i]->number . @$lastestProducts[$i]->unit }}</h6>
                                                     <span>{{ number_format(@$lastestProducts[$i]->price) }} VNĐ</span>
                                                 </div>
                                             </a>
@@ -348,12 +348,12 @@
                                     </div>
                                     <div class="latest-prdouct__slider__item">
                                         @for ($i = 3; $i < 6; $i++)
-                                            <a href="/shop-details" class="latest-product__item">
+                                            <a href="/shop-detail/{{ @$lastestProducts[$i]->id }}" class="latest-product__item">
                                                 <div class="latest-product__item__pic">
-                                                    <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name }}">
+                                                    <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name . " " . @$lastestProducts[$i]->number . @$lastestProducts[$i]->unit }}">
                                                 </div>
                                                 <div class="latest-product__item__text">
-                                                    <h6>{{ @$lastestProducts[$i]->product_name }}</h6>
+                                                    <h6>{{ @$lastestProducts[$i]->product_name . " " . @$lastestProducts[$i]->number . @$lastestProducts[$i]->unit }}</h6>
                                                     <span>{{ number_format(@$lastestProducts[$i]->price) }} VNĐ</span>
                                                 </div>
                                             </a>
@@ -518,7 +518,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name }}</a></h6>
+                                    <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name . ' ' . $product->number . $product->unit }}</a></h6>
                                     <h5>{{ number_format($product->price) }} VNĐ</h5>
                                 </div>
                             </div>
