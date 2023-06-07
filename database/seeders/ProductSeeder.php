@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
             'product_name' => 'Trà giải độc thận (Mùi tây khô)',
             'category_id' => 1,
             'price' => 25000,
-            'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
+            'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/0a8c33e0-4dd0-4726-a6b3-3c75330e59ef',
             'description' => '<p>
                             <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
                             </p>
@@ -56,7 +56,7 @@ class ProductSeeder extends Seeder
             'product_name' => 'Trà giải độc thận (Mùi tây khô)',
             'category_id' => 1,
             'price' => 99000,
-            'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
+            'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/0a8c33e0-4dd0-4726-a6b3-3c75330e59ef',
             'description' => '<p>
                             <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
                             </p>
@@ -94,7 +94,7 @@ class ProductSeeder extends Seeder
             'product_name' => 'Trà giải độc thận (Mùi tây khô)',
             'category_id' => 1,
             'price' => 179000,
-            'image' => 'https://drive.google.com/file/d/12fTqB2-4Q_H-lFjt6l62mf5jZGCL1PIf/view?usp=drive_link',
+            'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/0a8c33e0-4dd0-4726-a6b3-3c75330e59ef',
             'description' => '<p>
                             <span style="background-color:transparent;color:#000000;">Thành phần: Lá mùi tây sấy khô.</span>
                             </p>
@@ -132,7 +132,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men phục hồi',
                 'category_id' => 2,
                 'price' => 49000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -184,7 +184,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men phục hồi',
                 'category_id' => 2,
                 'price' => 219000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -236,7 +236,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men phục hồi',
                 'category_id' => 2,
                 'price' => 409000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -288,7 +288,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men phục hồi',
                 'category_id' => 2,
                 'price' => 789000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -340,7 +340,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tươi',
                 'category_id' => 2,
                 'price' => 29000,
-                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d95fd5dc-4d6f-4372-974a-3e699acaa288',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -392,7 +392,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tươi',
                 'category_id' => 2,
                 'price' => 159000,
-                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d95fd5dc-4d6f-4372-974a-3e699acaa288',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -444,7 +444,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tươi',
                 'category_id' => 2,
                 'price' => 289000,
-                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d95fd5dc-4d6f-4372-974a-3e699acaa288',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -496,7 +496,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tươi',
                 'category_id' => 2,
                 'price' => 609000,
-                'image' => 'https://drive.google.com/file/d/1tyiCg962jqyMVkFvJPdkuF9d5iO3YVSs/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d95fd5dc-4d6f-4372-974a-3e699acaa288',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -548,7 +548,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men nghệ',
                 'category_id' => 2,
                 'price' => 49000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -600,7 +600,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men nghệ',
                 'category_id' => 2,
                 'price' => 219000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -652,7 +652,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men nghệ',
                 'category_id' => 2,
                 'price' => 409000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -704,7 +704,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men nghệ',
                 'category_id' => 2,
                 'price' => 789000,
-                'image' => 'https://drive.google.com/file/d/1iCPFeo3jGTJWGlnwJN0k-c6smBhN3K5F/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/b6457074-5f52-42e8-ae2b-e8765d8d5182',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -756,7 +756,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men gừng',
                 'category_id' => 2,
                 'price' => 49000,
-                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3de67031-1aec-478d-94dc-4da09538b10f',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -808,7 +808,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men gừng',
                 'category_id' => 2,
                 'price' => 219000,
-                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3de67031-1aec-478d-94dc-4da09538b10f',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -860,7 +860,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men gừng',
                 'category_id' => 2,
                 'price' => 409000,
-                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3de67031-1aec-478d-94dc-4da09538b10f',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -912,7 +912,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men gừng',
                 'category_id' => 2,
                 'price' => 789000,
-                'image' => 'https://drive.google.com/file/d/1HqirikX9My2vqkREAkaZKR_9SJYL2ScZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3de67031-1aec-478d-94dc-4da09538b10f',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -964,7 +964,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tỏi',
                 'category_id' => 2,
                 'price' => 49000,
-                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/955cfb60-abcf-4bed-8eb2-c6238f5aaa8c',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -1016,7 +1016,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tỏi',
                 'category_id' => 2,
                 'price' => 219000,
-                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/955cfb60-abcf-4bed-8eb2-c6238f5aaa8c',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -1068,7 +1068,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tỏi',
                 'category_id' => 2,
                 'price' => 409000,
-                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/955cfb60-abcf-4bed-8eb2-c6238f5aaa8c',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -1120,7 +1120,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Mật ong lên men tỏi',
                 'category_id' => 2,
                 'price' => 789000,
-                'image' => 'https://drive.google.com/file/d/1G2JqqQWOtFGMS7s-E-3_04GbP-mjrnHB/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/955cfb60-abcf-4bed-8eb2-c6238f5aaa8c',
                 'description' => '<p>
                                     <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                     </p>
@@ -1172,7 +1172,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Trà Yerba Mates Loose Tea - dành cho gymer ',
                 'category_id' => 1,
                 'price' => 247000,
-                'image' => 'https://drive.google.com/file/d/1SXr3FUBmx_yios8sPYLky2TQ0oUuIQz5/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/0a8c33e0-4dd0-4726-a6b3-3c75330e59ef',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần: 100% từ búp và lá cây Ilex Paraguariensis sấy khô</span>
                                 </p>
@@ -1235,7 +1235,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Trà Yerba Mates Loose Tea - dành cho gymer ',
                 'category_id' => 1,
                 'price' => 539000,
-                'image' => 'https://drive.google.com/file/d/1SXr3FUBmx_yios8sPYLky2TQ0oUuIQz5/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/0a8c33e0-4dd0-4726-a6b3-3c75330e59ef',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần: 100% từ búp và lá cây Ilex Paraguariensis sấy khô</span>
                                 </p>
@@ -1298,7 +1298,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Cà phê eatclean Tropicana Slim',
                 'category_id' => 1,
                 'price' => 69000,
-                'image' => 'https://drive.google.com/file/d/1aT5LkVd7-4-BXuriQh8i-WnwRdAzzjbA/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/307f69db-f009-4999-a1b7-90d13e46b0db',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:&nbsp;</span>
                                 <span style="background-color:#ffffff;color:#000000;">Kem béo thực vật (45,11%), chất tạo ngọt:Sorbitol (5,5g/gói), bột cà phê (11,6%), bột cacao (2,86%), muối, chất ổn định:Carboxymethyl Cellulose, chất tạo ngọt (Sucralose; Acesulfam K, Steviolglycosides (0,07%).</span>
@@ -1330,7 +1330,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Gạo lứt',
                 'category_id' => 3,
                 'price' => 39000,
-                'image' => 'https://drive.google.com/file/d/15lpju1HM4nAfHxBOz2DH7Rhln_b7c_4g/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/565b9a97-2486-4245-8e77-70618c5d5126',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Gạo lức huyết rồng được xay sơ qua, và vẫn giữ được lớp cám dày bên ngoài nên lớp vỏ màu nâu đặc biệt, nó là một giống lúa được trồng ở vùng nước ngập sâu có nguồn gốc từ vùng Đồng Tháp Mười và Tứ Giác Long Xuyên được trồng trên vùng đất ngập sâu 1 - 2m. Nó có sức sống khá mạnh mẽ và có thể thích nghi với mọi điều kiện để sinh trưởng và phát triển mạnh. Gạo lức huyết rồng có chứa rất nhiều các chất dinh dưỡng tốt cho cơ thể.</span>
                                 </p>
@@ -1361,7 +1361,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Gạo lứt',
                 'category_id' => 3,
                 'price' => 69000,
-                'image' => 'https://drive.google.com/file/d/15lpju1HM4nAfHxBOz2DH7Rhln_b7c_4g/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/565b9a97-2486-4245-8e77-70618c5d5126',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Gạo lức huyết rồng được xay sơ qua, và vẫn giữ được lớp cám dày bên ngoài nên lớp vỏ màu nâu đặc biệt, nó là một giống lúa được trồng ở vùng nước ngập sâu có nguồn gốc từ vùng Đồng Tháp Mười và Tứ Giác Long Xuyên được trồng trên vùng đất ngập sâu 1 - 2m. Nó có sức sống khá mạnh mẽ và có thể thích nghi với mọi điều kiện để sinh trưởng và phát triển mạnh. Gạo lức huyết rồng có chứa rất nhiều các chất dinh dưỡng tốt cho cơ thể.</span>
                                 </p>
@@ -1392,7 +1392,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Gạo lứt',
                 'category_id' => 3,
                 'price' => 119000,
-                'image' => 'https://drive.google.com/file/d/15lpju1HM4nAfHxBOz2DH7Rhln_b7c_4g/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/565b9a97-2486-4245-8e77-70618c5d5126',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Gạo lức huyết rồng được xay sơ qua, và vẫn giữ được lớp cám dày bên ngoài nên lớp vỏ màu nâu đặc biệt, nó là một giống lúa được trồng ở vùng nước ngập sâu có nguồn gốc từ vùng Đồng Tháp Mười và Tứ Giác Long Xuyên được trồng trên vùng đất ngập sâu 1 - 2m. Nó có sức sống khá mạnh mẽ và có thể thích nghi với mọi điều kiện để sinh trưởng và phát triển mạnh. Gạo lức huyết rồng có chứa rất nhiều các chất dinh dưỡng tốt cho cơ thể.</span>
                                 </p>
@@ -1423,7 +1423,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Thanh gạo lứt phô mai',
                 'category_id' => 3,
                 'price' => 89000,
-                'image' => 'https://drive.google.com/file/d/1Wf5XAtrxKoqsJlhdBARFX-H26Z-UwCeZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3ee9f662-a3ef-4297-9038-3ea6f3f3ff92',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> Gạo lứt, Hạt điều, Hạnh nhân, Chà bông, Phô mai, Hạt bí, Gelatin.</span>
@@ -1449,7 +1449,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Thanh gạo lứt phô mai',
                 'category_id' => 3,
                 'price' => 169000,
-                'image' => 'https://drive.google.com/file/d/1Wf5XAtrxKoqsJlhdBARFX-H26Z-UwCeZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3ee9f662-a3ef-4297-9038-3ea6f3f3ff92',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> Gạo lứt, Hạt điều, Hạnh nhân, Chà bông, Phô mai, Hạt bí, Gelatin.</span>
@@ -1475,7 +1475,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Thanh gạo lứt phô mai',
                 'category_id' => 3,
                 'price' => 329000,
-                'image' => 'https://drive.google.com/file/d/1Wf5XAtrxKoqsJlhdBARFX-H26Z-UwCeZ/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/3ee9f662-a3ef-4297-9038-3ea6f3f3ff92',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> Gạo lứt, Hạt điều, Hạnh nhân, Chà bông, Phô mai, Hạt bí, Gelatin.</span>
@@ -1501,7 +1501,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Granola',
                 'category_id' => 4,
                 'price' => 99000,
-                'image' => 'https://drive.google.com/file/d/1f2Fuv3_9ttktMdpbT1tTOwsZ5oe51RSe/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/79d6e4a8-0cae-4d6c-9ab9-bc793b182a9f',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> 100% hạt dinh dưỡng gồm Hạt Macca, Óc chó đỏ, Óc chó vàng, Hạnh nhân, Hạt điều, Hạt bí xanh, Nho khô 3 màu, Nam việt quất.</span>
@@ -1552,7 +1552,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Granola',
                 'category_id' => 4,
                 'price' => 189000,
-                'image' => 'https://drive.google.com/file/d/1f2Fuv3_9ttktMdpbT1tTOwsZ5oe51RSe/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/79d6e4a8-0cae-4d6c-9ab9-bc793b182a9f',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> 100% hạt dinh dưỡng gồm Hạt Macca, Óc chó đỏ, Óc chó vàng, Hạnh nhân, Hạt điều, Hạt bí xanh, Nho khô 3 màu, Nam việt quất.</span>
@@ -1603,7 +1603,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Yến mạch',
                 'category_id' => 4,
                 'price' => 20000,
-                'image' => 'https://drive.google.com/file/d/1Zsq499xGHTK5H0rXgYO392GDICRUWNCa/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> 100% yến mạch hữu cơ cán mỏng đã sấy chín sơ.</span>
@@ -1653,7 +1653,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Yến mạch',
                 'category_id' => 4,
                 'price' => 39000,
-                'image' => 'https://drive.google.com/file/d/1Zsq499xGHTK5H0rXgYO392GDICRUWNCa/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> 100% yến mạch hữu cơ cán mỏng đã sấy chín sơ.</span>
@@ -1703,7 +1703,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Yến mạch',
                 'category_id' => 4,
                 'price' => 69000,
-                'image' => 'https://drive.google.com/file/d/1Zsq499xGHTK5H0rXgYO392GDICRUWNCa/view',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> 100% yến mạch hữu cơ cán mỏng đã sấy chín sơ.</span>
@@ -1753,7 +1753,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Hạt mix ',
                 'category_id' => 4,
                 'price' => 139000,
-                'image' => 'https://drive.google.com/file/d/1aoETUa_-3WVFw6Whrkuv9R0QWlAWGLtK/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/95f70e90-f06f-4c02-8203-6e529ee83fd5',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> Mix các loại hạt Macca Úc, Óc chó đỏ/Vàng Mỹ, Hạnh nhân Mỹ, Hạt dẻ cười Mỹ, Hạt bí xanh Ấn Độ, Hạt điều Bình Phước.</span>
@@ -1790,7 +1790,7 @@ class ProductSeeder extends Seeder
                 'product_name' => 'Hạt mix ',
                 'category_id' => 4,
                 'price' => 249000,
-                'image' => 'https://drive.google.com/file/d/1aoETUa_-3WVFw6Whrkuv9R0QWlAWGLtK/view?usp=drive_link',
+                'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/95f70e90-f06f-4c02-8203-6e529ee83fd5',
                 'description' => '<p>
                                 <span style="background-color:transparent;color:#000000;">Thành phần:</span>
                                 <span style="background-color:#ffffff;color:#000000;"> Mix các loại hạt Macca Úc, Óc chó đỏ/Vàng Mỹ, Hạnh nhân Mỹ, Hạt dẻ cười Mỹ, Hạt bí xanh Ấn Độ, Hạt điều Bình Phước.</span>
