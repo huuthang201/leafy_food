@@ -78,7 +78,7 @@
         <div class="column main"><input name="form_key" type="hidden" value="PefvQbePmuX6e2ZN">
             <div id="authenticationPopup" data-bind="scope:'authenticationPopup'">
                 <div class="success-extras">
-                    {{ $message == 'Successful.' ? echo "<i class='far fa-check-circle'></i>" : echo "<i class='fa-solid fa-xmark'></i>" }}
+                    {{ $message == 'Successful.' ? "<i class='far fa-check-circle'></i>" : "<i class='fa-solid fa-xmark'></i>" }}
                     <p>{{ $message == 'Successful.' ? 'Cảm ơn bạn đã mua hàng tại LeafyFood!' : 'Thông báo!' }}</p>
                     <p class="success-lrg">
                         {{ $message == 'Successful.' ? 'Ngồi xuống, thư giãn và chờ shipper giao hàng tới cho bạn!' : 'Thanh toán bị hủy!' }}
