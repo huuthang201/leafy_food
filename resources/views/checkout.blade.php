@@ -266,38 +266,43 @@
                                 <div class="col-lg-12">
                                     <div class="checkout__input">
                                         <p>Họ tên<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input checkout__input-address">
                                 <p>Địa chỉ<span>*</span></p>
-                                <select name="" id="province"></select>
-                                <select name="" id="district">
+                                <select name="province" id="province" required></select>
+                                <select name="district" id="district" required>
                                     <option  value="">Chọn quận</option>
                                 </select>
-                                <select name="" id="ward">
+                                <select name="ward" id="ward" required>
                                     <option   value="">Chọn phường</option>
                                 </select>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Số nhà, đường, ...<span>*</span></p>
+                                <input type="text"
+                                    placeholder="Số nhà, đường, ..." name="address" id="address" required>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Phone<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="phone" id="phone" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="email" value="{{ Auth::user()->email }}" id="email" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input">
-                                <p>Order notes<span>*</span></p>
+                                <p>Notes<span>*</span></p>
                                 <input type="text"
-                                    placeholder="Notes about your order, e.g. special notes for delivery.">
+                                    placeholder="Lưu ý cho cửa hàng." name="note">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
@@ -309,9 +314,14 @@
                                     <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' ' . $item->number . $item->unit . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name . ' ' . $item->number . $item->unit, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
                                     @endforeach
                                 </ul>
-                                <div class="checkout__order__subtotal">Tổng tiền <span>{{ number_format($totalPrice) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Thanh toán <span>{{ number_format($totalPrice) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ number_format($totalPrice + $feeShip - $discount) }} VNĐ</span></div>
                                 <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
+                                <input type="hidden" name="feeShip" value="{{ $feeShip }}" id="feeShipInput">
+                                <input type="hidden" name="discount" value="{{ $discount }}" id="discountInput">
+                                <input type="hidden" name="totalCheckout" value="{{ $totalPrice + $feeShip - $discount }}" id="totalCheckoutInput">
                                 <div class="checkout__input__checkbox">
                                     <label for="acc-or">
                                         In hóa đơn
@@ -337,7 +347,30 @@
                                         </label>
                                     </div> --}}
                                     @csrf
-                                    <button type="submit" class="site-btn">Đặt hàng</button>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="confirm">
+                                        Xác nhận
+                                    </button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=" width: auto;">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Bạn chắc chắn với thông tin đã ghi và muốn đặt hàng?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-success" id="order">Đặt hàng</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                 @endif
                             </div>
                         </div>
@@ -427,6 +460,7 @@
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/province.js"></script>
+    <script src="/js/order-condition.js"></script>
 </body>
 
 </html>
