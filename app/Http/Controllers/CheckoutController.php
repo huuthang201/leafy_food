@@ -51,10 +51,14 @@ class CheckoutController extends Controller
         foreach ($dataCart as $key => $value) {
             $dataProduct = Product::find($value->product_id);
             $dataCart[$key]['product_name'] = $dataProduct->product_name;
+            $dataCart[$key]['number'] = $dataProduct->number;
+            $dataCart[$key]['unit'] = $dataProduct->unit;
             $dataCart[$key]['product_price'] = $dataProduct->price;
             $dataCart[$key]['product_image'] = $dataProduct->image;
             $totalPrice += $dataProduct->price * $value->quantity;
         }
+        $param['feeShip'] = 30000;
+        $param['discount'] = 0;
         $param['dataCart'] = $dataCart;
         // dd($param['dataCart']);
         $param['totalPrice'] = $totalPrice; 
@@ -101,18 +105,17 @@ class CheckoutController extends Controller
      */
     public function checkout(Request $request)
     {
-        $totalPrice = $request->totalPrice;
+        $totalCheckout = $request->totalCheckout;
         $payMomo = $request->momo;
         if (isset($payMomo)) {
             $endpoint = "https://test-payment.momo.vn/v2/gateway/api/create";
-            
             $partnerCode = 'MOMOBKUN20180529';
             $accessKey = 'klm05TvNBzhg7h7j';
             $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
             $orderInfo = "Thanh toán đơn hàng LeafyFood qua MoMo";
-            $amount = $totalPrice;
+            $amount = $totalCheckout;
             $orderId = time() . "";
-            $redirectUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
+            $redirectUrl = env('APP_URL') . "/checkout-success?name=" . $request->name;
             $ipnUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
             $extraData = "";
             $requestId = time() . "";
@@ -138,9 +141,31 @@ class CheckoutController extends Controller
             $result = $this->execPostRequest($endpoint, json_encode($data));
             $jsonResult = json_decode($result, true);  // decode json
             
-            //Just a example, please check more in there
             return redirect($jsonResult['payUrl']);
-            // }
         }
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * No	Tên	Số thẻ	Hạn ghi trên thẻ	OTP	Trường hợp test
+     * 1	NGUYEN VAN A	9704 0000 0000 0018	03/07	OTP	Thành công
+     * 2	NGUYEN VAN A	9704 0000 0000 0026	03/07	OTP	Thẻ bị khóa
+     * 3	NGUYEN VAN A	9704 0000 0000 0034	03/07	OTP	Nguồn tiền không đủ
+     * 4	NGUYEN VAN A	9704 0000 0000 0042	03/07	OTP	Hạn mức thẻ
+     * 
+     * 
+     * No	Name	Number	Card Expdate	CVC	OTP	Test Case
+     * 1	NGUYEN VAN A	5200 0000 0000 1096	05/24	111	OTP	Card Successful
+     * 2	NGUYEN VAN A	5200 0000 0000 1104	05/24	111	OTP	Card failed
+     * 3	NGUYEN VAN A	4111 1111 1111 1111	05/24	111	No OTP	Card Successful
+     */
+    public function checkout_success (Request $request) {
+        $data = $request->all();
+        if($data['message'] == 'Successful.') {
+            $userID = Auth::user()->id;
+            Cart::where('user_id', $userID)->delete();
+        }
+        return view('checkout-success', $data);
     }
 }

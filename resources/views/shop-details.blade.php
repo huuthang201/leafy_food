@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- csrf token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Leafy Food</title>
+    <title>LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -201,11 +201,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>{{ $dataProduct->product_name }}</h2>
+                        <h2>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
                             <a href="/shop-grid/{{ $categoryName->id }}">{{ $categoryName->category_name }}</a>
-                            <span>{{ $dataProduct->product_name }}</span>
+                            <span>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</span>
                         </div>
                     </div>
                 </div>
@@ -238,7 +238,7 @@
                 </div>
                 <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
                     <div class="product__details__text">
-                        <h3>{{ $dataProduct->product_name }}</h3>
+                        <h3>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h3>
                         <div class="product__details__rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -248,7 +248,7 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">{{ number_format($dataProduct->price, 0, '', ',') }} VNĐ</div>
-                        <p>{{ strip_tags($dataProduct->description) }}</p>
+                        <p>{{ $dataProduct->description }}</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -279,7 +279,7 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">{{ substr($dataProduct->product_name, 0, 20) . '...' }}</a>
+                                    aria-selected="true">{{ substr($dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit, 0, 20) . '...' }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
@@ -293,7 +293,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Về {{ substr($dataProduct->product_name, 0, 20) . '...' }}</h6>
+                                    <h6>Về {{ substr($dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit, 0, 20) . '...' }}</h6>
                                     <p>{{ strip_tags($dataProduct->description) }}</p>
                                 </div>
                             </div>
@@ -339,7 +339,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="/shop-details/{{ $item->id }}">{{ $item->product_name }}</a></h6>
+                            <h6><a href="/shop-details/{{ $item->id }}">{{ $item->product_name . ' ' . $item->number . $item->unit }}</a></h6>
                             <h5>{{ number_format($item->price, 0, '', ',') }} VNĐ</h5>
                         </div>
                     </div>
@@ -410,7 +410,7 @@
                         <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
-                        <div class="footer__copyright__payment"><img src="/img/payment-item.png" alt=""></div>
+                        <div class="footer__copyright__payment"><img src="/img/payment-item.png" alt="" style="width: 40px !important;height: auto !important;">
                     </div>
                 </div>
             </div>

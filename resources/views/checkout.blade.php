@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Leafy Food</title>
+    <title>LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -21,6 +21,21 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <style>
+        #province, #district, #ward {
+            display: block !important;
+        }
+        .nice-select {
+            display: none !important;
+        }
+        .checkout__input-address{
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout__input-address select{
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -245,90 +260,49 @@
             <div class="checkout__form">
                 <h4>Billing Details</h4>
                 <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
-                    <select name="" id="province" style="display: block !importain">
-                    </select>
-                    <select name="" id="district" style="display: block !importain">
-                        <option  value="">chọn quận</option>
-                    </select>
-                    <select name="" id="ward" style="display: block !importain">
-                        <option   value="">chọn phường</option>
-                    </select>
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    
+                                <div class="col-lg-12">
                                     <div class="checkout__input">
-                                        <p>Fist Name<span>*</span></p>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Last Name<span>*</span></p>
-                                        <input type="text">
+                                        <p>Họ tên<span>*</span></p>
+                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkout__input">
-                                <p>Country<span>*</span></p>
-                                <input type="text">
+                            <div class="checkout__input checkout__input-address">
+                                <p>Địa chỉ<span>*</span></p>
+                                <select name="province" id="province" required></select>
+                                <select name="district" id="district" required>
+                                    <option  value="">Chọn quận</option>
+                                </select>
+                                <select name="ward" id="ward" required>
+                                    <option   value="">Chọn phường</option>
+                                </select>
                             </div>
                             <div class="checkout__input">
-                                <p>Address<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout__input__add">
-                                <input type="text" placeholder="Apartment, suite, unite ect (optinal)">
-                            </div>
-                            <div class="checkout__input">
-                                <p>Town/City<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input">
-                                <p>Country/State<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input">
-                                <p>Postcode / ZIP<span>*</span></p>
-                                <input type="text">
+                                <p>Số nhà, đường, ...<span>*</span></p>
+                                <input type="text"
+                                    placeholder="Số nhà, đường, ..." name="address" id="address" required>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Phone<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="phone" id="phone" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="email" value="{{ Auth::user()->email }}" id="email" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkout__input__checkbox">
-                                <label for="acc">
-                                    Create an account?
-                                    <input type="checkbox" id="acc">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <p>Create an account by entering the information below. If you are a returning customer
-                                please login at the top of the page</p>
                             <div class="checkout__input">
-                                <p>Account Password<span>*</span></p>
-                                <input type="text">
-                            </div>
-                            <div class="checkout__input__checkbox">
-                                <label for="diff-acc">
-                                    Ship to a different address?
-                                    <input type="checkbox" id="diff-acc">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <div class="checkout__input">
-                                <p>Order notes<span>*</span></p>
+                                <p>Notes<span>*</span></p>
                                 <input type="text"
-                                    placeholder="Notes about your order, e.g. special notes for delivery.">
+                                    placeholder="Lưu ý cho cửa hàng." name="note">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
@@ -337,12 +311,17 @@
                                 <div class="checkout__order__products">Sản phẩm <span>Tổng</span></div>
                                 <ul>
                                     @foreach ($dataCart as $item)
-                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
+                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' ' . $item->number . $item->unit . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name . ' ' . $item->number . $item->unit, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
                                     @endforeach
                                 </ul>
-                                <div class="checkout__order__subtotal">Tổng tiền <span>{{ number_format($totalPrice) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Thanh toán <span>{{ number_format($totalPrice) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ number_format($totalPrice + $feeShip - $discount) }} VNĐ</span></div>
                                 <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
+                                <input type="hidden" name="feeShip" value="{{ $feeShip }}" id="feeShipInput">
+                                <input type="hidden" name="discount" value="{{ $discount }}" id="discountInput">
+                                <input type="hidden" name="totalCheckout" value="{{ $totalPrice + $feeShip - $discount }}" id="totalCheckoutInput">
                                 <div class="checkout__input__checkbox">
                                     <label for="acc-or">
                                         In hóa đơn
@@ -354,9 +333,10 @@
                                     <p>Vui lòng chọn các phương thức thanh toán ở dưới.</p>
                                     <div class="checkout__input__checkbox">
                                         <label for="momo">
-                                            Momo
+                                            {{-- Momo --}}
                                             <input type="checkbox" id="momo" name='momo'>
                                             <span class="checkmark"></span>
+                                            <img src="/img/payment-item.png" alt="" style="width: 40px !important;height: auto !important;">
                                         </label>
                                     </div>
                                     {{-- <div class="checkout__input__checkbox">
@@ -367,7 +347,30 @@
                                         </label>
                                     </div> --}}
                                     @csrf
-                                    <button type="submit" class="site-btn">Đặt hàng</button>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="confirm">
+                                        Xác nhận
+                                    </button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=" width: auto;">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Bạn chắc chắn với thông tin đã ghi và muốn đặt hàng?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-success" id="order">Đặt hàng</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                 @endif
                             </div>
                         </div>
@@ -438,7 +441,7 @@
                         <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
-                        <div class="footer__copyright__payment"><img src="/img/payment-item.png" alt=""></div>
+                        <div class="footer__copyright__payment"><img src="/img/payment-item.png" alt="" style="width: 40px !important;height: auto !important;">
                     </div>
                 </div>
             </div>
@@ -457,6 +460,7 @@
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/province.js"></script>
+    <script src="/js/order-condition.js"></script>
 </body>
 
 </html>

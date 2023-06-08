@@ -31,3 +31,4 @@ Route::get('/add-cart', [App\Http\Controllers\ShopingCartController::class, 'add
 Route::get('/cart/delete', [App\Http\Controllers\ShopingCartController::class, 'delete_cart'])->name('delete-cart');
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
 Route::post('/checkout-process', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout-process');
+Route::get('/checkout-success', [App\Http\Controllers\CheckoutController::class, 'checkout_success'])->name('checkout-success');
