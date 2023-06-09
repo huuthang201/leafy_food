@@ -433,7 +433,7 @@
                             <div class="image-avata">
                                 <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
                             </div>
-                            <h4 class="name" style="margin-bottom: 10px">anh Dương</h4>
+                            <h4 class="name" style="margin-bottom: 10px">anh Dương Cà Mau</h4>
                             <p><i>Tiktok: <b>@duongdevxin</b></i></p>
                             <p><i>Khách hàng Tiktok Shop <b>LeafyFood</b></i></p>
                             <p class="designation m-0">"Tôi luôn chọn những phẩm của LeafyFood, vì tôi biết rõ nguồn gốc xuất xứ từng loại nguyên liệu để sản xuất.</p>
@@ -446,7 +446,7 @@
                             <div class="image-avata">
                                 <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
                             </div>
-                            <h4 class="name" style="margin-bottom: 10px">anh Tâm</h4>
+                            <h4 class="name" style="margin-bottom: 10px">anh Tâm Đồng Nai</h4>
                             <p><i>Email <b>dathureal@gmail.com</b></i></p>
                             <p><i>Khách hàng <b>LeafyFood.oneyearlater.me</b></i></p>
                             <p class="designation m-0">"Sức khỏe là quan trọng nhất! Với tôi mỗi ngày ăn những thực phẩm sạch để sức khoẻ ngày càng được hoàn thiện</p>
@@ -459,7 +459,7 @@
                             <div class="image-avata">
                                 <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
                             </div>
-                            <h4 class="name" style="margin-bottom: 10px">chị Pha</h4>
+                            <h4 class="name" style="margin-bottom: 10px">chị Pha Coãng Ngãi</h4>
                             <p><i>Tiktok: <b>@pha123</b></i></p>
                             <p><i>Khách hàng Tiktok Shop <b>LeafyFood</b></i></p>
                             <p class="designation m-0">"Là một người khá kỹ tính, tôi luôn luôn lựa chọn những thực phẩm sạch nhất. Và đây là nơi tôi đặt trọng niềm tin.</p>
