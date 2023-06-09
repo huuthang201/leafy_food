@@ -40,7 +40,7 @@
                 <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                 <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
             </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
+
         </div>
         <div class="humberger__menu__widget">
 
@@ -159,7 +159,7 @@
                             <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                             <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+            
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                         <div class="hero__search__form">
                             <form action="/search" method="GET">
                                 <div class="hero__search__categories">
-                                    Tất cả danh mục
+                                    Tìm kiếm
                                     <span class="arrow_carrot-down"></span>
                                 </div>
                                 <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
@@ -205,7 +205,7 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <h5>1900 6868</h5>
-                                <span>Hỗ trợ 24/7</span>
+                                <span>8:00 AM - 10:00 PM</span>
                             </div>
                         </div>
                     </div>
