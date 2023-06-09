@@ -256,7 +256,7 @@
                     </div>
                 </div>
                 <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
-                    {!! isset($error) ? "<div class='alert alert-danger' role='alert'>Không đủ hàng rồi bạn ơi, mong bạn thông cảm nhé, chỉ còn " . $dataProduct->quantity . " sản phẩm nữa thui!</div>" : "" !!}
+                    {!! isset($error) ? "<div class='alert alert-danger alert-dismissible fade show' role='alert'> <strong>Không đủ hàng rồi bạn ơi!</strong> mong bạn thông cảm nhé, chỉ còn " . $dataProduct->quantity . " sản phẩm nữa thui! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>" : "" !!}
                     <div class="product__details__text">
                         <h3>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h3>
                         <div class="product__details__rating">
