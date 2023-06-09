@@ -467,9 +467,6 @@ you can use the generic selector below, but it's slower:
 .icon_heart_alt:before {
 	content: "\e030";
 }
-.icon_heart_alt_favorite:before {
-	content: "\f004";
-}
 .icon_star_alt:before {
 	content: "\e031";
 }

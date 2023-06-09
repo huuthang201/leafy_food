@@ -13,7 +13,6 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
@@ -258,7 +257,7 @@
                         </div>
                         <input type="hidden" name="product_id" value="{{ $dataProduct->id }}">
                         <input type="submit" class="primary-btn" value="Thêm vào giỏ hàng">
-                        <a href="/favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span class={{ $favoriteProducts ? "icon_heart_alt_favorite" : "icon_heart_alt" }}></span></a>
+                        <a href="/favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span>{!! $favoriteProducts ? "<i class='fa fa-heart'></i>" : "<i class='fa fa-heart-o'></i>" !!}</span></a>
                         <ul>
                             <li><b>Còn</b> <span>{{ $dataProduct->quantity }}</span></li>
                             <li><b>Giao hàng</b> <span>Tùy vào địa chỉ giao hàng |<samp> Miễn phí cho đơn hàng có giá trị trên 300k</samp></span></li>
