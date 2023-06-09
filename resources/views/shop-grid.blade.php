@@ -247,10 +247,10 @@
                             </ul>
                         </div>
                         <div class="sidebar__item">
-                            <h4>Price</h4>
+                            <h4>Giá</h4>
                             <div class="price-range-wrap">
                                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                    data-min="10" data-max="540">
+                                    data-min="0" data-max="1000000">
                                     <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
                                     <span tab="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
                                     <span tab="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
@@ -346,7 +346,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>{{ $product->category_name }}</span>
-                                            <h5><a href="/shop-details/{{ $product->id }}">{{ $product->product_name }}</a></h5>
+                                            <h5><a href="/shop-details/{{ $product->id }}">{{ $product->product_name . ' ' . $product->number . $product->unit }}</a></h5>
                                             <div class="product__item__price">{{ number_format($product->price) }} VNĐ<span>{{ number_format($product->price) }} VNĐ</span></div>
                                         </div>
                                     </div>
