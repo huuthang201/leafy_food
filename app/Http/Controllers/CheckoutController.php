@@ -177,10 +177,12 @@ class CheckoutController extends Controller
             $userID = Auth::user()->id;
             Cart::where('user_id', $userID)->delete();
         }
-        Bill::create([
-            'user_id' => Auth::user()->id,
-            'bill_detail' => json_encode($data),
-        ]);
+        if($data['message'] == 'Successful.') {
+            Bill::create([
+                'user_id' => Auth::user()->id,
+                'bill_detail' => json_encode($data),
+            ]);
+        }
         return view('checkout-success', $data);
     }
 }
