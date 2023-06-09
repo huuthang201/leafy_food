@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Trạng thái thanh toán</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             padding: 40px;
@@ -77,7 +78,7 @@
         <div class="column main"><input name="form_key" type="hidden" value="PefvQbePmuX6e2ZN">
             <div id="authenticationPopup" data-bind="scope:'authenticationPopup'">
                 <div class="success-extras">
-                    <i class="far fa-check-circle"></i>
+                    {!! $message == 'Successful.' ? "<i class='far fa-check-circle'></i>" : "<i class='fa-solid fa-xmark'></i>" !!}
                     <p>{{ $message == 'Successful.' ? 'Cảm ơn bạn đã mua hàng tại LeafyFood!' : 'Thông báo!' }}</p>
                     <p class="success-lrg">
                         {{ $message == 'Successful.' ? 'Ngồi xuống, thư giãn và chờ shipper giao hàng tới cho bạn!' : 'Thanh toán bị hủy!' }}
