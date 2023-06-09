@@ -268,7 +268,7 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">{{ number_format($dataProduct->price, 0, '', ',') }} VNĐ</div>
-                        <p>{{ $dataProduct->description }}</p>
+                        <p>{{ strip_tags(nl2br($dataProduct->description)) }}</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
