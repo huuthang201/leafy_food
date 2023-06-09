@@ -243,7 +243,7 @@
                             <img class="product__details__pic__item--large"
                                 src="{{ $dataProduct->image }}" alt="">
                         </div>
-                        <div class="product__details__pic__slider owl-carousel">
+                        {{-- <div class="product__details__pic__slider owl-carousel">
                             <img data-imgbigurl="img/product/details/product-details-2.jpg"
                                 src="/img/product/details/thumb-1.jpg" alt="">
                             <img data-imgbigurl="img/product/details/product-details-3.jpg"
@@ -252,7 +252,7 @@
                                 src="/img/product/details/thumb-3.jpg" alt="">
                             <img data-imgbigurl="img/product/details/product-details-4.jpg"
                                 src="/img/product/details/thumb-4.jpg" alt="">
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
