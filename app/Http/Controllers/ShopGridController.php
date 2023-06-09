@@ -103,6 +103,10 @@ class ShopGridController extends Controller
         } else {
             $param['totalProductsFavorite'] = $totalProductsFavorite;
         }
+        if(isset($request->error))
+        {
+            $param['error'] = $request->error;
+        }
         // Get product details
         $dataProduct = Product::where('id', $idProduct)->first();
         $param['dataProduct'] = $dataProduct;
