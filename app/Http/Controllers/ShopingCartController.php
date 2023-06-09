@@ -35,6 +35,8 @@ class ShopingCartController extends Controller
             $dataCart[$key]['product_name'] = $dataProduct->product_name;
             $dataCart[$key]['product_price'] = $dataProduct->price;
             $dataCart[$key]['product_image'] = $dataProduct->image;
+            $dataCart[$key]['number'] = $dataProduct->number;
+            $dataCart[$key]['unit'] = $dataProduct->unit;
             $totalPrice += $dataProduct->price * $value->quantity;
         }
         $param['dataCart'] = $dataCart;
@@ -82,13 +84,13 @@ class ShopingCartController extends Controller
         if ($cart) {
             $cart->quantity = $cart->quantity + $param['quantity'];
             $cart->save();
-            // Reduce quantity in product table
-            $product = Product::find($param['product_id']);
-            $product->quantity = $product->quantity - $param['quantity'];
-            $product->save();
         } else {
             Cart::create($param);
         }
+        // Reduce quantity in product table
+        $product = Product::find($param['product_id']);
+        $product->quantity = $product->quantity - $param['quantity'];
+        $product->save();
         // redirect to shoping-cart
         return redirect()->route('shoping-cart');
     }
@@ -97,7 +99,12 @@ class ShopingCartController extends Controller
         $idCart = $request->id;
         $idProduct = $request->product_id;
         if ($idCart) {
-            Cart::where('id', $idCart)->where('product_id', $idProduct)->delete();
+            $CartData = Cart::where('id', $idCart)->first();
+            $CartData->delete();
+            // Increase quantity in product table
+            $product = Product::find($idProduct);
+            $product->quantity = $product->quantity + $CartData->quantity;
+            $product->save();
         }
         // redirect to shoping-cart
         return redirect()->route('shoping-cart');

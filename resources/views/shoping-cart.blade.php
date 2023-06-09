@@ -255,7 +255,7 @@
                                 <tr>
                                     <td class="shoping__cart__item">
                                         <img src="{{ $item->product_image }}" alt="{{ $item->product_name }}" width="100px" height="100px">
-                                        <h5>{{ $item->product_name }}</h5>
+                                        <a href="/shop-details/{{ $item->product_id }}"><h5>{{ $item->product_name . ' ' . $item->number . $item->unit }}</h5></a>
                                     </td>
                                     <td class="shoping__cart__price">
                                         {{ number_format($item->product_price) }} VNĐ
