@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Favorite;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -52,18 +53,89 @@ class ShopGridController extends Controller
         {
             $param['totalProductsInCart'] = $totalProductsInCart;
         }
-
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
         return view('shop-grid', $param);
+    }
+    public function shop_grid_price(Request $request)
+    {
+        $maxPrice = $request->max;
+        $minPrice = $request->min;
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        if ($user)
+        {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
+        // Fetch all products
+        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->paginate(12);
+        // get categories name
+        foreach ($products as $product)
+        {
+            $category = Category::where('id', $product->category_id)->first();
+            $product->category_name = $category->category_name;
+        }
+        $param['products'] = $products;
+        // Total products found
+        $allProducts = Product::all();
+        $totalProducts = count($allProducts);
+        $param['totalProducts'] = $totalProducts;
+        // All categories
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
+        // Lastest products
+        $lastestProducts = Product::orderBy('created_at', 'desc')->take(6)->get();
+        $param['lastestProducts'] = $lastestProducts;
+        // Count total products in cart
+        if ($user)
+        {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart))
+        {
+            $param['totalProductsInCart'] = 0;
+        }
+        else
+        {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
+        return view('shop-grid-price', $param);
     }
     public function shop_details(Request $request)
     {
+        $idProduct = $request->id;
         $user = Auth::user(); // alternative way to get the currently authenticated user
         if ($user) {
             $param['id'] = $user->id;
             $param['name'] = $user->name;
             $param['email'] = $user->email;
+            // Favorite products
+            $favoriteProducts = Favorite::where('user_id', $param['id'])->where('product_id', $idProduct)->first();
         }
-        $idProduct = $request->id;
+        if (isset($favoriteProducts)) {
+            $param['favoriteProducts'] = true;
+        }
+        else
+        {
+            $param['favoriteProducts'] = false;
+        }
         // Categories
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
@@ -76,13 +148,25 @@ class ShopGridController extends Controller
         } else {
             $param['totalProductsInCart'] = $totalProductsInCart;
         }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
+        if(isset($request->error))
+        {
+            $param['error'] = $request->error;
+        }
         // Get product details
         $dataProduct = Product::where('id', $idProduct)->first();
         $param['dataProduct'] = $dataProduct;
         // nl2br() function inserts HTML line breaks (<br> or <br />) in front of each newline in a string.
         $param['dataProduct']->description = str_replace("\n", '', $param['dataProduct']->description);
         $param['dataProduct']->description = nl2br($param['dataProduct']->description, true);
-        // dd($param['dataProduct']->description);
         // Category name of product
         $categoryName = Category::where('id', $dataProduct->category_id)->first();
         $param['categoryName'] = $categoryName;
@@ -91,6 +175,7 @@ class ShopGridController extends Controller
         $param['relatedProducts'] = $relatedProducts;
         return view('shop-details', $param);
     }
+
     public function shop_grid(Request $request)
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
@@ -121,9 +206,98 @@ class ShopGridController extends Controller
         } else {
             $param['totalProductsInCart'] = $totalProductsInCart;
         }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
         // Lastest products
         $lastestProducts = Product::orderBy('created_at', 'desc')->where('category_id', $idCategory)->take(6)->get();
         $param['lastestProducts'] = $lastestProducts;
         return view('shop-grid-category', $param);
+    }
+
+    public function add_favorite(Request $request)
+    {
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        if ($user) {
+            $param['id'] = $user->id;
+        }
+        else
+        {
+            return redirect()->route('login');
+        }
+        $idProduct = $request->product_id;
+        $favoriteProducts = Favorite::where('user_id', $param['id'])->where('product_id', $idProduct)->first();
+        if ($favoriteProducts)
+        {
+            $favoriteProducts->delete();
+            return redirect()->back();
+        }
+        else
+        {
+            Favorite::updateOrCreate([
+                'user_id' => $param['id'],
+                'product_id' => $idProduct,
+            ]);
+        }
+        return redirect()->back();
+    }
+
+    /**
+     * Favorite products
+     *
+     */
+    public function favorite()
+    {
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
+        else
+        {
+            return redirect()->route('login');
+        }
+        // Favorite products
+        $productFavorites = Favorite::where('user_id', $param['id'])->get();
+        $productIDs = [];
+        foreach ($productFavorites as $productFavorite)
+        {
+            $productIDs[] = $productFavorite->product_id;
+        }
+        $products = Product::whereIn('id', $productIDs)->orderBy('created_at', 'desc')->paginate(12);
+        $param['products'] = $products;
+        // Total products found
+        $allProducts = Favorite::where('user_id', $param['id'])->get();
+        $totalProducts = count($allProducts);
+        $param['totalProducts'] = $totalProducts;
+        // Categories
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
+        // Count total products in cart
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
+        return view('favorite', $param);
     }
 }

@@ -9,11 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- csrf token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>LeafyFood</title>
+    <title>Sản phẩm {{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
@@ -39,17 +38,27 @@
         </div>
         <div class="humberger__menu__cart">
             <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                 <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
             </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
+
         </div>
         <div class="humberger__menu__widget">
 
             <div class="header__top__right__auth">
                 @if (isset($id))                    
-                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
-                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                <div>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
                 @else
                     <a href="/login"><i class="fa fa-user"></i> Login</a>
                 @endif
@@ -58,9 +67,9 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="/">Trang chủ</a></li>
-                <li><a href="./shop-grid">Cửa hàng</a></li>
+                <li><a href="/shop-grid">Cửa hàng</a></li>
                 
-                <li><a href="./blog">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
@@ -104,8 +113,18 @@
 
                             <div class="header__top__right__auth">
                                 @if (isset($id))                    
-                                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
-                                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                                <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                                <div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+            
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
                                 @else
                                     <a href="/login"><i class="fa fa-user"></i> Login</a>
                                 @endif
@@ -128,7 +147,7 @@
                             <li><a href="/">Trang chủ</a></li>
                             <li class="active"><a href="/shop-grid">Cửa hàng</a></li>
                             
-                            <li><a href="./blog">Blog</a></li>
+                            <li><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
@@ -136,10 +155,10 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                             <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+            
                     </div>
                 </div>
             </div>
@@ -172,7 +191,7 @@
                         <div class="hero__search__form">
                             <form action="/search" method="GET">
                                 <div class="hero__search__categories">
-                                    Tất cả danh mục
+                                    Tìm kiếm
                                     <span class="arrow_carrot-down"></span>
                                 </div>
                                 <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
@@ -185,7 +204,7 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <h5>1900 6868</h5>
-                                <span>Hỗ trợ 24/7</span>
+                                <span>8:00 AM - 10:00 PM</span>
                             </div>
                         </div>
                     </div>
@@ -224,7 +243,7 @@
                             <img class="product__details__pic__item--large"
                                 src="{{ $dataProduct->image }}" alt="">
                         </div>
-                        <div class="product__details__pic__slider owl-carousel">
+                        {{-- <div class="product__details__pic__slider owl-carousel">
                             <img data-imgbigurl="img/product/details/product-details-2.jpg"
                                 src="/img/product/details/thumb-1.jpg" alt="">
                             <img data-imgbigurl="img/product/details/product-details-3.jpg"
@@ -233,10 +252,11 @@
                                 src="/img/product/details/thumb-3.jpg" alt="">
                             <img data-imgbigurl="img/product/details/product-details-4.jpg"
                                 src="/img/product/details/thumb-4.jpg" alt="">
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
+                    {!! isset($error) ? "<div class='alert alert-danger alert-dismissible fade show' role='alert'> <strong>Không đủ hàng rồi bạn ơi!</strong> mong bạn thông cảm nhé, chỉ còn " . $dataProduct->quantity . " sản phẩm nữa thui! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>" : "" !!}
                     <div class="product__details__text">
                         <h3>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h3>
                         <div class="product__details__rating">
@@ -248,7 +268,7 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">{{ number_format($dataProduct->price, 0, '', ',') }} VNĐ</div>
-                        <p>{{ $dataProduct->description }}</p>
+                        <p>{{ strip_tags(nl2br($dataProduct->description)) }}</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -258,11 +278,11 @@
                         </div>
                         <input type="hidden" name="product_id" value="{{ $dataProduct->id }}">
                         <input type="submit" class="primary-btn" value="Thêm vào giỏ hàng">
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <a href="/add-favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span>{!! $favoriteProducts ? "<i class='fa fa-heart'></i>" : "<i class='fa fa-heart-o'></i>" !!}</span></a>
                         <ul>
                             <li><b>Còn</b> <span>{{ $dataProduct->quantity }}</span></li>
-                            <li><b>Giao hàng</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                            <li><b>Trọng lượng</b> <span>0.5 kg</span></li>
+                            <li><b>Giao hàng</b> <span>Tùy vào địa chỉ giao hàng |<samp> Miễn phí cho đơn hàng có giá trị trên 300k</samp></span></li>
+                            <li><b>Trọng lượng</b> <span>{{ $dataProduct->number . $dataProduct->unit }}</span></li>
                             <li><b>Chia sẻ</b>
                                 <div class="share">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -367,23 +387,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
+                                        <div class="footer__widget">
                         <h6>Truy cập nhanh</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="#">Về LeaefyFood</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Tuyển dụng LeafyFood</a></li>
                         </ul>
                     </div>
                 </div>

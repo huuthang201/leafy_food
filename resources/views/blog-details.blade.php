@@ -37,10 +37,10 @@
         </div>
         <div class="humberger__menu__cart">
             <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                 <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
             </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
+
         </div>
         <div class="humberger__menu__widget">
 
@@ -67,9 +67,9 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="/">Trang chủ</a></li>
-                <li><a href="./shop-grid">Cửa hàng</a></li>
+                <li><a href="/shop-grid">Cửa hàng</a></li>
                 
-                <li><a href="./blog">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
@@ -146,9 +146,9 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="/">Trang chủ</a></li>
-                            <li><a href="./shop-grid">Cửa hàng</a></li>
+                            <li><a href="/shop-grid">Cửa hàng</a></li>
                             
-                            <li class="active"><a href="./blog">Blog</a></li>
+                            <li class="active"><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
@@ -156,10 +156,10 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                             <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+            
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                         <div class="hero__search__form">
                             <form action="/search" method="GET">
                                 <div class="hero__search__categories">
-                                    Tất cả danh mục
+                                    Tìm kiếm
                                     <span class="arrow_carrot-down"></span>
                                 </div>
                                 <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
@@ -205,7 +205,7 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <h5>1900 6868</h5>
-                                <span>Hỗ trợ 24/7</span>
+                                <span>8:00 AM - 10:00 PM</span>
                             </div>
                         </div>
                     </div>
@@ -436,20 +436,10 @@
                     <div class="footer__widget">
                         <h6>Truy cập nhanh</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="#">Về LeaefyFood</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Tuyển dụng LeafyFood</a></li>
                         </ul>
                     </div>
                 </div>

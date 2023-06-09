@@ -24,7 +24,10 @@ Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
 Route::get('/shop-details/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_details'])->name('shop-details');
 Route::get('/shop-grid', [App\Http\Controllers\ShopGridController::class, 'index'])->name('shop-grid');
+Route::get('/shop-grid/price/{min}/{max}', [App\Http\Controllers\ShopGridController::class, 'shop_grid_price'])->name('shop_grid_price');
 Route::get('/shoping-cart', [App\Http\Controllers\ShopingCartController::class, 'index'])->name('shoping-cart');
+Route::get('/bill', [App\Http\Controllers\ShopingCartController::class, 'bill'])->name('bill');
+Route::get('/bill/{id}', [App\Http\Controllers\ShopingCartController::class, 'bill_detail'])->name('bill_detail');
 Route::get('/shop-grid/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_grid'])->name('shop-grid');
 
 Route::get('/add-cart', [App\Http\Controllers\ShopingCartController::class, 'add_cart'])->name('add-cart');
@@ -32,3 +35,5 @@ Route::get('/cart/delete', [App\Http\Controllers\ShopingCartController::class, '
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
 Route::post('/checkout-process', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout-process');
 Route::get('/checkout-success', [App\Http\Controllers\CheckoutController::class, 'checkout_success'])->name('checkout-success');
+Route::get('/add-favorite', [App\Http\Controllers\ShopGridController::class, 'add_favorite'])->name('add-favorite');
+Route::get('/favorite', [App\Http\Controllers\ShopGridController::class, 'favorite'])->name('favorite');

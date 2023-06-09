@@ -40,6 +40,12 @@ php artisan db:seed --class=DatabaseSeeder
 ```
 php artisan serve
 ```
+
+## API sử dụng
+```
+https://provinces.open-api.vn/
+```
+## Hình ảnh sản phẩm
 <br>Cà phê eatclean Tropicana Slim<br>
 ![Cà phê eatclean Tropicana Slim](https://github.com/huuthang201/leafy_food/assets/64240532/307f69db-f009-4999-a1b7-90d13e46b0db)
 <br>

@@ -37,10 +37,10 @@
         </div>
         <div class="humberger__menu__cart">
             <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                 <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
             </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
+
         </div>
         <div class="humberger__menu__widget">
 
@@ -67,9 +67,9 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="/">Trang chủ</a></li>
-                <li><a href="./shop-grid">Cửa hàng</a></li>
+                <li><a href="/shop-grid">Cửa hàng</a></li>
                 
-                <li><a href="./blog">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
@@ -146,9 +146,9 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="/">Trang chủ</a></li>
-                            <li><a href="./shop-grid">Cửa hàng</a></li>
+                            <li><a href="/shop-grid">Cửa hàng</a></li>
                             
-                            <li><a href="./blog">Blog</a></li>
+                            <li><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
@@ -156,10 +156,10 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                             <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+            
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                         <div class="hero__search__form">
                             <form action="/search" method="GET">
                                 <div class="hero__search__categories">
-                                    Tất cả danh mục
+                                    Tìm kiếm
                                     <span class="arrow_carrot-down"></span>
                                 </div>
                                 <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
@@ -205,7 +205,7 @@
                             </div>
                             <div class="hero__search__phone__text">
                                 <h5>1900 6868</h5>
-                                <span>Hỗ trợ 24/7</span>
+                                <span>8:00 AM - 10:00 PM</span>
                             </div>
                         </div>
                     </div>
@@ -422,6 +422,61 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title from-blog__title">
+                        <h2>Phản hồi của khách hàng</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item customer-ev">
+                        <div class="testimonial-item text-center p-4 mb-5">
+                            <div class="image-avata">
+                                <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
+                            </div>
+                            <h4 class="name" style="margin-bottom: 10px">anh Dương Cà Mau</h4>
+                            <p><i>Tiktok: <b>@duongdevxin</b></i></p>
+                            <p><i>Khách hàng Tiktok Shop <b>LeafyFood</b></i></p>
+                            <p class="designation m-0">"Tôi luôn chọn những phẩm của LeafyFood, vì tôi biết rõ nguồn gốc xuất xứ từng loại nguyên liệu để sản xuất.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item customer-ev">
+                        <div class="testimonial-item text-center p-4 mb-5">
+                            <div class="image-avata">
+                                <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
+                            </div>
+                            <h4 class="name" style="margin-bottom: 10px">anh Tâm Đồng Nai</h4>
+                            <p><i>Email <b>dathureal@gmail.com</b></i></p>
+                            <p><i>Khách hàng <b>LeafyFood.oneyearlater.me</b></i></p>
+                            <p class="designation m-0">"Sức khỏe là quan trọng nhất! Với tôi mỗi ngày ăn những thực phẩm sạch để sức khoẻ ngày càng được hoàn thiện</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item customer-ev">
+                        <div class="testimonial-item text-center p-4 mb-5">
+                            <div class="image-avata">
+                                <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
+                            </div>
+                            <h4 class="name" style="margin-bottom: 10px">chị Pha Coãng Ngãi</h4>
+                            <p><i>Tiktok: <b>@pha123</b></i></p>
+                            <p><i>Khách hàng Tiktok Shop <b>LeafyFood</b></i></p>
+                            <p class="designation m-0">"Là một người khá kỹ tính, tôi luôn luôn lựa chọn những thực phẩm sạch nhất. Và đây là nơi tôi đặt trọng niềm tin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Blog Section Begin -->
+    <section class="from-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title from-blog__title">
                         <h2>Bài viết</h2>
                     </div>
                 </div>
@@ -494,23 +549,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
+                                        <div class="footer__widget">
                         <h6>Truy cập nhanh</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="#">Về LeaefyFood</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Tuyển dụng LeafyFood</a></li>
                         </ul>
                     </div>
                 </div>

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LeafyFood</title>
+    <title>Sản phẩm yêu thích | LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -59,14 +59,14 @@
                             @csrf
                         </form>
                     </div>
-                @else
-                    <a href="/login"><i class="fa fa-user"></i> Login</a>
-                @endif
+                    @else
+                        <a href="/login"><i class="fa fa-user"></i> Login</a>
+                    @endif
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="/">Trang chủ</a></li>
+                <li><a href="/">Trang chủ</a></li>
                 <li><a href="/shop-grid">Cửa hàng</a></li>
                 
                 <li><a href="/blog">Blog</a></li>
@@ -149,7 +149,7 @@
                             <li><a href="/shop-grid">Cửa hàng</a></li>
                             
                             <li><a href="/blog">Blog</a></li>
-                            <li class="active"><a href="/contact">Contact</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -221,10 +221,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Liên hệ với chúng tôi</h2>
+                        <h2>LeafyFood</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
-                            <span>Liên hệ với chúng tôi</span>
+                            <span>Shop</span>
                         </div>
                     </div>
                 </div>
@@ -233,86 +233,93 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Contact Section Begin -->
-    <section class="contact spad">
+    <!-- Product Section Begin -->
+    <section class="product spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_phone"></span>
-                        <h4>Điện thoại</h4>
-                        <p>1900 6868 (miễn phí)</p>
+                <div class="col-lg-3 col-md-5">
+                    <div class="sidebar">
+                        <div class="sidebar__item">
+                            <h4>Danh mục</h4>
+                            <ul>
+                                @foreach ($categories as $category)
+                                    <li><a href="/shop-grid/{{ $category->id }}">{{ $category->category_name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        {{-- <div class="sidebar__item">
+                            <h4>Price</h4>
+                            <div class="price-range-wrap">
+                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                    data-min="10" data-max="540">
+                                    <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                    <span tab="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                    <span tab="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                </div>
+                                <div class="range-slider">
+                                    <div class="price-input">
+                                        <input type="text" id="minamount">
+                                        <input type="text" id="maxamount">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_pin_alt"></span>
-                        <h4>Địa chỉ</h4>
-                        <p>UIT, Khu phố a, Thủ Đức</p>
+                <div class="col-lg-9 col-md-7">
+                    <div class="filter__item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5">
+                                <div class="filter__sort">
+                                    <span>Sắp xếp theo</span>
+                                    <select>
+                                        <option value="0">Giá</option>
+                                        <option value="0">Mua nhiều</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="filter__found">
+                                    <h6><span>{{ $totalProducts }}</span> Sản phẩm được tìm thấy</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-3">
+                                <div class="filter__option">
+                                    <span class="icon_grid-2x2"></span>
+                                    <span class="icon_ul"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_clock_alt"></span>
-                        <h4>Mở cửa</h4>
-                        <p>8:00 AM to 10:00 PM</p>
+                    <div class="row">
+                        @foreach ($products as $product)
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="{{ $product->image }}">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name }}</a></h6>
+                                    <h5>{{ number_format($product->price) }} VNĐ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_mail_alt"></span>
-                        <h4>Email</h4>
-                        <p>leafyfood@gmail.com</p>
+                    <div class="product__pagination">
+                        @for ($i = 1; $i <= $products->lastPage(); $i++)
+                            <a href="{{ $products->url($i) }}">{{ $i }}</a>
+                        @endfor
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
-
-    <!-- Map Begin -->
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.5834650620966!2d106.80255325834823!3d10.870245412974466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2sUniversity%20of%20Information%20Technology%20-%20VNUHCM!5e0!3m2!1sen!2s!4v1684667043920!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="map-inside">
-            <i class="icon_pin"></i>
-            <div class="inside-widget">
-                <h4>LeafyFood</h4>
-                <ul>
-                    <li>Phone: 1900 6868 (miễn phí)</li>
-                    <li>Add: UIT, Khu phố a, Thủ Đức</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Map End -->
-
-    <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact__form__title">
-                        <h2>Liên hệ với chúng tôi</h2>
-                    </div>
-                </div>
-            </div>
-            <form action="#">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Họ tên">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <textarea placeholder="Bạn muốn nhắn gửi gì?"></textarea>
-                        <button type="submit" class="site-btn">Gửi ngay</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Contact Form End -->
+    <!-- Product Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">

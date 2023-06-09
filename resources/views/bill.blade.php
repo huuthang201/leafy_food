@@ -146,10 +146,10 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="/">Trang chủ</a></li>
-                            <li><a href="/shop-grid">Cửa hàng</a></li>
+                            <li class="active"><a href="/shop-grid">Cửa hàng</a></li>
                             
                             <li><a href="/blog">Blog</a></li>
-                            <li class="active"><a href="/contact">Contact</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -221,10 +221,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Liên hệ với chúng tôi</h2>
+                        <h2>Shopping Cart</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
-                            <span>Liên hệ với chúng tôi</span>
+                            <span>Shopping Cart</span>
                         </div>
                     </div>
                 </div>
@@ -233,86 +233,56 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Contact Section Begin -->
-    <section class="contact spad">
+    <!-- Shoping Cart Section Begin -->
+    <section class="shoping-cart spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_phone"></span>
-                        <h4>Điện thoại</h4>
-                        <p>1900 6868 (miễn phí)</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_pin_alt"></span>
-                        <h4>Địa chỉ</h4>
-                        <p>UIT, Khu phố a, Thủ Đức</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_clock_alt"></span>
-                        <h4>Mở cửa</h4>
-                        <p>8:00 AM to 10:00 PM</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_mail_alt"></span>
-                        <h4>Email</h4>
-                        <p>leafyfood@gmail.com</p>
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        @if (count($dataBill) > 0)
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Mã bill</th>
+                                    <th>Loại</th>
+                                    <th>Người mua</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Chi tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($dataBill as $item)
+                                <tr>
+                                    <td>
+                                        {{ $item['bill_detail']->orderId }}
+                                    </td>
+                                    <td>
+                                        {{ $item['bill_detail']->orderInfo }}
+                                    </td>
+                                    <td>
+                                        {{ $item['bill_detail']->name }}
+                                    </td>
+                                    <td>
+                                        {{ number_format($item['bill_detail']->amount) }} VNĐ
+                                    </td>
+                                    <td class="">
+                                        <a href="/bill/{{ $item->id }}" class="btn btn-primary">Chi tiết</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        @else
+                        <div class="alert alert-danger" role="alert">
+                            Bạn chưa mua hàng lần nào!
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
-
-    <!-- Map Begin -->
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.5834650620966!2d106.80255325834823!3d10.870245412974466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2sUniversity%20of%20Information%20Technology%20-%20VNUHCM!5e0!3m2!1sen!2s!4v1684667043920!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="map-inside">
-            <i class="icon_pin"></i>
-            <div class="inside-widget">
-                <h4>LeafyFood</h4>
-                <ul>
-                    <li>Phone: 1900 6868 (miễn phí)</li>
-                    <li>Add: UIT, Khu phố a, Thủ Đức</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Map End -->
-
-    <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact__form__title">
-                        <h2>Liên hệ với chúng tôi</h2>
-                    </div>
-                </div>
-            </div>
-            <form action="#">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Họ tên">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <textarea placeholder="Bạn muốn nhắn gửi gì?"></textarea>
-                        <button type="submit" class="site-btn">Gửi ngay</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Contact Form End -->
+    <!-- Shoping Cart Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -383,7 +353,22 @@
     <script src="/js/main.js"></script>
 
 
-
 </body>
 
+<script>
+    function deleteCart(id, product_id) {
+        $.ajax({
+            url: '/cart/delete',
+            type: 'GET',
+            data: {
+                id: id,
+                product_id: product_id,
+                _token: '{{ csrf_token() }}'
+            },
+            success: function(data) {
+                location.reload();
+            }
+        });
+    }
+</script>
 </html>
