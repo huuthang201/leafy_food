@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bill;
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Favorite;
@@ -150,7 +151,7 @@ class CheckoutController extends Controller
             );
             $result = $this->execPostRequest($endpoint, json_encode($data));
             $jsonResult = json_decode($result, true);  // decode json
-            
+
             return redirect($jsonResult['payUrl']);
         }
     }
@@ -176,6 +177,10 @@ class CheckoutController extends Controller
             $userID = Auth::user()->id;
             Cart::where('user_id', $userID)->delete();
         }
+        Bill::create([
+            'user_id' => Auth::user()->id,
+            'bill_detail' => json_encode($data),
+        ]);
         return view('checkout-success', $data);
     }
 }
