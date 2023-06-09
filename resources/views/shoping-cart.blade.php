@@ -309,7 +309,7 @@
                 <div class="col-lg-12">
                     <div class="shoping__cart__btns">
                         <a href="/shop-grid" class="primary-btn cart-btn">MUA HÀNG TIẾP</a>
-                        <a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                        <a href="/shoping-cart" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
                             CẬP NHẬT GIỎ</a>
                     </div>
                 </div>

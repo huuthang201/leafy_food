@@ -72,11 +72,20 @@ class ShopingCartController extends Controller
         $param['user_id'] = $user->id;
         $param['product_id'] = $request->product_id;
         $param['quantity'] = $request->quantity;
+        // check if product is available
+        $product = Product::find($param['product_id']);
+        if ($product->quantity < $param['quantity']) {
+            return redirect('/shop-details/' . $param['product_id'] . '?error=khongduhangroibanoi');
+        }
         // update if already exists
         $cart = Cart::where('user_id', $param['user_id'])->where('product_id', $param['product_id'])->first();
         if ($cart) {
             $cart->quantity = $cart->quantity + $param['quantity'];
             $cart->save();
+            // Reduce quantity in product table
+            $product = Product::find($param['product_id']);
+            $product->quantity = $product->quantity - $param['quantity'];
+            $product->save();
         } else {
             Cart::create($param);
         }

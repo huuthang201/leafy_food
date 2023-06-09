@@ -256,6 +256,7 @@
                     </div>
                 </div>
                 <form class="col-lg-6 col-md-6" action="/add-cart" method="get">
+                    {!! isset($error) ? "<div class='alert alert-danger' role='alert'>Không đủ hàng rồi bạn ơi, mong bạn thông cảm nhé, chỉ còn " . $dataProduct->quantity . " sản phẩm nữa thui!</div>" : "" !!}
                     <div class="product__details__text">
                         <h3>{{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</h3>
                         <div class="product__details__rating">
