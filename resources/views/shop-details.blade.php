@@ -38,7 +38,7 @@
         </div>
         <div class="humberger__menu__cart">
             <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                 <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
@@ -47,8 +47,18 @@
 
             <div class="header__top__right__auth">
                 @if (isset($id))                    
-                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
-                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                <div>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
                 @else
                     <a href="/login"><i class="fa fa-user"></i> Login</a>
                 @endif
@@ -57,9 +67,9 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="/">Trang chủ</a></li>
-                <li><a href="./shop-grid">Cửa hàng</a></li>
+                <li><a href="/shop-grid">Cửa hàng</a></li>
                 
-                <li><a href="./blog">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Liên hệ</a></li>
             </ul>
         </nav>
@@ -103,8 +113,18 @@
 
                             <div class="header__top__right__auth">
                                 @if (isset($id))                    
-                                    {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
-                                    <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                                <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
+                                <div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+            
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
                                 @else
                                     <a href="/login"><i class="fa fa-user"></i> Login</a>
                                 @endif
@@ -127,7 +147,7 @@
                             <li><a href="/">Trang chủ</a></li>
                             <li class="active"><a href="/shop-grid">Cửa hàng</a></li>
                             
-                            <li><a href="./blog">Blog</a></li>
+                            <li><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Liên hệ</a></li>
                         </ul>
                     </nav>
@@ -135,7 +155,7 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                             <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
@@ -257,7 +277,7 @@
                         </div>
                         <input type="hidden" name="product_id" value="{{ $dataProduct->id }}">
                         <input type="submit" class="primary-btn" value="Thêm vào giỏ hàng">
-                        <a href="/favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span>{!! $favoriteProducts ? "<i class='fa fa-heart'></i>" : "<i class='fa fa-heart-o'></i>" !!}</span></a>
+                        <a href="/add-favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span>{!! $favoriteProducts ? "<i class='fa fa-heart'></i>" : "<i class='fa fa-heart-o'></i>" !!}</span></a>
                         <ul>
                             <li><b>Còn</b> <span>{{ $dataProduct->quantity }}</span></li>
                             <li><b>Giao hàng</b> <span>Tùy vào địa chỉ giao hàng |<samp> Miễn phí cho đơn hàng có giá trị trên 300k</samp></span></li>

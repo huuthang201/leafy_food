@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Favorite;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -65,6 +66,15 @@ class HomeController extends Controller
         } else {
             $param['totalProductsInCart'] = $totalProductsInCart;
         }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
         return view('index', $param);
     }
 
@@ -99,6 +109,15 @@ class HomeController extends Controller
             $param['totalProductsInCart'] = 0;
         } else {
             $param['totalProductsInCart'] = $totalProductsInCart;
+        }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
         }
         return view('search', $param);
     }

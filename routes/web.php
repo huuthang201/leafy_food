@@ -32,4 +32,5 @@ Route::get('/cart/delete', [App\Http\Controllers\ShopingCartController::class, '
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
 Route::post('/checkout-process', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout-process');
 Route::get('/checkout-success', [App\Http\Controllers\CheckoutController::class, 'checkout_success'])->name('checkout-success');
-Route::get('/favorite', [App\Http\Controllers\ShopGridController::class, 'add_favorite'])->name('add-favorite');
+Route::get('/add-favorite', [App\Http\Controllers\ShopGridController::class, 'add_favorite'])->name('add-favorite');
+Route::get('/favorite', [App\Http\Controllers\ShopGridController::class, 'favorite'])->name('favorite');
