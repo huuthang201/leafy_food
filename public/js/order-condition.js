@@ -31,9 +31,9 @@ $(document).ready(function() {
     {
         $("#province").change(function() {
             if (this.value == 79) {
-                $("#feeShip").text("0 VNĐ");
-                $("#totalCheckoutInput").val($("#totalCheckoutInput").val() - $("#feeShipInput").val());
-                $("#feeShipInput").val(0);
+                $("#feeShip").text("20,000 VNĐ");
+                $("#totalCheckoutInput").val($("#totalCheckoutInput").val() - $("#feeShipInput").val() + 20000);
+                $("#feeShipInput").val(20000);
                 $("#totalCheckout").text($("#totalCheckoutInput").val().toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }) + " VNĐ");
             } else {
                 $("#feeShip").text("30.000 VNĐ");
