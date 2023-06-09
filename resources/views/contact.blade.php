@@ -221,10 +221,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Contact Us</h2>
+                        <h2>Liên hệ với chúng tôi</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
-                            <span>Contact Us</span>
+                            <span>Liên hệ với chúng tôi</span>
                         </div>
                     </div>
                 </div>
@@ -240,22 +240,22 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_phone"></span>
-                        <h4>Phone</h4>
+                        <h4>Điện thoại</h4>
                         <p>1900 6868 (miễn phí)</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
-                        <h4>Address</h4>
+                        <h4>Địa chỉ</h4>
                         <p>UIT, Khu phố a, Thủ Đức</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_clock_alt"></span>
-                        <h4>Open time</h4>
-                        <p>10:00 am to 23:00 pm</p>
+                        <h4>Mở cửa</h4>
+                        <p>8:00 AM to 10:00 PM</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -331,23 +331,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
+                                        <div class="footer__widget">
                         <h6>Truy cập nhanh</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="#">Về LeaefyFood</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Tuyển dụng LeafyFood</a></li>
                         </ul>
                     </div>
                 </div>
