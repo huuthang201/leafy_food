@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LeafyFood</title>
+    <title>Mua hàng LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -309,7 +309,7 @@
                                     </div>
                                     <div class="latest-prdouct__slider__item">
                                         @for ($i = 3; $i < 6; $i++)
-                                            <a href="/shop-detail/{{ @$lastestProducts[$i]->id }}" class="latest-product__item">
+                                            <a href="/shop-details/{{ @$lastestProducts[$i]->id }}" class="latest-product__item">
                                                 <div class="latest-product__item__pic">
                                                     <img src="{{ @$lastestProducts[$i]->image }}" alt="{{ @$lastestProducts[$i]->product_name . " " . @$lastestProducts[$i]->number . @$lastestProducts[$i]->unit }}">
                                                 </div>

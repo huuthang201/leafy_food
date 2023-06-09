@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- csrf token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>LeafyFood</title>
+    <title>Sản phẩm {{ $dataProduct->product_name . ' ' . $dataProduct->number . $dataProduct->unit }}</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -258,11 +258,11 @@
                         </div>
                         <input type="hidden" name="product_id" value="{{ $dataProduct->id }}">
                         <input type="submit" class="primary-btn" value="Thêm vào giỏ hàng">
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <a href="/favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span class={{ $favoriteProducts ? "icon_heart_alt_favorite" : "icon_heart_alt" }}></span></a>
                         <ul>
                             <li><b>Còn</b> <span>{{ $dataProduct->quantity }}</span></li>
-                            <li><b>Giao hàng</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                            <li><b>Trọng lượng</b> <span>0.5 kg</span></li>
+                            <li><b>Giao hàng</b> <span>Tùy vào địa chỉ giao hàng |<samp> Miễn phí cho đơn hàng có giá trị trên 300k</samp></span></li>
+                            <li><b>Trọng lượng</b> <span>{{ $dataProduct->number . $dataProduct->unit }}</span></li>
                             <li><b>Chia sẻ</b>
                                 <div class="share">
                                     <a href="#"><i class="fa fa-facebook"></i></a>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Favorite;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,13 +58,22 @@ class ShopGridController extends Controller
     }
     public function shop_details(Request $request)
     {
+        $idProduct = $request->id;
         $user = Auth::user(); // alternative way to get the currently authenticated user
         if ($user) {
             $param['id'] = $user->id;
             $param['name'] = $user->name;
             $param['email'] = $user->email;
+            // Favorite products
+            $favoriteProducts = Favorite::where('user_id', $param['id'])->where('product_id', $idProduct)->first();
         }
-        $idProduct = $request->id;
+        if (isset($favoriteProducts)) {
+            $param['favoriteProducts'] = true;
+        }
+        else
+        {
+            $param['favoriteProducts'] = false;
+        }
         // Categories
         $categories = Category::take(8)->get();
         $param['categories'] = $categories;
@@ -82,7 +92,6 @@ class ShopGridController extends Controller
         // nl2br() function inserts HTML line breaks (<br> or <br />) in front of each newline in a string.
         $param['dataProduct']->description = str_replace("\n", '', $param['dataProduct']->description);
         $param['dataProduct']->description = nl2br($param['dataProduct']->description, true);
-        // dd($param['dataProduct']->description);
         // Category name of product
         $categoryName = Category::where('id', $dataProduct->category_id)->first();
         $param['categoryName'] = $categoryName;
@@ -91,6 +100,7 @@ class ShopGridController extends Controller
         $param['relatedProducts'] = $relatedProducts;
         return view('shop-details', $param);
     }
+
     public function shop_grid(Request $request)
     {
         $user = Auth::user(); // alternative way to get the currently authenticated user
@@ -125,5 +135,32 @@ class ShopGridController extends Controller
         $lastestProducts = Product::orderBy('created_at', 'desc')->where('category_id', $idCategory)->take(6)->get();
         $param['lastestProducts'] = $lastestProducts;
         return view('shop-grid-category', $param);
+    }
+
+    public function add_favorite(Request $request)
+    {
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        if ($user) {
+            $param['id'] = $user->id;
+        }
+        else
+        {
+            return redirect()->route('login');
+        }
+        $idProduct = $request->product_id;
+        $favoriteProducts = Favorite::where('user_id', $param['id'])->where('product_id', $idProduct)->first();
+        if ($favoriteProducts)
+        {
+            $favoriteProducts->delete();
+            return redirect()->back();
+        }
+        else
+        {
+            Favorite::updateOrCreate([
+                'user_id' => $param['id'],
+                'product_id' => $idProduct,
+            ]);
+        }
+        return redirect()->back();
     }
 }
