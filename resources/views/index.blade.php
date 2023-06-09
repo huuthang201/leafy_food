@@ -436,7 +436,7 @@
                             <h4 class="name" style="margin-bottom: 10px">anh Dương</h4>
                             <p><i>Tiktok: <b>@duongdevxin</b></i></p>
                             <p><i>Khách hàng Tiktok Shop <b>LeafyFood</b></i></p>
-                            <p class="designation m-0">"Tôi luôn chọn những phẩm của Tây Nguyên Food, vì tôi biết rõ nguồn gốc xuất xứ từng loại nguyên liệu để sản xuất.</p>
+                            <p class="designation m-0">"Tôi luôn chọn những phẩm của LeafyFood, vì tôi biết rõ nguồn gốc xuất xứ từng loại nguyên liệu để sản xuất.</p>
                         </div>
                     </div>
                 </div>
