@@ -64,6 +64,60 @@ class ShopGridController extends Controller
         }
         return view('shop-grid', $param);
     }
+    public function shop_grid_price(Request $request)
+    {
+        $maxPrice = $request->max;
+        $minPrice = $request->min;
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        if ($user)
+        {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
+        // Fetch all products
+        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->paginate(12);
+        // get categories name
+        foreach ($products as $product)
+        {
+            $category = Category::where('id', $product->category_id)->first();
+            $product->category_name = $category->category_name;
+        }
+        $param['products'] = $products;
+        // Total products found
+        $allProducts = Product::all();
+        $totalProducts = count($allProducts);
+        $param['totalProducts'] = $totalProducts;
+        // All categories
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
+        // Lastest products
+        $lastestProducts = Product::orderBy('created_at', 'desc')->take(6)->get();
+        $param['lastestProducts'] = $lastestProducts;
+        // Count total products in cart
+        if ($user)
+        {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart))
+        {
+            $param['totalProductsInCart'] = 0;
+        }
+        else
+        {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
+        return view('shop-grid-price', $param);
+    }
     public function shop_details(Request $request)
     {
         $idProduct = $request->id;

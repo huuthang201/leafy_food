@@ -247,7 +247,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <div class="sidebar__item">
+                        {{-- <div class="sidebar__item">
                             <h4>Price</h4>
                             <div class="price-range-wrap">
                                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
@@ -263,34 +263,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sidebar__item">
-                            <h4>Size phổ biến</h4>
-                            <div class="sidebar__item__size">
-                                <label for="large">
-                                    Large
-                                    <input type="radio" id="large">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__size">
-                                <label for="medium">
-                                    Medium
-                                    <input type="radio" id="medium">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__size">
-                                <label for="small">
-                                    Small
-                                    <input type="radio" id="small">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__size">
-                                <label for="tiny">
-                                    Tiny
-                                    <input type="radio" id="tiny">
-                                </label>
-                            </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-7">
@@ -300,8 +273,8 @@
                                 <div class="filter__sort">
                                     <span>Sắp xếp theo</span>
                                     <select>
-                                        <option value="0">Default</option>
-                                        <option value="0">Default</option>
+                                        <option value="0">Giá</option>
+                                        <option value="0">Mua nhiều</option>
                                     </select>
                                 </div>
                             </div>

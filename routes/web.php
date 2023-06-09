@@ -24,6 +24,7 @@ Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
 Route::get('/shop-details/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_details'])->name('shop-details');
 Route::get('/shop-grid', [App\Http\Controllers\ShopGridController::class, 'index'])->name('shop-grid');
+Route::get('/shop-grid/price/{min}/{max}', [App\Http\Controllers\ShopGridController::class, 'shop_grid_price'])->name('shop_grid_price');
 Route::get('/shoping-cart', [App\Http\Controllers\ShopingCartController::class, 'index'])->name('shoping-cart');
 Route::get('/shop-grid/{id}', [App\Http\Controllers\ShopGridController::class, 'shop_grid'])->name('shop-grid');
 

@@ -1642,7 +1642,20 @@ ol {
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
 }
-
+.customer-ev {
+	border: 1px solid #ebebeb;
+	border-radius: 20px;
+	background: #ffffff;
+}
+.image-avata {
+	text-align: center;
+	padding: 20px 0;
+}
+.image-avata img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
 .product__pagination a:hover,
 .blog__pagination a:hover {
 	background: #7fad39;
