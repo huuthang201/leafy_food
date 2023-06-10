@@ -281,8 +281,8 @@
                         <a href="/add-favorite?product_id={{ $dataProduct->id }}" class="heart-icon"><span>{!! $favoriteProducts ? "<i class='fa fa-heart'></i>" : "<i class='fa fa-heart-o'></i>" !!}</span></a>
                         <ul>
                             <li><b>Còn</b> <span>{{ $dataProduct->quantity }}</span></li>
+                            <li><b>Trọng lượng</b> <span>{{ $dataProduct->number != null ? $dataProduct->number . $dataProduct->unit : 'Tổng trọng lượng các sản phẩm trong Combo' }}</span></li>
                             <li><b>Giao hàng</b> <span>Tùy vào địa chỉ giao hàng |<samp> Miễn phí cho đơn hàng có giá trị trên 300k</samp></span></li>
-                            <li><b>Trọng lượng</b> <span>{{ $dataProduct->number . $dataProduct->unit }}</span></li>
                             <li><b>Chia sẻ</b>
                                 <div class="share">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
