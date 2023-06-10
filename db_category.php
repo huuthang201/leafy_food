@@ -23,4 +23,10 @@ $data = [
 'image' => 'https://vinmec-prod.s3.amazonaws.com/images/20200321_101804_608417_ngu-coc-nguyen-hat-.max-1800x1800.jpg',
 'description' => 'Bún ngô eat clean, bún khô gia truyền'
 ],
+[
+'id' => 5,
+'category_name'=> 'Combo',
+'image' => '',
+'description' => 'Combo sẽ bao gồm các sản phẩm khác nhau, mỗi loại một ít'
+],
 ]

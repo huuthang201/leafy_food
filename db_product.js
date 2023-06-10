@@ -1808,4 +1808,86 @@ $data = [
         'number' => 500,
         'unit' => 'g'   
     ],
+    [
+        'product_name' => 'Combo 1: Detox Boost ',
+        'category_id' => 5,
+        'price' => 299000,
+        'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvn.biggo.com%2Fs%2FCombo%2B20%2BG%25C3%25B3I%2B%25C4%2591%25E1%25BB%2593%2B%25C4%2583N%2BV%25E1%25BA%25B7T%2F&psig=AOvVaw3gXNUnGxWLhvFXDwOwB2EJ&ust=1686501770782000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCniOiSuf8CFQAAAAAdAAAAABAE',
+        'description' => '<p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Trà giải độc thận (Mùi tây khô) 50g&nbsp;</span>
+        </p>
+        <p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Mật ong lên men (Phục hồi) 250ml&nbsp;</span>
+        </p>
+        <p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Gạo lứt 1kg</span>
+        </p>',
+        'quantity' => 20,
+        'status' => 1,
+        'number' => 1,
+        'unit' => 'combo'   
+    ],
+    [
+        'product_name' => 'Combo 2: Energizing Gym Blend',
+        'category_id' => 5,
+        'price' => 499000,
+        'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvn.biggo.com%2Fs%2FCombo%2B20%2BG%25C3%25B3I%2B%25C4%2591%25E1%25BB%2593%2B%25C4%2583N%2BV%25E1%25BA%25B7T%2F&psig=AOvVaw3gXNUnGxWLhvFXDwOwB2EJ&ust=1686501770782000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCniOiSuf8CFQAAAAAdAAAAABAE',
+        'description' => '<p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Mật ong lên men (Tươi) 500ml&nbsp;</span>
+        </p>
+        <p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Trà Yerba Mates Loose Tea - dành cho gymer 180g</span>
+        </p>',
+        'quantity' => 20,
+        'status' => 1,
+        'number' => 1,
+        'unit' => 'combo'
+    ],
+    [
+        'product_name' => 'Combo 3: Coffee Crunch',
+        'category_id' => 5,
+        'price' => 149000,
+        'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvn.biggo.com%2Fs%2FCombo%2B20%2BG%25C3%25B3I%2B%25C4%2591%25E1%25BB%2593%2B%25C4%2583N%2BV%25E1%25BA%25B7T%2F&psig=AOvVaw3gXNUnGxWLhvFXDwOwB2EJ&ust=1686501770782000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCniOiSuf8CFQAAAAAdAAAAABAE',
+        'description' => '<p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Cà phê eatclean Tropicana Slim 100g</span>
+        <br>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Granola 250g</span>
+        </p>',
+        'quantity' => 20,
+        'status' => 1,
+        'number' => 1,
+        'unit' => 'combo'
+    ],
+    [
+        'product_name' => 'Combo 4: Healthy Morning Start',
+        'category_id' => 5,
+        'price' => 269000,
+        'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvn.biggo.com%2Fs%2FCombo%2B20%2BG%25C3%25B3I%2B%25C4%2591%25E1%25BB%2593%2B%25C4%2583N%2BV%25E1%25BA%25B7T%2F&psig=AOvVaw3gXNUnGxWLhvFXDwOwB2EJ&ust=1686501770782000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCniOiSuf8CFQAAAAAdAAAAABAE',
+        'description' => '<p>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Thanh gạo lứt phô mai 500g</span>
+        <br>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Yến mạch 500g</span>
+        <br>
+        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Hạt mix 500g</span>
+        </p>',
+        'quantity' => 20,
+        'status' => 1,
+        'number' => 1,
+        'unit' => 'combo'
+    ],
+    [
+        'product_name' => 'Combo 5: Combo Tiện lợi Yerba Maté',
+        'category_id' => 5,
+        'price' => 469000,
+        'image' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvn.biggo.com%2Fs%2FCombo%2B20%2BG%25C3%25B3I%2B%25C4%2591%25E1%25BB%2593%2B%25C4%2583N%2BV%25E1%25BA%25B7T%2F&psig=AOvVaw3gXNUnGxWLhvFXDwOwB2EJ&ust=1686501770782000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCniOiSuf8CFQAAAAAdAAAAABAE',
+        'description' => '<p>
+                        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Trà Yerba Maté Loose Tea 500g&nbsp;</span>
+                        <br>
+                        <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Cốc Gourd Maté truyền thống</span>
+                        </p>',
+        'quantity' => 23,
+        'status' => 1,
+        'number' => 1,
+        'unit' => 'combo'
+    ],
 ];
