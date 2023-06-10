@@ -317,7 +317,9 @@
                                 <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>
                                 <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
                                 <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ number_format($totalPrice + $feeShip - $discount) }} VNĐ</span></div>
+                                {{-- Mua kèm deal sốc	Mua 3 sản phẩm được giảm thêm 10% --}}
+                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ $totalProductsInCart >= 3 ? number_format(0.9 * ($totalPrice + $feeShip - $discount)) : number_format($totalPrice + $feeShip - $discount) }} VNĐ</span></div>
+                                <input type="hidden" name="totalProductsInCart" value="{{ $totalProductsInCart }}">
                                 <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
                                 <input type="hidden" name="feeShip" value="{{ $feeShip }}" id="feeShipInput">
                                 <input type="hidden" name="discount" value="{{ $discount }}" id="discountInput">
