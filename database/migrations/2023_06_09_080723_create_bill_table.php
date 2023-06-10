@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('bill', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->integer('total_bill');
             $table->json('bill_detail');
             $table->timestamps();
         });

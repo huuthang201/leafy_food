@@ -371,7 +371,7 @@
                                                 Bạn chắc chắn với thông tin đã ghi và muốn đặt hàng?
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="submit" class="btn btn-success" id="order">Đặt hàng</button>
+                                                <button id="confirm-order" type="submit" class="btn btn-success" id="order">Đặt hàng</button>
                                             </div>
                                         </div>
                                         </div>

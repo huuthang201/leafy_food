@@ -42,6 +42,10 @@ class CheckoutController extends Controller
         } else {
             $param['totalProductsInCart'] = $totalProductsInCart;
         }
+        // If total products in cart = 0, redirect to home
+        if ($param['totalProductsInCart'] == 0) {
+            return redirect()->to('/shoping-cart');
+        }
         // Count total products favorite
         if ($user) {
             $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
@@ -127,7 +131,7 @@ class CheckoutController extends Controller
             $amount = $totalCheckout;
             $orderId = time() . "";
             $redirectUrl = env('APP_URL') . "/checkout-success?name=" . $request->name;
-            $ipnUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
+            $ipnUrl = env('APP_URL') . "/checkout-success?name=" . $request->name;
             $extraData = "";
             $requestId = time() . "";
             $requestType = "payWithATM";
@@ -180,6 +184,7 @@ class CheckoutController extends Controller
         if($data['message'] == 'Successful.') {
             Bill::create([
                 'user_id' => Auth::user()->id,
+                'total_bill' => $data['amount'],
                 'bill_detail' => json_encode($data),
             ]);
         }
