@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('quantity');
             $table->string('image', 255);
             $table->string('status', 255);
-            $table->integer('number');
+            $table->integer('number')->nullable();
             $table->string('unit', 20);
             $table->timestamps();
         });

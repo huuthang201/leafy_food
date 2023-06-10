@@ -1823,6 +1823,88 @@ class ProductSeeder extends Seeder
                 'number' => 500,
                 'unit' => 'g'   
             ],
+            [
+                'product_name' => 'Combo 1: Detox Boost ',
+                'category_id' => 5,
+                'price' => 299000,
+                'image' => 'https://vn-live-01.slatic.net/p/5ac16f81d784f3dbfa178e201d6ef5be.jpg',
+                'description' => '<p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Trà giải độc thận (Mùi tây khô) 50g&nbsp;</span>
+                </p>
+                <p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Mật ong lên men (Phục hồi) 250ml&nbsp;</span>
+                </p>
+                <p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Gạo lứt 1kg</span>
+                </p>',
+                'quantity' => 20,
+                'status' => 1,
+                'number' => null,
+                'unit' => ''   
+            ],
+            [
+                'product_name' => 'Combo 2: Energizing Gym Blend',
+                'category_id' => 5,
+                'price' => 499000,
+                'image' => 'https://cf.shopee.vn/file/vn-11134207-7qukw-lh02qrqi5e0ib3',
+                'description' => '<p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Mật ong lên men (Tươi) 500ml&nbsp;</span>
+                </p>
+                <p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Trà Yerba Mates Loose Tea - dành cho gymer 180g</span>
+                </p>',
+                'quantity' => 20,
+                'status' => 1,
+                'number' => null,
+                'unit' => ''
+            ],
+            [
+                'product_name' => 'Combo 3: Coffee Crunch',
+                'category_id' => 5,
+                'price' => 149000,
+                'image' => 'https://cf.shopee.vn/file/83a0e4a806c2c6a0423f3faff5f55aca',
+                'description' => '<p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Cà phê eatclean Tropicana Slim 100g</span>
+                <br>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Granola 250g</span>
+                </p>',
+                'quantity' => 20,
+                'status' => 1,
+                'number' => null,
+                'unit' => ''
+            ],
+            [
+                'product_name' => 'Combo 4: Healthy Morning Start',
+                'category_id' => 5,
+                'price' => 269000,
+                'image' => 'https://sg-live-01.slatic.net/p/cfbc1a1342c46ea38eb11b79a24f7550.jpg',
+                'description' => '<p>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Thanh gạo lứt phô mai 500g</span>
+                <br>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Yến mạch 500g</span>
+                <br>
+                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Hạt mix 500g</span>
+                </p>',
+                'quantity' => 20,
+                'status' => 1,
+                'number' => null,
+                'unit' => ''
+            ],
+            [
+                'product_name' => 'Combo 5: Combo Tiện lợi Yerba Maté',
+                'category_id' => 5,
+                'price' => 469000,
+                'image' => 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSGtuXE11JkPdyiEoxlMRuPDIW_xQtPuPwzc7N1hsWIy_WJN5e15eUPkVweqJfBdRGJyuyKtq3Xo3QQsoB_SF5x22VqaWfuwKSvzniG8NQ&usqp=CAs',
+                'description' => '<p>
+                                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Trà Yerba Maté Loose Tea 500g&nbsp;</span>
+                                <br>
+                                <span style="background-color:rgb(255,255,255);color:rgb(0,0,0);">Cốc Gourd Maté truyền thống</span>
+                                </p>',
+                'quantity' => 23,
+                'status' => 1,
+                'number' => null,
+                'unit' => ''
+            ],
         ];
 
         foreach ($data as $key => $value) {
