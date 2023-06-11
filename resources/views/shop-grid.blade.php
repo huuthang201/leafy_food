@@ -95,10 +95,7 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            <a href="https://www.facebook.com/leafyfoodeatclean"><i class="fa fa-facebook"></i></a>
         </div>
         <div class="humberger__menu__contact">
             <ul>
@@ -125,10 +122,7 @@
                     <div class="col-lg-6">
                         <div class="header__top__right">
                             <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="https://www.facebook.com/leafyfoodeatclean"><i class="fa fa-facebook"></i></a>
                             </div>
 
                             <div class="header__top__right__auth">
@@ -454,11 +448,9 @@
                             <input type="text" placeholder="Nhập email của bạn">
                             <button type="submit" class="site-btn">Đăng kí ngay!</button>
                         </form>
-                        <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                                                <div class="footer__widget__social">
+                            <a href="https://www.facebook.com/leafyfoodeatclean"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.tiktok.com/@leafyfood"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>

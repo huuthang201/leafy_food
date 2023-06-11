@@ -1327,7 +1327,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'g'   
             ],
             [
-                'product_name' => 'Gạo lứt',
+                'product_name' => 'Gạo lứt huyết rồng dành cho người ăn chay, người già yếu, trẻ em, người bị tiểu đường, ung thư',
                 'category_id' => 3,
                 'price' => 39000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/565b9a97-2486-4245-8e77-70618c5d5126',
@@ -1358,7 +1358,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'kg'   
             ],
             [
-                'product_name' => 'Gạo lứt',
+                'product_name' => 'Gạo lứt huyết rồng dành cho người ăn chay, người già yếu, trẻ em, người bị tiểu đường, ung thư',
                 'category_id' => 3,
                 'price' => 69000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/565b9a97-2486-4245-8e77-70618c5d5126',
@@ -1389,7 +1389,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'kg'   
             ],
             [
-                'product_name' => 'Gạo lứt',
+                'product_name' => 'Gạo lứt huyết rồng dành cho người ăn chay, người già yếu, trẻ em, người bị tiểu đường, ung thư',
                 'category_id' => 3,
                 'price' => 119000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/565b9a97-2486-4245-8e77-70618c5d5126',
@@ -1498,7 +1498,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'kg'   
             ],
             [
-                'product_name' => 'Granola',
+                'product_name' => 'Ngũ cốc Granola siêu hạt - 100% hạt dinh dưỡng (không yến mạch) giúp giảm cân, đẹp da',
                 'category_id' => 4,
                 'price' => 99000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/79d6e4a8-0cae-4d6c-9ab9-bc793b182a9f',
@@ -1549,7 +1549,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'g'   
             ],
             [
-                'product_name' => 'Granola',
+                'product_name' => 'Ngũ cốc Granola siêu hạt - 100% hạt dinh dưỡng (không yến mạch) giúp giảm cân, đẹp da',
                 'category_id' => 4,
                 'price' => 189000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/79d6e4a8-0cae-4d6c-9ab9-bc793b182a9f',
@@ -1600,7 +1600,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'g'   
             ],
             [
-                'product_name' => 'Yến mạch',
+                'product_name' => 'Yến Mạch Cán Mỏng Hữu Cơ Markal bảo vệ tim, ngừa ung thư, giảm cân hiệu quả, ngừa mụn',
                 'category_id' => 4,
                 'price' => 20000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679',
@@ -1650,7 +1650,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'g'   
             ],
             [
-                'product_name' => 'Yến mạch',
+                'product_name' => 'Yến Mạch Cán Mỏng Hữu Cơ Markal bảo vệ tim, ngừa ung thư, giảm cân hiệu quả, ngừa mụn',
                 'category_id' => 4,
                 'price' => 39000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679',
@@ -1700,7 +1700,7 @@ class ProductSeeder extends Seeder
                 'unit' => 'g'   
             ],
             [
-                'product_name' => 'Yến mạch',
+                'product_name' => 'Yến Mạch Cán Mỏng Hữu Cơ Markal bảo vệ tim, ngừa ung thư, giảm cân hiệu quả, ngừa mụn',
                 'category_id' => 4,
                 'price' => 69000,
                 'image' => 'https://github.com/huuthang201/leafy_food/assets/64240532/d11a44c9-0871-42fe-9b54-94407b535679',
