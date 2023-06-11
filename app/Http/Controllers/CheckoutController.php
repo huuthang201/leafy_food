@@ -73,9 +73,67 @@ class CheckoutController extends Controller
             $totalPrice += $dataProduct->price * $value->quantity;
         }
         $param['feeShip'] = 30000;
-        $param['discount'] = 0;
         $param['dataCart'] = $dataCart;
-        // dd($param['dataCart']);
+        // Handle discount
+        // check first time buy
+        $bill = Bill::where('user_id', $param['id'])->first();
+        if ($bill) {
+            $firstTimeBuy = false;
+        } else {
+            $firstTimeBuy = true;
+        }
+        if ($firstTimeBuy) {
+            $priceReduce_FirstTimeBuy = 15000;
+        } else {
+            $priceReduce_FirstTimeBuy = 0;
+        }
+
+        if ($param['totalProductsInCart'] >= 3) {
+            $priceReduce_BuyMoreThan3P  = $totalPrice * 0.1;
+        } else {
+            $priceReduce_BuyMoreThan3P = 0;
+        }
+        // check if user bought total price >= 1000000
+        $bill = Bill::where('user_id', $param['id'])->get();
+        $totalPriceBought = 0;
+        foreach ($bill as $key => $value) {
+            $totalPriceBought += $value->total_bill;
+        }
+        // check if user is VIP
+        if ($totalPriceBought >= 1000000) {
+            if($totalPrice >= 500000)
+            {
+                // handle Tặng kèm 50g sản phẩm bất kì mà khách chọn khi mua đơn hàng trên 500.000đ.
+                // check cart has product with weight >= 50g and min price
+            }
+            else {
+                // handle Giảm 5.000đ cho mỗi đơn tiếp theo dưới 500.000đ
+                $priceReduceForVIP = 5000;
+                $reduceCode = "GIAMVIP5K";
+            }
+        } else {
+            $priceReduceForVIP = 0;
+            $reduceCode = "";
+        }
+        $maxDiscount = max($priceReduce_FirstTimeBuy, $priceReduce_BuyMoreThan3P, $priceReduceForVIP);
+        // get $reduceCode by $maxDiscount
+        if ($maxDiscount != 0)
+        {
+            if ($maxDiscount == $priceReduce_FirstTimeBuy) {
+                $reduceCode = "GIAM15K";
+            } else if ($maxDiscount == $priceReduce_BuyMoreThan3P) {
+                $reduceCode = "GIAM10PHANTRAM";
+            } else {
+                $reduceCode = "";
+            }
+        }
+        else {
+            $reduceCode = "";
+        }
+        $param['priceReduce'] = $maxDiscount;
+        $param['reduceCode'] = $reduceCode;
+        // dd($param['reduceCode'], $param['priceReduce']);
+        $param['discount'] = 0;
         $param['totalPrice'] = $totalPrice; 
         return view('checkout', $param);
     }

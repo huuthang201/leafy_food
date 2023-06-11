@@ -253,7 +253,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h6><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click here</a> to enter your code
+                    <h6><span class="icon_tag_alt"></span> Vui lòng hoàn thành các thông tin bên dưới
                     </h6>
                 </div>
             </div>
@@ -262,6 +262,19 @@
                 <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
+                            @if($reduceCode == 'GIAM15K')
+                            <div class="alert alert-success" role="alert">
+                                Bạn được giảm 15.000đ cho đơn đầu tiên.
+                            </div>
+                            @elseif($reduceCode == 'GIAM10PHANTRAM')
+                            <div class="alert alert-success" role="alert">
+                                Bạn được giảm 10% khi mua trên 3 sản phẩm.
+                            </div>
+                            @elseif($reduceCode == 'GIAMVIP5K')
+                            <div class="alert alert-success" role="alert">
+                                Bạn được giảm 5.000đ khách hàng thân thiết.
+                            </div>
+                            @endif
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="checkout__input">
@@ -315,18 +328,26 @@
                                     @endforeach
                                 </ul>
                                 <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div>
+                                {{-- <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div> --}}
                                 {{-- Mua kèm deal sốc	Mua 3 sản phẩm được giảm thêm 10% --}}
-                                @if ($totalProductsInCart >= 3)
-                                <div class="checkout__order__total">Giảm giá <span id="discount">10%</span></div>
+                                @if ($reduceCode == 'GIAM15K')
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(15000) }} VNĐ</span></div>
+                                @elseif ($reduceCode == 'GIAM10PHANTRAM')
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">10%</span></div>
+                                @elseif ($reduceCode == 'GIAM20PHANTRAM')
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">20%</span></div>
                                 @endif
-                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ $totalProductsInCart >= 3 ? number_format(0.9 * ($totalPrice + $feeShip - $discount)) : number_format($totalPrice + $feeShip - $discount) }} VNĐ</span></div>
+                                @if ($reduceCode != '')
+                                {{-- Giá sau khi giảm --}}
+                                <div class="checkout__order__total">Giá sau giảm <span id="priceAfterReduce">{{ number_format($totalPrice - $priceReduce) }} VNĐ</span></div>
+                                @endif
+                                <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
+                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ number_format($totalPrice - $priceReduce + $feeShip - $discount) }} VNĐ</span></div>
                                 <input type="hidden" name="totalProductsInCart" value="{{ $totalProductsInCart }}">
                                 <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
                                 <input type="hidden" name="feeShip" value="{{ $feeShip }}" id="feeShipInput">
                                 <input type="hidden" name="discount" value="{{ $discount }}" id="discountInput">
-                                <input type="hidden" name="totalCheckout" value="{{ $totalPrice + $feeShip - $discount }}" id="totalCheckoutInput">
+                                <input type="hidden" name="totalCheckout" value="{{ $totalPrice - $priceReduce + $feeShip - $discount }}" id="totalCheckoutInput">
                                 <div class="checkout__input__checkbox">
                                     <label for="acc-or">
                                         In hóa đơn
