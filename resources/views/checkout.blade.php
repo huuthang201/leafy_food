@@ -330,7 +330,9 @@
                                 <div class="checkout__order__products">Sản phẩm <span>Tổng</span></div>
                                 <ul>
                                     @foreach ($dataCart as $item)
+                                    @if ($item->quantity > 0)
                                     <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' ' . $item->number . $item->unit . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name . ' ' . $item->number . $item->unit, 0, 10) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
+                                    @endif
                                     @endforeach
                                 </ul>
                                 <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>

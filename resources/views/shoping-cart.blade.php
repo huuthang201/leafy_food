@@ -252,6 +252,7 @@
                             </thead>
                             <tbody>
                                 @foreach($dataCart as $item)
+                                {{-- @if($item->quantity > 0) --}}
                                 <tr>
                                     <td class="shoping__cart__item">
                                         <img src="{{ $item->product_image }}" alt="{{ $item->product_name }}" width="100px" height="100px">
@@ -263,7 +264,7 @@
                                     <td class="shoping__cart__quantity">
                                         <div class="quantity">
                                             <div class="pro-qty">
-                                                <input type="text" value="{{ $item->quantity }}">
+                                                <input type="text" value="{{ $item->quantity }}" data-id="{{ $item->product_id }}" data-price="{{ $item->product_price }}" data-total="{{ $item->product_price * $item->quantity }}">
                                             </div>
                                         </div>
                                     </td>
@@ -294,6 +295,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                {{-- @endif --}}
                                 @endforeach
                             </tbody>
                         </table>

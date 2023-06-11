@@ -205,9 +205,14 @@
     var proQty = $('.pro-qty');
     proQty.prepend('<span class="dec qtybtn">-</span>');
     proQty.append('<span class="inc qtybtn">+</span>');
+    var decQty = $('.dec');
+    var incQty = $('.inc');
     proQty.on('click', '.qtybtn', function () {
         var $button = $(this);
         var oldValue = $button.parent().find('input').val();
+        // if (oldValue == 1) {
+        //     return false;
+        // }
         if ($button.hasClass('inc')) {
             var newVal = parseFloat(oldValue) + 1;
         } else {
@@ -219,6 +224,53 @@
             }
         }
         $button.parent().find('input').val(newVal);
+    });
+
+    decQty.on('click', function () {
+        var $button = $(this);
+        // ajax update cart
+        var id = $button.parent().find('input').attr('data-id');
+        var price = $button.parent().find('input').attr('data-price');
+        var token = $('meta[name="csrf-token"]').attr('content');
+        var oldValue = $button.parent().find('input').val();
+        if (oldValue == 1) {
+            return false;
+        }
+        $.ajax({
+            url: '/add-cart',
+            type: 'GET',
+            data: {
+                product_id: id,
+                quantity: -1,
+                _token: token
+            },
+            success: function (data) {
+                if (data.code === 200) {
+                    $('.shoping__cart__total').html((oldValue - 1) * price);
+                }
+            }
+        });
+    });
+
+    incQty.on('click', function () {
+        // ajax update cart
+        var $button = $(this);
+        var id = $button.parent().find('input').attr('data-id');
+        var token = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+            url: '/add-cart',
+            type: 'GET',
+            data: {
+                product_id: id,
+                quantity: 1,
+                _token: token
+            },
+            success: function (data) {
+                if (data.code === 200) {
+                    $('.shoping__cart__total').html((oldValue + 1) * price);
+                }
+            }
+        });
     });
 
 })(jQuery);

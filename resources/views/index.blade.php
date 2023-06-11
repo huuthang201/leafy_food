@@ -249,7 +249,7 @@
                     <div class="section-title">
                         <h2>Sản phẩm nổi bật</h2>
                     </div>
-                    <div class="featured__controls">
+                    {{-- <div class="featured__controls">
                         <ul>
                             <li class="active" data-filter="*">All</li>
                             <li data-filter=".oranges">Oranges</li>
@@ -260,7 +260,7 @@
                             <li data-filter=".{{ $categorie->category_name }}">{{ $categorie->category_name }}</li>
                         @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="row featured__filter">
@@ -434,7 +434,7 @@
                     <div class="blog__item customer-ev">
                         <div class="testimonial-item text-center p-4 mb-5">
                             <div class="image-avata">
-                                <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
+                                <img src="https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.15752-9/285028910_1436292743478307_8302166698424927395_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4iwogBx-tFEAX8fRacK&_nc_ht=scontent.fsgn13-2.fna&oh=03_AdT-OvOWAapNVyzjHpJJw5hYrmuxSRmItrpaJz8CWUnYxQ&oe=64ACEB06" alt="Eat Clean Hong - Thu Nhi">
                             </div>
                             <h4 class="name" style="margin-bottom: 10px">anh Dương Cà Mau</h4>
                             <p><i>Tiktok: <b>@duongdevxin</b></i></p>
@@ -447,7 +447,7 @@
                     <div class="blog__item customer-ev">
                         <div class="testimonial-item text-center p-4 mb-5">
                             <div class="image-avata">
-                                <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
+                                <img src="https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.15752-9/279617473_361483819378648_4607505756764889738_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=iBzFC_NABhwAX-hFbeQ&_nc_ht=scontent.fsgn4-1.fna&oh=03_AdTmbHVRT8ti63NeJgvBs2wJDzxV8rCYwsgvr1oGPM1ZqA&oe=64ACED89" alt="Eat Clean Hong - Thu Nhi">
                             </div>
                             <h4 class="name" style="margin-bottom: 10px">anh Tâm Đồng Nai</h4>
                             <p><i>Email <b>dathureal@gmail.com</b></i></p>
@@ -460,7 +460,7 @@
                     <div class="blog__item customer-ev">
                         <div class="testimonial-item text-center p-4 mb-5">
                             <div class="image-avata">
-                                <img src="//bizweb.dktcdn.net/100/458/914/themes/867491/assets/testimonial_3.jpg?1678979739711" alt="Eat Clean Hong - Thu Nhi">
+                                <img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.15752-9/275305634_5016115058434170_4840890476425632122_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Cw5quFDl4poAX_SwDS0&_nc_ht=scontent.fsgn3-1.fna&oh=03_AdTHQANp59r1tl73jX5zfwP6azg9Gsc1unlkCokCqcOPSg&oe=64ACFD80" alt="Eat Clean Hong - Thu Nhi">
                             </div>
                             <h4 class="name" style="margin-bottom: 10px">chị Pha Coãng Ngãi</h4>
                             <p><i>Tiktok: <b>@pha123</b></i></p>
