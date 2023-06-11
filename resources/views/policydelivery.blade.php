@@ -352,6 +352,9 @@
                         <ul>
                             <li><a href="/policy-delivery">Chính sách giao hàng</a></li>
                         </ul>
+                        <ul>
+                            <li><a href="/discount">Khuyến mãi</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
