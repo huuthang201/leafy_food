@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
-        li {
+        /* li {
             margin-left: 16px;
             font-size: 16px;
-        }
+        } */
         .container ul{
             line-height: 3;
         }
