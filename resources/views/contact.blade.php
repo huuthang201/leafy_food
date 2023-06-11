@@ -263,7 +263,7 @@
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
                         <h4>Địa chỉ</h4>
-                        <p>UIT, Khu phố a, Thủ Đức</p>
+                        <p>UIT, Khu phố 6, Linh Trung, Thủ Đức</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
@@ -294,7 +294,7 @@
                 <h4>LeafyFood</h4>
                 <ul>
                     <li>Phone: 1900 6868 (miễn phí)</li>
-                    <li>Add: UIT, Khu phố a, Thủ Đức</li>
+                    <li>Add: UIT, Khu phố 6, Linh Trung, Thủ Đức</li>
                 </ul>
             </div>
         </div>
@@ -339,7 +339,7 @@
                             <a href="/"><img src="/img/logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
+                            <li>Địa chỉ: UIT, Khu phố 6, Linh Trung, Thủ Đức</li>
                             <li>Phone: 1900 6868</li>
                             <li>Email: leafyfood@gmail.com</li>
                         </ul>

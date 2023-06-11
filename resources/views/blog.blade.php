@@ -444,7 +444,7 @@
                             <a href="/"><img src="/img/logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Địa chỉ: UIT, Khu phố a, Thủ Đức</li>
+                            <li>Địa chỉ: UIT, Khu phố 6, Linh Trung, Thủ Đức</li>
                             <li>Phone: 1900 6868</li>
                             <li>Email: leafyfood@gmail.com</li>
                         </ul>
