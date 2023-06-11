@@ -41,7 +41,7 @@ class CategorySeeder extends Seeder
             [
                 // 'id' => 5,
                 'category_name'=> 'Combo',
-                'image' => '',
+                'image' => 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSGtuXE11JkPdyiEoxlMRuPDIW_xQtPuPwzc7N1hsWIy_WJN5e15eUPkVweqJfBdRGJyuyKtq3Xo3QQsoB_SF5x22VqaWfuwKSvzniG8NQ&usqp=CAs',
                 'description' => 'Combo sẽ bao gồm các sản phẩm khác nhau, mỗi loại một ít'
             ],
         ];
