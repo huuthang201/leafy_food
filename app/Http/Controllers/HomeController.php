@@ -185,4 +185,38 @@ class HomeController extends Controller
         }
         return view('policyreturn', $param);
     }
+    
+
+    public function discount()
+    {
+        $user = Auth::user(); // alternative way to get the currently authenticated user
+        if ($user) {
+            $param['id'] = $user->id;
+            $param['name'] = $user->name;
+            $param['email'] = $user->email;
+        }
+        // Categories
+        $categories = Category::take(8)->get();
+        $param['categories'] = $categories;
+        // Count total products in cart
+        if ($user) {
+            $totalProductsInCart = Cart::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsInCart)) {
+            $param['totalProductsInCart'] = 0;
+        } else {
+            $param['totalProductsInCart'] = $totalProductsInCart;
+        }
+        // Count total products favorite
+        if ($user) {
+            $totalProductsFavorite = Favorite::where('user_id', $param['id'])->count();
+        }
+        if (!isset($totalProductsFavorite)) {
+            $param['totalProductsFavorite'] = 0;
+        } else {
+            $param['totalProductsFavorite'] = $totalProductsFavorite;
+        }
+        return view('discount', $param);
+    }
+
 }

@@ -20,6 +20,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('la
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/policy-delivery', [App\Http\Controllers\HomeController::class, 'policy_delivery'])->name('policy-delivery');
 Route::get('/policy-return', [App\Http\Controllers\HomeController::class, 'policy_return'])->name('policy-return');
+Route::get('/discount', [App\Http\Controllers\HomeController::class, 'discount'])->name('discount');
 Route::get('/blog-details', [App\Http\Controllers\BlogController::class, 'blog_details'])->name('blog-details');
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
