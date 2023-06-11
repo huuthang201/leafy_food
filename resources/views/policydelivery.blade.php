@@ -10,7 +10,7 @@
     <title>Chính sách giao hàng LeafyFood</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
         li {
-            margin-left: 20px;
-            font-size: 20px;
+            margin-left: 18px;
+            font-size: 18px;
         }
     </style>
 </head>
