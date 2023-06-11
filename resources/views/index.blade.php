@@ -24,7 +24,8 @@
     <meta name="twitter:description" content="Leafy (lá cây) và Food (thực phẩm) gợi lên hình ảnh về các nguyên liệu tươi, tốt cho sức khỏe và các bữa ăn tự nhiên, ngon miệng. Nó gợi ý về mối liên hệ giữa thiên nhiên và dinh dưỡng, với thông điệp mạnh mẽ về sự bền vững. Tên ngắn cũng giúp dễ nhớ, dễ tìm kiếm, đây là những lợi thế chính cho các doanh nghiệp.">
     <meta name="twitter:creator" content="@LeafyFood">
     <meta name="twitter:image" content="/img/logo.png">
-    
+    {{-- favicon --}}
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LeafyFood - Chăm sóc sức khỏe, thưởng thức cuộc sống</title>
