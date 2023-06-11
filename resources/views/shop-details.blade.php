@@ -390,10 +390,16 @@
                                         <div class="footer__widget">
                         <h6>Truy cập nhanh</h6>
                         <ul>
-                            <li><a href="#">Về LeaefyFood</a></li>
+                            <li><a href="/contact">Về LeaefyFood</a></li>
                         </ul>
                         <ul>
                             <li><a href="#">Tuyển dụng LeafyFood</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="/policy-return">Chính sách hoàn trả</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="/policy-delivery">Chính sách giao hàng</a></li>
                         </ul>
                     </div>
                 </div>

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LeafyFood</title>
+    <title>Chính sách hoàn trả LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -22,18 +22,9 @@
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
-        #province, #district, #ward {
-            display: block !important;
-        }
-        .nice-select {
-            display: none !important;
-        }
-        .checkout__input-address{
-            display: flex;
-            flex-direction: column;
-        }
-        .checkout__input-address select{
-            margin-bottom: 15px;
+        li {
+            margin-left: 20px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -60,7 +51,7 @@
         <div class="humberger__menu__widget">
 
             <div class="header__top__right__auth">
-                @if (isset($id))
+                @if (isset($id))                    
                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
                     <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
                     <div>
@@ -205,12 +196,12 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="/search" method="GET">
                                 <div class="hero__search__categories">
                                     Tìm kiếm
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
                                 <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
@@ -236,10 +227,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Checkout</h2>
+                        <h2>Chính sách hoàn trả</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
-                            <span>Checkout</span>
+                            <span>Chính sách hoàn trả</span>
                         </div>
                     </div>
                 </div>
@@ -248,170 +239,81 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Checkout Section Begin -->
-    <section class="checkout spad">
+    <!-- Shoping Cart Section Begin -->
+    <section class="shoping-cart spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h6><span class="icon_tag_alt"></span> Vui lòng hoàn thành các thông tin bên dưới
-                    </h6>
-                </div>
-            </div>
-            <div class="checkout__form">
-                <h4>Billing Details</h4>
-                <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-6">
-                            @if($reduceCode == 'GIAM15K')
-                            <div class="alert alert-success" role="alert">
-                                Bạn được <b>giảm 15.000đ</b> cho đơn đầu tiên.
-                            </div>
-                            @elseif($reduceCode == 'GIAM10PHANTRAM')
-                            <div class="alert alert-success" role="alert">
-                                Bạn được <b>giảm 10%</b> khi mua trên 3 sản phẩm.
-                            </div>
-                            @elseif($reduceCode == 'GIAMVIP5K')
-                            <div class="alert alert-success" role="alert">
-                                Bạn được <b>giảm 5.000đ</b> khách hàng thân thiết.
-                            </div>
-                            @elseif($reduceCode == 'TANG50G')
-                            <div class="alert alert-success" role="alert">
-                                Khách hàng thân thiết được tặng <b>{{ $nameProductReduce }}</b>.
-                            </div>
-                            @endif
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="checkout__input">
-                                        <p>Họ tên<span>*</span></p>
-                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout__input checkout__input-address">
-                                <p>Địa chỉ<span>*</span></p>
-                                <select name="province" id="province" required></select>
-                                <select name="district" id="district" required>
-                                    <option  value="">Chọn quận</option>
-                                </select>
-                                <select name="ward" id="ward" required>
-                                    <option   value="">Chọn phường</option>
-                                </select>
-                            </div>
-                            <div class="checkout__input">
-                                <p>Số nhà, đường, ...<span>*</span></p>
-                                <input type="text"
-                                    placeholder="Số nhà, đường, ..." name="address" id="address" required>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Phone<span>*</span></p>
-                                        <input type="text" name="phone" id="phone" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Email<span>*</span></p>
-                                        <input type="text" name="email" value="{{ Auth::user()->email }}" id="email" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout__input">
-                                <p>Notes<span>*</span></p>
-                                <input type="text"
-                                    placeholder="Lưu ý cho cửa hàng." name="note">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="checkout__order">
-                                <h4>Đơn hàng</h4>
-                                <div class="checkout__order__products">Sản phẩm <span>Tổng</span></div>
-                                <ul>
-                                    @foreach ($dataCart as $item)
-                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' ' . $item->number . $item->unit . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name . ' ' . $item->number . $item->unit, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
-                                    @endforeach
-                                </ul>
-                                <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>
-                                {{-- <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div> --}}
-                                {{-- Mua kèm deal sốc	Mua 3 sản phẩm được giảm thêm 10% --}}
-                                @if ($reduceCode == 'GIAM15K')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(15000) }} VNĐ</span></div>
-                                @elseif ($reduceCode == 'GIAM10PHANTRAM')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">10%</span></div>
-                                @elseif ($reduceCode == 'GIAMVIP5K')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(5000) }} VNĐ</span></div>
-                                @elseif ($reduceCode == 'TANG50G')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">Tặng 1 sản phẩm {{ $nameProductReduce }}</span></div>
-                                @endif
-                                @if ($reduceCode != '')
-                                {{-- Giá sau khi giảm --}}
-                                <div class="checkout__order__total">Giá sau giảm <span id="priceAfterReduce">{{ number_format($totalPrice - $priceReduce) }} VNĐ</span></div>
-                                @endif
-                                <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ number_format($totalPrice - $priceReduce + $feeShip - $discount) }} VNĐ</span></div>
-                                <input type="hidden" name="totalProductsInCart" value="{{ $totalProductsInCart }}">
-                                <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
-                                <input type="hidden" name="feeShip" value="{{ $feeShip }}" id="feeShipInput">
-                                <input type="hidden" name="discount" value="{{ $discount }}" id="discountInput">
-                                <input type="hidden" name="totalCheckout" value="{{ $totalPrice - $priceReduce + $feeShip - $discount }}" id="totalCheckoutInput">
-                                <div class="checkout__input__checkbox">
-                                    <label for="acc-or">
-                                        In hóa đơn
-                                        <input type="checkbox" id="acc-or">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                @if ($totalPrice > 0)
-                                    <p>Vui lòng chọn các phương thức thanh toán ở dưới.</p>
-                                    <div class="checkout__input__checkbox">
-                                        <label for="momo">
-                                            {{-- Momo --}}
-                                            <input type="checkbox" id="momo" name='momo'>
-                                            <span class="checkmark"></span>
-                                            <img src="/img/payment-item.png" alt="" style="width: 40px !important;height: auto !important;">
-                                        </label>
-                                    </div>
-                                    {{-- <div class="checkout__input__checkbox">
-                                        <label for="paypal">
-                                            Paypal
-                                            <input type="checkbox" id="paypal">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div> --}}
-                                    @csrf
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="confirm">
-                                        Xác nhận
-                                    </button>
-                                    
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=" width: auto;">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Bạn chắc chắn với thông tin đã ghi và muốn đặt hàng?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button id="confirm-order" type="submit" class="btn btn-success" id="order">Đặt hàng</button>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <ul>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Phương thức:</span><o:p></o:p>
+                    <ul style="list-style-type:circle;">
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Để đổi trả sản phẩm, khách hàng truy cập vào kênh chăm sóc khách hàng chính là Fanpage của LeafyFood: </span><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/leafyfoodeatclean"><span lang="EN-GB" dir="ltr">https://www.facebook.com/leafyfoodeatclean</span></a><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Thời hạn đổi trả sản phẩm phải trong vòng 7 ngày từ khi nhận hàng. Sau khi nhận được thông tin, bộ phận chăm sóc khách hàng của LeafyFood sẽ hướng dẫn thu hồi sản phẩm, hoàn tiền hoặc đổi sản phẩm mới. Nếu quá 3 ngày, LeafyFood xin từ chối hỗ trợ giải quyết vì mặc định khách hàng đã hài lòng với sản phẩm được giao.</span><o:p></o:p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Các trường hợp đổi trả:</span><o:p></o:p>
+                    <ul style="list-style-type:circle;">
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Sản phẩm giao sai</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Sản phẩm không đảm bảo chất lượng đã cam kết</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Sản phẩm hư hỏng do lỗi của nhà sản xuất hoặc bộ phận giao hàng</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Sản phẩm có dấu hiệu đã qua sử dụng hoặc hết hạn sử dụng tại thời điểm nhận hàng</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Lưu ý: Sản phẩm đã mua sẽ được đổi sang sản phẩm cùng loại, hoặc sản phẩm khác.</span><o:p></o:p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Điều kiện hoàn tiền:</span><o:p></o:p>
+                    <ul style="list-style-type:circle;">
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Trong trường hợp không thể đổi trả sản phẩm, LeafyFood sẽ tiến hành hoàn tiền cho khách hàng.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Trường hợp được xem là <strong>“không thể đổi trả sản phẩm”</strong> bao gồm:</span><o:p></o:p>
+                            <ul style="list-style-type:square;">
+                                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                                    <span lang="EN-GB" dir="ltr">1. Sản phẩm giao sai và không thể tiến hành đổi trả: trong quá trình đổi trả, nếu sản phẩm mà bạn thương mong muốn đã hết hàng, đồng thời, không có hoặc bạn thương không đồng ý lấy sản phẩm khác có giá trị tương đương, LeafyFood sẽ tiến hành hoàn tiền.</span><o:p></o:p>
+                                </li>
+                                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                                    <span lang="EN-GB" dir="ltr">2. Khách hàng đã trả tiền nhưng không thể giao hàng: trong trường hợp đã trả tiền thông qua hình thức chuyển khoản, hoặc các hình thức tương tự, nhưng sản phẩm không thể được giao vì vấn đề ngoài ý muốn, LeafyFood sẽ tiến hành hoàn tiền nếu không thể xử lý vấn đề trong vòng 7 ngày từ ngày nhận đơn hàng. Nếu quá trình giao hàng bị gián đoạn do nguyên nhân đến từ khách hàng, LeafyFood sẽ tiến hành hoàn tiền sau 2 lần giao hàng thất bại</span><o:p></o:p>
+                                </li>
+                                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                                    <span lang="EN-GB" dir="ltr">3. Không nhận được xác nhận đổi hàng từ khách hàng sau hai lần liên hệ: Sau khi nhận được hàng trả lại, bộ phận CSKH sẽ liên hệ lần 1 để xác nhận nhu cầu đổi hàng. Nếu không liên hệ được, bộ phận sẽ liên hệ lần 2 sau ba ngày. Nếu không thể nhận được xác nhận đổi hàng sau hai lần liên hệ, LeafyFood sẽ tiến hành hoàn tiền.</span><o:p></o:p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Lưu ý:&nbsp;</span><o:p></o:p>
+                    <ul style="list-style-type:circle;">
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">LeafyFood luôn mong muốn có thể mang những sản phẩm nhà Leafy đến với bạn thương. Do đó, LeafyFood sẽ cố gắng hỗ trợ bạn thương trong quá trình đổi trả sản phẩm trước khi đưa ra quyết định hoàn tiền.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Trừ khi được đề cập trong Chính sách Đổi trả và Hoàn tiền này, các trường hợp trả hàng do&nbsp;</span><span style="mso-spacerun:yes;" lang="EN-GB" dir="ltr"> </span><span lang="EN-GB" dir="ltr">khách hàng thay đổi ý định mua hàng sẽ không được giải quyết.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Trong trường hợp khách hàng trả phí thu hộ (COD), vui cung cấp thông tin tài khoản ngân hàng/ví điện tử cho bộ phận CSKH để nhận hoàn trả.</span><o:p></o:p><o:p></o:p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </section>
-    <!-- Checkout Section End -->
+    <!-- Shoping Cart Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -478,7 +380,6 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.nice-select.min.js"></script>
@@ -487,8 +388,24 @@
     <script src="/js/mixitup.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/province.js"></script>
-    <script src="/js/order-condition.js"></script>
+
+
 </body>
 
+<script>
+    function deleteCart(id, product_id) {
+        $.ajax({
+            url: '/cart/delete',
+            type: 'GET',
+            data: {
+                id: id,
+                product_id: product_id,
+                _token: '{{ csrf_token() }}'
+            },
+            success: function(data) {
+                location.reload();
+            }
+        });
+    }
+</script>
 </html>

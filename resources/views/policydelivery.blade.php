@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LeafyFood</title>
+    <title>Chính sách giao hàng LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -22,18 +22,9 @@
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
-        #province, #district, #ward {
-            display: block !important;
-        }
-        .nice-select {
-            display: none !important;
-        }
-        .checkout__input-address{
-            display: flex;
-            flex-direction: column;
-        }
-        .checkout__input-address select{
-            margin-bottom: 15px;
+        li {
+            margin-left: 20px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -60,7 +51,7 @@
         <div class="humberger__menu__widget">
 
             <div class="header__top__right__auth">
-                @if (isset($id))
+                @if (isset($id))                    
                     {{-- <a href="/logout"><i class="fa fa-user"></i> Logout</a> --}}
                     <a href="#"><i class="fa fa-user"></i> {{ $name }}</a>
                     <div>
@@ -205,12 +196,12 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="/search" method="GET">
                                 <div class="hero__search__categories">
                                     Tìm kiếm
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="Bạn muốn tìm gì?">
+                                <input type="text" placeholder="Bạn muốn tìm gì?" name="keyword">
                                 <button type="submit" class="site-btn">TÌM KIẾM</button>
                             </form>
                         </div>
@@ -236,10 +227,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Checkout</h2>
+                        <h2>Chính sách giao hàng</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
-                            <span>Checkout</span>
+                            <span>Chính sách giao hàng</span>
                         </div>
                     </div>
                 </div>
@@ -248,170 +239,63 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Checkout Section Begin -->
-    <section class="checkout spad">
+    <!-- Shoping Cart Section Begin -->
+    <section class="shoping-cart spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h6><span class="icon_tag_alt"></span> Vui lòng hoàn thành các thông tin bên dưới
-                    </h6>
-                </div>
-            </div>
-            <div class="checkout__form">
-                <h4>Billing Details</h4>
-                <form action="/checkout-process" method="POST" target="_blank" enctype="application/x-www-form-urlencoded">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-6">
-                            @if($reduceCode == 'GIAM15K')
-                            <div class="alert alert-success" role="alert">
-                                Bạn được <b>giảm 15.000đ</b> cho đơn đầu tiên.
-                            </div>
-                            @elseif($reduceCode == 'GIAM10PHANTRAM')
-                            <div class="alert alert-success" role="alert">
-                                Bạn được <b>giảm 10%</b> khi mua trên 3 sản phẩm.
-                            </div>
-                            @elseif($reduceCode == 'GIAMVIP5K')
-                            <div class="alert alert-success" role="alert">
-                                Bạn được <b>giảm 5.000đ</b> khách hàng thân thiết.
-                            </div>
-                            @elseif($reduceCode == 'TANG50G')
-                            <div class="alert alert-success" role="alert">
-                                Khách hàng thân thiết được tặng <b>{{ $nameProductReduce }}</b>.
-                            </div>
-                            @endif
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="checkout__input">
-                                        <p>Họ tên<span>*</span></p>
-                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout__input checkout__input-address">
-                                <p>Địa chỉ<span>*</span></p>
-                                <select name="province" id="province" required></select>
-                                <select name="district" id="district" required>
-                                    <option  value="">Chọn quận</option>
-                                </select>
-                                <select name="ward" id="ward" required>
-                                    <option   value="">Chọn phường</option>
-                                </select>
-                            </div>
-                            <div class="checkout__input">
-                                <p>Số nhà, đường, ...<span>*</span></p>
-                                <input type="text"
-                                    placeholder="Số nhà, đường, ..." name="address" id="address" required>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Phone<span>*</span></p>
-                                        <input type="text" name="phone" id="phone" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Email<span>*</span></p>
-                                        <input type="text" name="email" value="{{ Auth::user()->email }}" id="email" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout__input">
-                                <p>Notes<span>*</span></p>
-                                <input type="text"
-                                    placeholder="Lưu ý cho cửa hàng." name="note">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="checkout__order">
-                                <h4>Đơn hàng</h4>
-                                <div class="checkout__order__products">Sản phẩm <span>Tổng</span></div>
-                                <ul>
-                                    @foreach ($dataCart as $item)
-                                    <li title="X{{ $item->quantity . ' sản phẩm ' . $item->product_name . ' ' . $item->number . $item->unit . ' có giá ' . number_format($item->product_price * $item->quantity) }} VNĐ">X{{ $item->quantity }} {{ substr($item->product_name . ' ' . $item->number . $item->unit, 0, 20) . '...' }} <span>{{ number_format($item->product_price * $item->quantity) }} VNĐ</span></li>
-                                    @endforeach
-                                </ul>
-                                <div class="checkout__order__total">Tổng tiền <span id="totalPrice">{{ number_format($totalPrice) }} VNĐ</span></div>
-                                {{-- <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format($discount) }} VNĐ</span></div> --}}
-                                {{-- Mua kèm deal sốc	Mua 3 sản phẩm được giảm thêm 10% --}}
-                                @if ($reduceCode == 'GIAM15K')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(15000) }} VNĐ</span></div>
-                                @elseif ($reduceCode == 'GIAM10PHANTRAM')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">10%</span></div>
-                                @elseif ($reduceCode == 'GIAMVIP5K')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(5000) }} VNĐ</span></div>
-                                @elseif ($reduceCode == 'TANG50G')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">Tặng 1 sản phẩm {{ $nameProductReduce }}</span></div>
-                                @endif
-                                @if ($reduceCode != '')
-                                {{-- Giá sau khi giảm --}}
-                                <div class="checkout__order__total">Giá sau giảm <span id="priceAfterReduce">{{ number_format($totalPrice - $priceReduce) }} VNĐ</span></div>
-                                @endif
-                                <div class="checkout__order__total">Phí ship <span id="feeShip">{{ number_format($feeShip) }} VNĐ</span></div>
-                                <div class="checkout__order__total">Thanh toán <span id="totalCheckout">{{ number_format($totalPrice - $priceReduce + $feeShip - $discount) }} VNĐ</span></div>
-                                <input type="hidden" name="totalProductsInCart" value="{{ $totalProductsInCart }}">
-                                <input type="hidden" name="totalPrice" value="{{ $totalPrice }}">
-                                <input type="hidden" name="feeShip" value="{{ $feeShip }}" id="feeShipInput">
-                                <input type="hidden" name="discount" value="{{ $discount }}" id="discountInput">
-                                <input type="hidden" name="totalCheckout" value="{{ $totalPrice - $priceReduce + $feeShip - $discount }}" id="totalCheckoutInput">
-                                <div class="checkout__input__checkbox">
-                                    <label for="acc-or">
-                                        In hóa đơn
-                                        <input type="checkbox" id="acc-or">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                @if ($totalPrice > 0)
-                                    <p>Vui lòng chọn các phương thức thanh toán ở dưới.</p>
-                                    <div class="checkout__input__checkbox">
-                                        <label for="momo">
-                                            {{-- Momo --}}
-                                            <input type="checkbox" id="momo" name='momo'>
-                                            <span class="checkmark"></span>
-                                            <img src="/img/payment-item.png" alt="" style="width: 40px !important;height: auto !important;">
-                                        </label>
-                                    </div>
-                                    {{-- <div class="checkout__input__checkbox">
-                                        <label for="paypal">
-                                            Paypal
-                                            <input type="checkbox" id="paypal">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div> --}}
-                                    @csrf
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="confirm">
-                                        Xác nhận
-                                    </button>
-                                    
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=" width: auto;">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Bạn chắc chắn với thông tin đã ghi và muốn đặt hàng?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button id="confirm-order" type="submit" class="btn btn-success" id="order">Đặt hàng</button>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <ul>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Về tổng quan, LeafyFood có thể trực tiếp vận chuyển và giao hàng tận tay khách hàng. Cụ thể, sản phẩm sẽ được giao cho khách hàng thông qua các nhà cung cấp dịch vụ chuyển phát.</span><o:p></o:p>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Một số thông tin chi tiết về thời gian cũng như phí giao hàng để khách hàng có trải nghiệm mua sắm thoải mái tại website của nhà Leafy.</span><o:p></o:p>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Thời gian giao hàng:</span><o:p></o:p>
+                    <ul style="list-style-type:circle;">
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Đơn hàng nội và ngoại thành TP.HCM: giao hàng trong 1-3 ngày sau khi đặt hàng.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Đơn hàng ở các tỉnh thành khác: giao hàng trong 3-7 ngày sau khi đặt hàng.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Nếu khách hàng thanh toán bằng phương thức chuyển khoản, thời gian xử lý đơn hàng sẽ được tính từ khi nhận được thanh toán.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Thời gian giao hàng có thể thay đổi tùy theo yêu cầu của khách hàng. Nếu khách hàng có nhu cầu giao gấp, khi đặt hàng, hãy nhập thông tin ngày nhận hàng vào mục ghi chú nhé. LeafyFood sẽ cố gắng hết sức để sắp xếp và giao hàng theo yêu cầu của khách hàng.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">LeafyFood cũng có thể chủ động thay đổi thời gian giao hàng do chịu ảnh hưởng của thiên tai hoặc các sự kiện đặc biệt khác. Trong trường hợp này, LeafyFood sẽ cập nhật tình hình đơn hàng và thời gian giao hàng mới cho khách hàng.</span><o:p></o:p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Giai đoạn giao hàng:</span><o:p></o:p>
+                    <ul style="list-style-type:circle;">
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Để kiểm tra thông tin hoặc tình trạng đơn hàng của khách hàng, xin vui lòng inbox fanpage hoặc gọi số hotline, cung cấp tên và số điện thoại để được kiểm tra.&nbsp;</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Đơn hàng của khách hàng sẽ được giao tối đa trong 2 lần. Trường hợp lần đầu giao hàng không thành công, sẽ có nhân viên liên hệ để sắp xếp lịch giao hàng lần 2 với khách hàng. Nếu lần giao hàng thứ 2 vẫn không thể liên lạc lại được hoặc không nhận được bất kỳ phản hồi nào, đơn hàng sẽ không còn hiệu lực. Trong trường hợp khách hàng đã thanh toán bằng phương thức chuyển khoản, LeafyFood sẽ tiến hành hoàn tiền cho đơn hàng mà khách hàng đã thanh toán (theo chính sách đổi trả và hoàn tiền của LeafyFood).</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Khi hàng được giao đến, khách hàng vui lòng ký xác nhận với nhân viên giao hàng và kiểm tra lại số lượng cũng như loại hàng hóa được giao có chính xác không. Xin khách hàng vui lòng giữ lại biên lai vận chuyển và hóa đơn mua hàng để đối chiếu kiểm tra khi cần thiết.</span><o:p></o:p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Phí giao hàng: Phí ship: Nội thành (20k); Ngoại thành (30k); Trên 300k freeship</span><o:p></o:p>
+                </li>
+                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                    <span lang="EN-GB" dir="ltr">Đối với sàn thương mại điện tử shopee LeafyFood chọn hình thức giao hàng nhanh và giao hàng tiết kiệm</span><o:p></o:p>
+                </li>
+                <li>
+                    <span lang="EN-GB" dir="ltr">J&amp;T vì J&amp;T đang là đơn vị vận chuyển độc quyền duy nhất trên Tiktok Shop</span><o:p></o:p>
+                </li>
+            </ul>
         </div>
     </section>
-    <!-- Checkout Section End -->
+    <!-- Shoping Cart Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -478,7 +362,6 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.nice-select.min.js"></script>
@@ -487,8 +370,24 @@
     <script src="/js/mixitup.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/province.js"></script>
-    <script src="/js/order-condition.js"></script>
+
+
 </body>
 
+<script>
+    function deleteCart(id, product_id) {
+        $.ajax({
+            url: '/cart/delete',
+            type: 'GET',
+            data: {
+                id: id,
+                product_id: product_id,
+                _token: '{{ csrf_token() }}'
+            },
+            success: function(data) {
+                location.reload();
+            }
+        });
+    }
+</script>
 </html>
