@@ -60,7 +60,7 @@
             <ul>
                 <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                 <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
-            </ul>
+                <li><a href="/bill"><i class="fa fa-newspaper-o" aria-hidden="true"></i>            </ul>
 
         </div>
         <div class="humberger__menu__widget">
@@ -173,7 +173,7 @@
                         <ul>
                             <li><a href="/favorite"><i class="fa fa-heart"></i> <span>{{ $totalProductsFavorite }}</span></a></li>
                             <li><a href="/shoping-cart"><i class="fa fa-shopping-bag"></i> <span>{{ $totalProductsInCart ? $totalProductsInCart : 0 }}</span></a></li>
-                        </ul>
+                <li><a href="/bill"><i class="fa fa-newspaper-o" aria-hidden="true"></i>                        </ul>
             
                     </div>
                 </div>
