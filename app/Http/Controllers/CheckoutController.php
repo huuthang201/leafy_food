@@ -115,7 +115,7 @@ class CheckoutController extends Controller
             $priceReduceForVIP = 0;
             $reduceCode = "";
         }
-        $maxDiscount = max($priceReduce_FirstTimeBuy, $priceReduce_BuyMoreThan3P, $priceReduceForVIP);
+        $maxDiscount = max($priceReduce_FirstTimeBuy, $priceReduce_BuyMoreThan3P);
         // get $reduceCode by $maxDiscount
         if ($maxDiscount != 0)
         {
