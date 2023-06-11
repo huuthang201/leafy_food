@@ -312,13 +312,12 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="{{ $product->image }}">
                                     <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="/add-favorite?product_id={{ $product->id }}"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="/add-cart?quantity=1&product_id={{ $product->id }}"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name }}</a></h6>
+                                    <h6><a href="/shop-details/{{ $product->id }}">{{ $product->product_name . ' ' . $product->number . $product->unit }}</a></h6>
                                     <h5>{{ number_format($product->price) }} VNĐ</h5>
                                 </div>
                             </div>
