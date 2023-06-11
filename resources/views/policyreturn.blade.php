@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
         li {
-            margin-left: 18px;
-            font-size: 18px;
+            margin-left: 16px;
+            font-size: 16px;
+        }
+        .container ul{
+            line-height: 3;
         }
     </style>
 </head>
@@ -244,7 +247,7 @@
         <div class="container">
             <ul>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Phương thức:</span><o:p></o:p>
+                    <h3>Phương thức</h3>
                     <ul style="list-style-type:circle;">
                         <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                             <span lang="EN-GB" dir="ltr">Để đổi trả sản phẩm, khách hàng truy cập vào kênh chăm sóc khách hàng chính là Fanpage của LeafyFood: </span><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/leafyfoodeatclean"><span lang="EN-GB" dir="ltr">https://www.facebook.com/leafyfoodeatclean</span></a><o:p></o:p>
@@ -255,7 +258,7 @@
                     </ul>
                 </li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Các trường hợp đổi trả:</span><o:p></o:p>
+                    <h3>Các trường hợp đổi trả</h3>
                     <ul style="list-style-type:circle;">
                         <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                             <span lang="EN-GB" dir="ltr">Sản phẩm giao sai</span><o:p></o:p>
@@ -275,7 +278,7 @@
                     </ul>
                 </li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Điều kiện hoàn tiền:</span><o:p></o:p>
+                    <h3>Điều kiện hoàn tiền</h3>
                     <ul style="list-style-type:circle;">
                         <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                             <span lang="EN-GB" dir="ltr">Trong trường hợp không thể đổi trả sản phẩm, LeafyFood sẽ tiến hành hoàn tiền cho khách hàng.</span><o:p></o:p>
@@ -297,7 +300,7 @@
                     </ul>
                 </li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Lưu ý:&nbsp;</span><o:p></o:p>
+                    <h3>Lưu ý</h3>
                     <ul style="list-style-type:circle;">
                         <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                             <span lang="EN-GB" dir="ltr">LeafyFood luôn mong muốn có thể mang những sản phẩm nhà Leafy đến với bạn thương. Do đó, LeafyFood sẽ cố gắng hỗ trợ bạn thương trong quá trình đổi trả sản phẩm trước khi đưa ra quyết định hoàn tiền.</span><o:p></o:p>

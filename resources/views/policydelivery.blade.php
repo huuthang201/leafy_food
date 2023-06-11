@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
         li {
-            margin-left: 18px;
-            font-size: 18px;
+            margin-left: 16px;
+            font-size: 16px;
+        }
+        .container ul{
+            line-height: 3;
         }
     </style>
 </head>
@@ -243,14 +246,19 @@
     <section class="shoping-cart spad">
         <div class="container">
             <ul>
+                <li>
+                    <h3>Về tổng quan</h3>
+                    <ul>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">LeafyFood có thể trực tiếp vận chuyển và giao hàng tận tay khách hàng. Cụ thể, sản phẩm sẽ được giao cho khách hàng thông qua các nhà cung cấp dịch vụ chuyển phát.</span><o:p></o:p>
+                        </li>
+                        <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
+                            <span lang="EN-GB" dir="ltr">Một số thông tin chi tiết về thời gian cũng như phí giao hàng để khách hàng có trải nghiệm mua sắm thoải mái tại website của nhà Leafy.</span><o:p></o:p>
+                        </li>
+                    </ul>
+                <li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Về tổng quan, LeafyFood có thể trực tiếp vận chuyển và giao hàng tận tay khách hàng. Cụ thể, sản phẩm sẽ được giao cho khách hàng thông qua các nhà cung cấp dịch vụ chuyển phát.</span><o:p></o:p>
-                </li>
-                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Một số thông tin chi tiết về thời gian cũng như phí giao hàng để khách hàng có trải nghiệm mua sắm thoải mái tại website của nhà Leafy.</span><o:p></o:p>
-                </li>
-                <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Thời gian giao hàng:</span><o:p></o:p>
+                    <h3>Thời gian giao hàng</h3>
                     <ul style="list-style-type:circle;">
                         <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                             <span lang="EN-GB" dir="ltr">Đơn hàng nội và ngoại thành TP.HCM: giao hàng trong 1-3 ngày sau khi đặt hàng.</span><o:p></o:p>
@@ -270,7 +278,7 @@
                     </ul>
                 </li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Giai đoạn giao hàng:</span><o:p></o:p>
+                    <h3>Giai đoạn giao hàng</h3>
                     <ul style="list-style-type:circle;">
                         <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                             <span lang="EN-GB" dir="ltr">Để kiểm tra thông tin hoặc tình trạng đơn hàng của khách hàng, xin vui lòng inbox fanpage hoặc gọi số hotline, cung cấp tên và số điện thoại để được kiểm tra.&nbsp;</span><o:p></o:p>
@@ -284,7 +292,8 @@
                     </ul>
                 </li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
-                    <span lang="EN-GB" dir="ltr">Phí giao hàng: Phí ship: Nội thành (20k); Ngoại thành (30k); Trên 300k freeship</span><o:p></o:p>
+                    <h3>Phí giao hàng</h3>
+                    <span lang="EN-GB" dir="ltr">Phí ship: Nội thành (20k); Ngoại thành (30k); Trên 300k freeship</span><o:p></o:p>
                 </li>
                 <li class="Bnggch" style="mso-list:l0 level1 lfo1;">
                     <span lang="EN-GB" dir="ltr">Đối với sàn thương mại điện tử shopee LeafyFood chọn hình thức giao hàng nhanh và giao hàng tiết kiệm</span><o:p></o:p>

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LeafyFood</title>
+    <title>Thanh toán đơn hàng LeafyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -238,10 +238,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Checkout</h2>
+                        <h2>Thanh toán</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Trang chủ</a>
-                            <span>Checkout</span>
+                            <span>Thanh toán</span>
                         </div>
                     </div>
                 </div>
