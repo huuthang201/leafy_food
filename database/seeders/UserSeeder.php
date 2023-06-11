@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Thắng Nguyễn Hữu',
                 'email' => 'admin@gmail.com',
-                'password' => Hash::make('123123123'),
+                'password' => '$2y$10$kldc.HZaWbpmXa6jdDLg3u9.eUfsb/jXbBoqoPfTnmadVr.4jlBqK'
             ],
             [
                 'name' => 'Hoàng Trí Tâm',
