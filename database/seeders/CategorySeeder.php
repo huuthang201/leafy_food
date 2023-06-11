@@ -34,7 +34,7 @@ class CategorySeeder extends Seeder
             ],
             [
                 // 'id' => 4,
-                'category_name'=> 'Các loại hạt, ngũ cốc',
+                'category_name'=> 'Hạt, ngũ cốc',
                 'image' => 'https://vinmec-prod.s3.amazonaws.com/images/20200321_101804_608417_ngu-coc-nguyen-hat-.max-1800x1800.jpg',
                 'description' => 'Bún ngô eat clean, bún khô gia truyền'
             ],
