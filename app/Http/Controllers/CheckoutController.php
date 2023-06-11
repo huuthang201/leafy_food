@@ -87,8 +87,12 @@ class CheckoutController extends Controller
         } else {
             $priceReduce_FirstTimeBuy = 0;
         }
-
-        if ($param['totalProductsInCart'] >= 3) {
+        // Count quantity of products in cart
+        $totalQuantity = 0;
+        foreach ($dataCart as $key => $value) {
+            $totalQuantity += $value->quantity;
+        }
+        if ($totalQuantity >= 3) {
             $priceReduce_BuyMoreThan3P  = $totalPrice * 0.1;
         } else {
             $priceReduce_BuyMoreThan3P = 0;
@@ -105,6 +109,37 @@ class CheckoutController extends Controller
             {
                 // handle Tặng kèm 50g sản phẩm bất kì mà khách chọn khi mua đơn hàng trên 500.000đ.
                 // check cart has product with weight >= 50g and min price
+                $dataCart = Cart::where('user_id', $param['id'])->get();
+                $minPrice = 0;
+                foreach ($dataCart as $key => $value) {
+                    $dataProduct = Product::find($value->product_id);
+                    if ($dataProduct->unit == 'g')
+                    {
+                        if ($dataProduct->number <= 50) {
+                            if ($minPrice == 0) {
+                                $minPrice = $dataProduct->price;
+                                $product_id = $dataProduct->id;
+                            } else {
+                                if ($dataProduct->price < $minPrice) {
+                                    $minPrice = $dataProduct->price;
+                                    $product_id = $dataProduct->id;
+                                }
+                            }
+                        }
+                    }
+                }
+                if ($minPrice != 0) {
+                    $product = Product::find($product_id);
+                    $param['product'] = $product;
+                    $priceReduceForVIP = $product->price;
+                    $reduceCode = "TANG50G";
+                    $nameProductReduce = $product->product_name . " " . $product->number . $product->unit;
+                }
+                else {
+                    // handle Giảm 5.000đ cho mỗi đơn tiếp theo dưới 500.000đ
+                    $priceReduceForVIP = 0;
+                    $reduceCode = "KHONGTIMTHAYSANPHAM50G";
+                }
             }
             else {
                 // handle Giảm 5.000đ cho mỗi đơn tiếp theo dưới 500.000đ
@@ -115,7 +150,14 @@ class CheckoutController extends Controller
             $priceReduceForVIP = 0;
             $reduceCode = "";
         }
-        $maxDiscount = max($priceReduce_FirstTimeBuy, $priceReduce_BuyMoreThan3P);
+        if(isset($nameProductReduce))
+        {
+            $param['nameProductReduce'] = $nameProductReduce;
+        }
+        else {
+            $param['nameProductReduce'] = "";
+        }
+        $maxDiscount = max($priceReduce_FirstTimeBuy, $priceReduce_BuyMoreThan3P, $priceReduceForVIP);
         // get $reduceCode by $maxDiscount
         if ($maxDiscount != 0)
         {
@@ -123,6 +165,8 @@ class CheckoutController extends Controller
                 $reduceCode = "GIAM15K";
             } else if ($maxDiscount == $priceReduce_BuyMoreThan3P) {
                 $reduceCode = "GIAM10PHANTRAM";
+            } else if ($maxDiscount == $priceReduceForVIP) {
+                $reduceCode = $reduceCode;
             } else {
                 $reduceCode = "";
             }

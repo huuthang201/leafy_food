@@ -3437,6 +3437,9 @@ ol {
 	.hero__search__form form .hero__search__categories {
 		display: none;
 	}
+	.hero__item {
+		height: 179px;
+	}
 	.featured__controls ul li {
 		margin-bottom: 10px;
 	}

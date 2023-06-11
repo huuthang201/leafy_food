@@ -256,6 +256,9 @@
                             <li data-filter=".fresh-meat">Fresh Meat</li>
                             <li data-filter=".vegetables">Vegetables</li>
                             <li data-filter=".fastfood">Fastfood</li>
+                        @foreach($categories as $categorie)
+                            <li data-filter=".{{ $categorie->category_name }}">{{ $categorie->category_name }}</li>
+                        @endforeach
                         </ul>
                     </div>
                 </div>

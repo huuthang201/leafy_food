@@ -264,15 +264,19 @@
                         <div class="col-lg-8 col-md-6">
                             @if($reduceCode == 'GIAM15K')
                             <div class="alert alert-success" role="alert">
-                                Bạn được giảm 15.000đ cho đơn đầu tiên.
+                                Bạn được <b>giảm 15.000đ</b> cho đơn đầu tiên.
                             </div>
                             @elseif($reduceCode == 'GIAM10PHANTRAM')
                             <div class="alert alert-success" role="alert">
-                                Bạn được giảm 10% khi mua trên 3 sản phẩm.
+                                Bạn được <b>giảm 10%</b> khi mua trên 3 sản phẩm.
                             </div>
                             @elseif($reduceCode == 'GIAMVIP5K')
                             <div class="alert alert-success" role="alert">
-                                Bạn được giảm 5.000đ khách hàng thân thiết.
+                                Bạn được <b>giảm 5.000đ</b> khách hàng thân thiết.
+                            </div>
+                            @elseif($reduceCode == 'TANG50G')
+                            <div class="alert alert-success" role="alert">
+                                Khách hàng thân thiết được tặng <b>{{ $nameProductReduce }}</b>.
                             </div>
                             @endif
                             <div class="row">
@@ -334,8 +338,10 @@
                                 <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(15000) }} VNĐ</span></div>
                                 @elseif ($reduceCode == 'GIAM10PHANTRAM')
                                 <div class="checkout__order__total">Khuyến mãi <span id="discount">10%</span></div>
-                                @elseif ($reduceCode == 'GIAM20PHANTRAM')
-                                <div class="checkout__order__total">Khuyến mãi <span id="discount">20%</span></div>
+                                @elseif ($reduceCode == 'GIAMVIP5K')
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">{{ number_format(5000) }} VNĐ</span></div>
+                                @elseif ($reduceCode == 'TANG50G')
+                                <div class="checkout__order__total">Khuyến mãi <span id="discount">Tặng 1 sản phẩm {{ $nameProductReduce }}</span></div>
                                 @endif
                                 @if ($reduceCode != '')
                                 {{-- Giá sau khi giảm --}}
