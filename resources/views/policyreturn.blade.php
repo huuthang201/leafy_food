@@ -25,6 +25,8 @@
     <meta name="twitter:creator" content="@LeafyFood">
     <meta name="twitter:image" content="/img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{-- favicon --}}
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chính sách hoàn trả LeafyFood</title>
 
