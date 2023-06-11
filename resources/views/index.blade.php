@@ -209,13 +209,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="/img/hero/banner.jpg">
-                        <div class="hero__text">
+                    <div class="hero__item set-bg" data-setbg="https://user-images.githubusercontent.com/64240532/244913065-3b0d5b5f-b0cd-48ef-a36d-4786f689dcdf.png">
+                        {{-- <div class="hero__text">
                             <span>Thực phẩm từ thiên nhiên</span>
                             <h2>LeafyFood <br /></h2>
                             <p>Ăn sạch - Sống khỏe</p>
                             <a href="/shop-grid" class="primary-btn">MUA NGAY</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
