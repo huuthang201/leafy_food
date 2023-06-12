@@ -368,8 +368,8 @@
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="{{ $item->image }}">
                             <ul class="product__item__pic__hover">
-                                        <li><a href="/add-favorite?product_id={{ $product->id }}"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="/add-cart?quantity=1&product_id={{ $product->id }}"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="/add-favorite?product_id={{ $item->id }}"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="/add-cart?quantity=1&product_id={{ $item->id }}"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
